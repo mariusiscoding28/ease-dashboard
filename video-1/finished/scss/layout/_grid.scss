@@ -46,5 +46,3 @@
 @include offset-grid($total-cols, false);
 // Offset columns - Responsive
 @include offset-grid($total-cols, true);
-
-// @include loop-deep-map($mic-colors);

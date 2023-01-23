@@ -231,8 +231,8 @@ $e-utilities: (
     (
       name: "Margin - Left and Right",
       responsive: true,
-      property: margin-left,
-      property-2: margin-right,
+      property: margin-left margin-right,
+      // property-2: margin-right,
       class: e-mg-x-,
       important: true,
       values: map.merge($spacings, $spacings),

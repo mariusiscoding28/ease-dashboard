@@ -29,5 +29,16 @@ h6,
   }
 }
 
-// Font sizes and weight classes
-@include loop-deep-map($font-sizes);
+// $headings: (
+//   h1: 3rem,
+//   h2: 3rem,
+//   h3: 3rem,
+// );
+
+// $property: font-size font-weight;
+
+// $property: font-size;
+
+// @include loop-through-map($headings, null, $property: $property, $important: true);
+
+// @include loop-through-map($headings, $property: $property, $important: false, $responsive: false);

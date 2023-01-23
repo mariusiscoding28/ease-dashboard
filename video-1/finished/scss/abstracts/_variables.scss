@@ -178,7 +178,7 @@ $e-colors: (
   --heading-4: 1.8rem;
   --heading-5: 1.6rem;
   --heading-6: 1.6rem;
-  --body: 1.4rem;
+  --paragraph-size: 1.4rem;
   --card-title: 1.6rem;
   --small-text: 1.2rem;
   --menu-item: 1.4rem;
@@ -186,11 +186,11 @@ $e-colors: (
   --dropdown-item: 1.3rem;
   --bdg-size: 0.8rem;
   --btn-size: 1.8rem;
+  --heading-line-height: 1.4;
+  --default-line-height: 1.5;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
-  --heading-line-height: 1.4;
-  --default-line-height: 1.5;
 
   /* ************** SPACING ************** */
   --spacing-0: 0;
@@ -204,7 +204,6 @@ $e-colors: (
 
   /* ************** LAYOUT ************** */
   --container-default: 90%;
-  --container-xs: 28rem;
   --container-sm: 87.5rem;
   --container-md: 121.5rem;
   --container-lg: 131.5rem;
@@ -212,34 +211,11 @@ $e-colors: (
 }
 
 /* ************** TYPOGRAPHY ************** */
-$font-sizes: (
-  "body": (
-    class: e-fs-,
-    property: font-size,
-    sizes: (
-      base: var(--base-font-size),
-      body: var(--body),
-      title: var(--card-title),
-      small: var(--small-text),
-      menu-item: var(--menu-item),
-      dropdown-item: var(--dropdown-item),
-      icon: var(--heading-1),
-    ),
-  ),
-  "font-weight": (
-    class: e-fs-,
-    property: font-weight,
-    sizes: (
-      reg: var(--font-weight-regular),
-      med: var(--font-weight-medium),
-      bld: var(--font-weight-bold),
-    ),
-  ),
-);
 
-$font-family: (
-  heading: var(--heading-font-family),
-  body: var(--body-font-family),
+$font-weights: (
+  reg: var(--font-weight-regular),
+  med: var(--font-weight-medium),
+  bld: var(--font-weight-bold),
 );
 
 /* ************** SPACINGS ************** */
