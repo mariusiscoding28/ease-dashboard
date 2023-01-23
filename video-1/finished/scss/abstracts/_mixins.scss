@@ -2,6 +2,15 @@
 @use "variables" as *;
 @use "../layout/breakpoints" as *;
 
+// Transition
+@mixin transition($property: all, $duration: 0.3s, $delay: 0s, $easing-function: ease-out) {
+  transition: $property $duration $delay $easing-function;
+}
+
+// Box shadow
+@mixin boxShadow($x: 0, $y: 0, $blur: 0.55rem, $color: rgba(#000, 0.14)) {
+  box-shadow: $x $y $blur $color;
+}
 // Creating grid columns
 @mixin grid($total, $number) {
   flex: 0 0 calc(100% / (#{$total} / #{$number}));

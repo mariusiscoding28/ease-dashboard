@@ -35,7 +35,7 @@ $e-colors: (
     ),
   ),
   "orange": (
-    name: "orange",
+    name: "warn",
     variations: (
       main: #fd8b49,
       100: #fdc4a1,
@@ -47,7 +47,7 @@ $e-colors: (
     ),
   ),
   "green": (
-    name: "green",
+    name: "success",
     variations: (
       main: #5fab76,
       100: #add4b8,
@@ -59,7 +59,7 @@ $e-colors: (
     ),
   ),
   "blue": (
-    name: "blue",
+    name: "info",
     variations: (
       main: #4a529d,
       100: #9faac4,
@@ -71,7 +71,7 @@ $e-colors: (
     ),
   ),
   "red": (
-    name: "red",
+    name: "danger",
     variations: (
       main: #c44f4f,
       100: #c098a2,
@@ -141,14 +141,14 @@ $e-colors: (
   --default-icon-clr: var(--e-primary-600-clr);
   --default-icon-hvr-bg-clr: var(--e-gray-clr);
   /* Badges */
-  --bdg-success-bg-clr: var(--e-green-100-clr);
-  --bdg-success-text-clr: var(--e-green-clr);
-  --bdg-info-bg-clr: var(--e-secondary-100-clr);
-  --bdg-info-text-clr: var(--e-secondary-clr);
-  --bdg-warn-bg-clr: var(--e-orange-100-clr);
-  --bdg-warn-text-clr: var(--e-orange-clr);
-  --bdg-danger-bg-clr: var(--e-red-100-clr);
-  --bdg-danger-text-clr: var(--e-red-clr);
+  --bdg-success-bg-clr: var(--e-success-100-clr);
+  --bdg-success-text-clr: var(--e-success-clr);
+  --bdg-secondary-bg-clr: var(--e-secondary-100-clr);
+  --bdg-secondary-text-clr: var(--e-secondary-clr);
+  --bdg-warn-bg-clr: var(--e-warn-100-clr);
+  --bdg-warn-text-clr: var(--e-warn-clr);
+  --bdg-danger-bg-clr: var(--e-danger-100-clr);
+  --bdg-danger-text-clr: var(--e-danger-clr);
   /* Form */
   --input-bg-clr: var(--e-gray-clr);
   --input-brdr-clr: var(--e-primary-clr);
@@ -159,14 +159,14 @@ $e-colors: (
   --btn-default-text-clr: var(--e-gray-50-clr);
   --btn-primary-bg-clr: var(--e-primary-100-clr);
   --btn-primary-text-clr: var(--e-primary-clr);
-  --btn-success-bg-clr: var(--e-green-100-clr);
-  --btn-success-text-clr: var(--e-green-clr);
-  --btn-info-bg-clr: var(--e-secondary-100-clr);
-  --btn-info-text-clr: var(--e-secondary-clr);
-  --btn-warn-bg-clr: var(--e-orange-100-clr);
-  --btn-warn-text-clr: var(--e-orange-clr);
-  --btn-danger-bg-clr: var(--e-red-100-clr);
-  --btn-danger-text-clr: var(--e-red-clr);
+  --btn-secondary-bg-clr: var(--e-secondary-100-clr);
+  --btn-secondary-text-clr: var(--e-secondary-clr);
+  --btn-success-bg-clr: var(--e-success-100-clr);
+  --btn-success-text-clr: var(--e-success-clr);
+  --btn-warn-bg-clr: var(--e-warn-100-clr);
+  --btn-warn-text-clr: var(--e-warn-clr);
+  --btn-danger-bg-clr: var(--e-danger-100-clr);
+  --btn-danger-text-clr: var(--e-danger-clr);
 
   /* ************** TYPOGRAPHY ************** */
   --base-font-size: 62.5%; // 10px (10 / 16) * 100 = 62.5
@@ -182,10 +182,10 @@ $e-colors: (
   --card-title: 1.6rem;
   --small-text: 1.2rem;
   --menu-item: 1.4rem;
-  --icon-size: 1.8rem;
+  --icon-size: 1.4rem;
   --dropdown-item: 1.3rem;
-  --bdg-size: 0.8rem;
-  --btn-size: 1.8rem;
+  --bdg-size: 1rem;
+  --btn-size: 1.4rem;
   --heading-line-height: 1.4;
   --default-line-height: 1.5;
   --font-weight-regular: 400;
@@ -208,6 +208,12 @@ $e-colors: (
   --container-md: 121.5rem;
   --container-lg: 131.5rem;
   --container-xl: 156rem;
+
+  /* ************** COMPONENTS ************** */
+  --default-brd-rad: 0.4rem;
+  --default-btn-padding: 0.9rem 3rem;
+  --default-btn-sm-padding: 0.6rem 2rem;
+  --default-bdg-padding: 0.4rem 1.2rem;
 }
 
 /* ************** TYPOGRAPHY ************** */
@@ -279,3 +285,12 @@ $containers: (
   lg: var(--container-lg),
   xl: var(--container-xl),
 );
+
+/* ************** COMPONENTS ************** */
+
+// ========= Buttons ============ //
+$buttons: default primary secondary success warn danger;
+// ========= Badges ============ //
+$badges: secondary success warn danger;
+// ========= Avatar ============ //
+$avatars: 30 35 40 45 50;

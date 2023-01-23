@@ -1,4 +1,4 @@
-/* Abstracts */
+// Abstracts
 @forward "../abstracts/variables";
 @forward "../abstracts/mixins";
 
@@ -12,3 +12,9 @@
 // Layout
 @forward "../layout/breakpoints";
 @forward "../layout/grid";
+
+// Components
+@forward "../components/button";
+@forward "../components/badges";
+@forward "../components/avatar";
+@forward "../components/cards";
