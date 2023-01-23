@@ -1,0 +1,222 @@
+@use "sass:map";
+@use "variables" as *;
+@use "../layout/breakpoints" as *;
+
+// Creating grid columns
+@mixin grid($total, $number) {
+  flex: 0 0 calc(100% / (#{$total} / #{$number}));
+  max-width: calc(100% / (#{$total} / #{$number}));
+}
+
+// Creating offset grid
+@mixin offset-grid($total-cols, $responsive) {
+  @if $responsive {
+    @each $break, $value in $containers {
+      @include respond(#{$break}) {
+        @for $i from 1 through $total-cols {
+          .e-offset-#{$break}-#{$i} {
+            @if $i == $total-cols {
+              margin-left: 0;
+              flex: 0 0 100%;
+              max-width: 100%;
+            } @else {
+              margin-left: calc(100% / (#{$total-cols} / #{$i}));
+              flex: 0 0 calc(100% * ((#{$total-cols} - #{$i}) / #{$total-cols}));
+              max-width: calc(100% * ((#{$total-cols} - #{$i}) / #{$total-cols}));
+            }
+          }
+        }
+      }
+    }
+  } @else {
+    @for $i from 1 through $total-cols {
+      .e-offset-#{$i} {
+        @if $i == $total-cols {
+          margin-left: 0;
+          flex: 0 0 100%;
+          max-width: 100%;
+        } @else {
+          margin-left: calc(100% / (#{$total-cols} / #{$i}));
+          flex: 0 0 calc(100% * ((#{$total-cols} - #{$i}) / #{$total-cols}));
+          max-width: calc(100% * ((#{$total-cols} - #{$i}) / #{$total-cols}));
+        }
+      }
+    }
+  }
+}
+
+/* Mixin to loop through a map */
+@mixin loop-through-map($map, $class, $suffix, $property, $property2, $responsive, $force-xs, $important) {
+  // Responsive
+  @if $responsive {
+    @each $break, $value in $containers {
+      @if $break == xs and $force-xs {
+        @include respond(#{$break}) {
+          @each $child, $value in $map {
+            @if $value != null {
+              @if $class == null {
+                #{$child}#{$suffix}-#{$break} {
+                  @if $important {
+                    #{$property}: #{$value} !important;
+                    @if $property2 {
+                      #{$property2}: #{$value} !important;
+                    }
+                  } @else {
+                    #{$property}: #{$value};
+                    @if $property2 {
+                      #{$property2}: #{$value};
+                    }
+                  }
+                }
+              } @else {
+                .#{$class}#{$child}#{$suffix}-#{$break} {
+                  @if $important {
+                    #{$property}: #{$value} !important;
+                    @if $property2 {
+                      #{$property2}: #{$value} !important;
+                    }
+                  } @else {
+                    #{$property}: #{$value};
+                    @if $property2 {
+                      #{$property2}: #{$value};
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      } @else {
+        @if $break == xs {
+          @each $child, $value in $map {
+            @if $value != null {
+              @if $class == null {
+                #{$child}#{$suffix} {
+                  @if $important {
+                    #{$property}: #{$value} !important;
+                    @if $property2 {
+                      #{$property2}: #{$value} !important;
+                    }
+                  } @else {
+                    #{$property}: #{$value};
+                    @if $property2 {
+                      #{$property2}: #{$value};
+                    }
+                  }
+                }
+              } @else {
+                .#{$class}#{$child}#{$suffix} {
+                  @if $important {
+                    #{$property}: #{$value} !important;
+                    @if $property2 {
+                      #{$property2}: #{$value} !important;
+                    }
+                  } @else {
+                    #{$property}: #{$value};
+                    @if $property2 {
+                      #{$property2}: #{$value};
+                    }
+                  }
+                }
+              }
+            }
+          }
+        } @else {
+          @include respond(#{$break}) {
+            @each $child, $value in $map {
+              @if $value != null {
+                @if $class == null {
+                  #{$child}#{$suffix}-#{$break} {
+                    @if $important {
+                      #{$property}: #{$value} !important;
+                      @if $property2 {
+                        #{$property2}: #{$value} !important;
+                      }
+                    } @else {
+                      #{$property}: #{$value};
+                      @if $property2 {
+                        #{$property2}: #{$value};
+                      }
+                    }
+                  }
+                } @else {
+                  .#{$class}#{$child}#{$suffix}-#{$break} {
+                    @if $important {
+                      #{$property}: #{$value} !important;
+                      @if $property2 {
+                        #{$property2}: #{$value} !important;
+                      }
+                    } @else {
+                      #{$property}: #{$value};
+                      @if $property2 {
+                        #{$property2}: #{$value};
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  } @else {
+    @each $child, $value in $map {
+      @if $value != null {
+        @if $class == null {
+          #{$child}#{$suffix} {
+            @if $important {
+              #{$property}: #{$value} !important;
+              @if $property2 {
+                #{$property2}: #{$value} !important;
+              }
+            } @else {
+              #{$property}: #{$value};
+              @if $property2 {
+                #{$property2}: #{$value};
+              }
+            }
+          }
+        } @else {
+          .#{$class}#{$child}#{$suffix} {
+            @if $important {
+              #{$property}: #{$value} !important;
+              @if $property2 {
+                #{$property2}: #{$value} !important;
+              }
+            } @else {
+              #{$property}: #{$value};
+              @if $property2 {
+                #{$property2}: #{$value};
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Looping through complex map
+@mixin loop-deep-map($deep-map) {
+  // First level of the map
+  @each $block, $children in $deep-map {
+    // Second level of the map
+    @each $subblock, $values in $children {
+      // Variables
+      $class: map.get($children, class);
+      $suffix: map.get($children, suffix);
+      $property: map.get($children, property);
+      $property2: map.get($children, property2);
+      $responsive: map.get($children, responsive);
+      $force-xs: map.get($children, generate-xs);
+      $important: map.get($children, important);
+
+      // Calling the loop mixin to loop through the inner map
+      @if type-of($values) == map and $values != null and $class != null {
+        // Important CSS keyword
+        @include loop-through-map($values, $class, $suffix, $property, $property2, $responsive, $force-xs, $important);
+      }
+    }
+  }
+}
