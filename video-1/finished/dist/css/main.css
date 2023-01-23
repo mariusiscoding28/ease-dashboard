@@ -4826,6 +4826,8 @@ h6,
   position: relative;
   background-color: var(--card-bg-clr);
   border-radius: var(--default-brd-rad);
+  -webkit-box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.14);
+          box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.14);
 }
 .e-card__header {
   padding: 2rem;

@@ -8,7 +8,7 @@
 }
 
 // Box shadow
-@mixin boxShadow($x: 0, $y: 0, $blur: 0.55rem, $color: rgba(#000, 0.14)) {
+@mixin boxShadow($x: 0, $y: 0, $blur: 0.15rem, $color: rgba(#000, 0.14)) {
   box-shadow: $x $y $blur $color;
 }
 // Creating grid columns
