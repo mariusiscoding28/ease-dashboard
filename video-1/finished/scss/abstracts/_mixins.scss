@@ -102,157 +102,6 @@
   }
 }
 
-@mixin loop-through-ma($map, $class, $suffix, $property, $property2, $responsive, $force-xs, $important) {
-  // Responsive
-  @if $responsive {
-    @each $break, $value in $containers {
-      @if $break == xs and $force-xs {
-        @include respond(#{$break}) {
-          @each $child, $value in $map {
-            @if $value != null {
-              @if $class == null {
-                #{$child}#{$suffix}-#{$break} {
-                  @if $important {
-                    #{$property}: #{$value} !important;
-                    @if $property2 {
-                      #{$property2}: #{$value} !important;
-                    }
-                  } @else {
-                    #{$property}: #{$value};
-                    @if $property2 {
-                      #{$property2}: #{$value};
-                    }
-                  }
-                }
-              } @else {
-                .#{$class}#{$child}#{$suffix}-#{$break} {
-                  @if $important {
-                    #{$property}: #{$value} !important;
-                    @if $property2 {
-                      #{$property2}: #{$value} !important;
-                    }
-                  } @else {
-                    #{$property}: #{$value};
-                    @if $property2 {
-                      #{$property2}: #{$value};
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      } @else {
-        @if $break == xs {
-          @each $child, $value in $map {
-            @if $value != null {
-              @if $class == null {
-                #{$child}#{$suffix} {
-                  @if $important {
-                    #{$property}: #{$value} !important;
-                    @if $property2 {
-                      #{$property2}: #{$value} !important;
-                    }
-                  } @else {
-                    #{$property}: #{$value};
-                    @if $property2 {
-                      #{$property2}: #{$value};
-                    }
-                  }
-                }
-              } @else {
-                .#{$class}#{$child}#{$suffix} {
-                  @if $important {
-                    #{$property}: #{$value} !important;
-                    @if $property2 {
-                      #{$property2}: #{$value} !important;
-                    }
-                  } @else {
-                    #{$property}: #{$value};
-                    @if $property2 {
-                      #{$property2}: #{$value};
-                    }
-                  }
-                }
-              }
-            }
-          }
-        } @else {
-          @include respond(#{$break}) {
-            @each $child, $value in $map {
-              @if $value != null {
-                @if $class == null {
-                  #{$child}#{$suffix}-#{$break} {
-                    @if $important {
-                      #{$property}: #{$value} !important;
-                      @if $property2 {
-                        #{$property2}: #{$value} !important;
-                      }
-                    } @else {
-                      #{$property}: #{$value};
-                      @if $property2 {
-                        #{$property2}: #{$value};
-                      }
-                    }
-                  }
-                } @else {
-                  .#{$class}#{$child}#{$suffix}-#{$break} {
-                    @if $important {
-                      #{$property}: #{$value} !important;
-                      @if $property2 {
-                        #{$property2}: #{$value} !important;
-                      }
-                    } @else {
-                      #{$property}: #{$value};
-                      @if $property2 {
-                        #{$property2}: #{$value};
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  } @else {
-    @each $child, $value in $map {
-      @if $value != null {
-        @if $class == null {
-          #{$child}#{$suffix} {
-            @if $important {
-              #{$property}: #{$value} !important;
-              @if $property2 {
-                #{$property2}: #{$value} !important;
-              }
-            } @else {
-              #{$property}: #{$value};
-              @if $property2 {
-                #{$property2}: #{$value};
-              }
-            }
-          }
-        } @else {
-          .#{$class}#{$child}#{$suffix} {
-            @if $important {
-              #{$property}: #{$value} !important;
-              @if $property2 {
-                #{$property2}: #{$value} !important;
-              }
-            } @else {
-              #{$property}: #{$value};
-              @if $property2 {
-                #{$property2}: #{$value};
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 // Looping through complex map
 @mixin loop-deep-map($deep-map) {
   // First level of the map
@@ -260,18 +109,15 @@
     // Second level of the map
     @each $subblock, $values in $children {
       // Variables
-      $class: map.get($children, class);
+      $base-class: map.get($children, class);
       $suffix: map.get($children, suffix);
       $property: map.get($children, property);
-      $property2: map.get($children, property2);
-      $responsive: map.get($children, responsive);
-      $force-xs: map.get($children, generate-xs);
-      $important: map.get($children, important);
+      $responsive: if(map-has-key($children, responsive), map.get($children, responsive), true);
+      $important: if(map-has-key($children, important), map.get($children, important), true);
 
       // Calling the loop mixin to loop through the inner map
-      @if type-of($values) == map and $values != null and $class != null {
-        // Important CSS keyword
-        @include loop-through-map($values, $class, $suffix, $property, $property2, $responsive, $force-xs, $important);
+      @if type-of($values) == map and $values != null and $base-class != null {
+        @include loop-through-map($values, $base-class, $suffix, $property, $responsive, $important);
       }
     }
   }

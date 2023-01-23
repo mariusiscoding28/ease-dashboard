@@ -7,9 +7,7 @@ $e-utilities: (
   "overflow":
     (
       class: e-overflow-,
-      responsive: true,
       property: overflow,
-      important: true,
       values: (
         auto: auto,
         visible: visible,
@@ -19,11 +17,8 @@ $e-utilities: (
   // Text alignment
   "text-alignment":
     (
-      name: "Text Alignment",
-      responsive: true,
       property: text-align,
       class: e-ta-,
-      important: true,
       values: (
         left: left,
         center: center,
@@ -34,10 +29,9 @@ $e-utilities: (
   // Text transform
   "text-transform":
     (
-      name: "Text Transform",
       property: text-transform,
       class: e-tt-,
-      important: true,
+      responsive: false,
       values: (
         none: none,
         lowercase: lowercase,
@@ -48,11 +42,9 @@ $e-utilities: (
   // Text style
   "text-style":
     (
-      name: "Text Style",
       property: font-style,
       class: e-ts-,
-      suffix: null,
-      important: true,
+      responsive: false,
       values: (
         normal: normal,
         italic: italic,
@@ -61,23 +53,33 @@ $e-utilities: (
   // Text decoration
   "text-decoration":
     (
-      name: "Text Decoration",
       property: text-decoration,
       class: e-td-,
-      important: true,
+      responsive: false,
       values: (
         underline: underline,
         line-through: line-through,
       ),
     ),
+  // Font sizes
+  "font-sizes":
+    (
+      property: font-size,
+      class: e-fs-,
+      values: map.merge($font-sizes, $font-sizes),
+    ),
+  // Font weights
+  "font-weights":
+    (
+      property: font-weight,
+      class: e-fw-,
+      values: map.merge($font-weights, $font-weights),
+    ),
   // Flexbox and Block
   "flexbox-block":
     (
-      name: "Flexbox and Block",
-      responsive: true,
       property: display,
       class: e-d-,
-      important: true,
       values: (
         block: block,
         in-block: inline-block,
@@ -89,11 +91,8 @@ $e-utilities: (
   // Flexbox direction
   "flexbox-direction":
     (
-      name: "Flexbox Direction",
-      responsive: true,
       property: flex-direction,
       class: e-fd-,
-      important: true,
       values: (
         row: row,
         row-reverse: row-reverse,
@@ -104,11 +103,8 @@ $e-utilities: (
   // Flexbox - Justify content
   "flexbox-justify":
     (
-      name: "Flexbox - Justify Content",
-      responsive: true,
       property: justify-content,
       class: e-justify-,
-      important: true,
       values: (
         stretch: stretch,
         start: flex-start,
@@ -122,11 +118,8 @@ $e-utilities: (
   // Flexbox - Align items
   "flexbox-align":
     (
-      name: "Flexbox - Align Items",
-      responsive: true,
       property: align-items,
       class: e-align-,
-      important: true,
       values: (
         stretch: stretch,
         start: flex-start,
@@ -137,11 +130,8 @@ $e-utilities: (
   // Flexbox - Ordering
   "flexbox-order":
     (
-      name: "Flexbox - Ordering",
-      responsive: true,
       property: order,
       class: e-order-,
-      important: true,
       values: (
         n-1: -1,
         0: 0,
@@ -154,11 +144,8 @@ $e-utilities: (
   // Flexbox - Basis
   "flexbox-basis":
     (
-      name: "Flexbox - Basis",
-      responsive: true,
       property: flex,
       class: e-flex-b-,
-      important: true,
       values: (
         1: 1,
         2: 2,
@@ -167,11 +154,8 @@ $e-utilities: (
   // Flexbox - Basis - Auto
   "flexbox-basis-auto":
     (
-      name: "Flexbox - Basis - Auto",
-      responsive: true,
       property: flex,
       class: e-flex-,
-      important: true,
       values: (
         auto: 0 0 auto,
       ),
@@ -179,145 +163,99 @@ $e-utilities: (
   // Margin - All around
   "margin":
     (
-      name: "Margin - All Around",
-      responsive: true,
       property: margin,
       class: e-mg-,
-      important: true,
       values: map.merge($spacings, $spacings),
     ),
   // Margin - Top
   "margin-top":
     (
-      name: "Margin - Top",
-      responsive: true,
       property: margin-top,
       class: e-mg-t-,
-      important: true,
       values: map.merge($spacings, $spacings),
     ),
   // Margin - Right
   "margin-right":
     (
-      name: "Margin - Right",
-      responsive: true,
       property: margin-right,
       class: e-mg-r-,
-      important: true,
       values: map.merge($spacings, $spacings),
     ),
   // Margin - Bottom
   "margin-bottom":
     (
-      name: "Margin - Bottom",
-      responsive: true,
       property: margin-bottom,
       class: e-mg-b-,
-      important: true,
       values: map.merge($spacings, $spacings),
     ),
   // Margin - Left
   "margin-left":
     (
-      name: "Margin - Left",
-      responsive: true,
       property: margin-left,
       class: e-mg-l-,
-      important: true,
       values: map.merge($spacings, $spacings),
     ),
   // Margin - Left and Right
   "margin-left-right":
     (
-      name: "Margin - Left and Right",
-      responsive: true,
       property: margin-left margin-right,
-      // property-2: margin-right,
       class: e-mg-x-,
-      important: true,
       values: map.merge($spacings, $spacings),
     ),
   // Margin - Top and Bottom
   "margin-top-bottom":
     (
-      name: "Margin - Top and Bottom",
-      responsive: true,
-      property: margin-top,
-      property-2: margin-bottom,
+      property: margin-top margin-bottom,
       class: e-mg-y-,
-      important: true,
       values: map.merge($spacings, $spacings),
     ),
   // Padding - All around
   "padding":
     (
-      name: "Padding - All Around",
-      responsive: true,
       property: padding,
       class: e-pd-,
-      important: true,
       values: map.merge($spacings, $spacings),
     ),
   // Padding - Top
   "padding-top":
     (
-      name: "Padding - Top",
-      responsive: true,
       property: padding-top,
       class: e-pd-t-,
-      important: true,
       values: map.merge($spacings, $spacings),
     ),
   // Padding - Right
   "padding-right":
     (
-      name: "Padding - Right",
-      responsive: true,
       property: padding-right,
       class: e-pd-r-,
-      important: true,
       values: map.merge($spacings, $spacings),
     ),
   // Padding - Bottom
   "padding-bottom":
     (
-      name: "Padding - Bottom",
-      responsive: true,
       property: padding-bottom,
       class: e-pd-b-,
-      important: true,
       values: map.merge($spacings, $spacings),
     ),
   // Padding - Left
   "padding-left":
     (
-      name: "Padding - Left",
-      responsive: true,
       property: padding-left,
       class: e-pd-l-,
-      important: true,
       values: map.merge($spacings, $spacings),
     ),
   // Padding - Left and Right
   "padding-left-right":
     (
-      name: "Padding - Left and Right",
-      responsive: true,
-      property: padding-left,
-      property-2: padding-right,
+      property: padding-left padding-right,
       class: e-pd-x-,
-      important: true,
       values: map.merge($spacings, $spacings),
     ),
   // Padding - Top and Bottom
   "padding-top-bottom":
     (
-      name: "Padding - Top and Bottom",
-      responsive: true,
-      property: padding-top,
-      property-2: padding-bottom,
+      property: padding-top padding-bottom,
       class: e-pd-y-,
-      important: true,
       values: map.merge($spacings, $spacings),
     )
 );
