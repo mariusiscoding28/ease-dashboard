@@ -72,6 +72,7 @@ $e-utilities: (
   "font-weights":
     (
       property: font-weight,
+      responsive: false,
       class: e-fw-,
       values: map.merge($font-weights, $font-weights),
     ),

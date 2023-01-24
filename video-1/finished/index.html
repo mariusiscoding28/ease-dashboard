@@ -5,6 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- Main CSS-->
     <link rel="stylesheet" href="dist/css/main.css" />
@@ -81,7 +88,7 @@
       </div>
 
       <!-- Card -->
-      <div class="e-row">
+      <div class="e-row e-mg-b-20">
 
         <div class="e-flex-sm-6 e-flex-md-4 e-mg-b-10 e-mg-b-0-md">
           <div class="e-card">
@@ -136,12 +143,45 @@
 
       </div>
 
+      <!-- Form -->
+      <form class="e-form e-mg-b-20">
 
+        <div class="e-form__group">
+          <input type="text" class="e-form__input" placeholder="Search">
+          <i class="ri-search-line e-form__icon e-fs-14"></i>
+        </div>
+
+        <!-- <div class="e-form__group e-mg-t-20">
+          <textarea class="e-form__textarea"></textarea>
+        </div> -->
+
+      </form>
+
+      <!-- Dropdown -->
+      <div
+        class="e-dropdown e-dropdown-abs-left e-dropdown-abs-center-sm e-dropdown-abs-right-md e-dropdown-abs-left-lg e-d-in-block">
+        <div class="e-avat e-avat-30" data-dropdown-target="notifications"><img src="images/user-f-1.jpg"
+            class="e-avat__img" alt=""></div>
+
+        <div class="e-dropdown__menu" id="notifications">
+          <div class="e-fs-16 e-fw-med e-pd-20">Your notifications</div>
+        </div>
+      </div>
+      <div
+        class="e-dropdown e-dropdown-abs-left e-dropdown-abs-center-sm e-dropdown-abs-right-md e-dropdown-abs-left-lg e-d-in-block">
+        <div class="e-avat e-avat-30" data-dropdown-target="notification"><img src="images/user-f-1.jpg"
+            class="e-avat__img" alt=""></div>
+
+        <div class="e-dropdown__menu e-pd-20" id="notification">
+          <div class="e-fs-16 e-fw-med e-pd-b-20">Your notifications</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ex totam molestiae?</p>
+        </div>
+      </div>
 
     </div>
 
     <!-- Main (custom) script-->
-    <script src=""></script>
+    <script src="dist/js/main.min.js"></script>
   </body>
 
 </html>

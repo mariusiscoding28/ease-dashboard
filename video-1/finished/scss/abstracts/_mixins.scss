@@ -11,6 +11,33 @@
 @mixin boxShadow($x: 0, $y: 0, $blur: 0.15rem, $color: rgba(#000, 0.14)) {
   box-shadow: $x $y $blur $color;
 }
+
+// Custom scroll bar
+@mixin customScrollbar($width: 0.5rem, $height: 0.5rem, $bg-color: var(--e-gray-600-clr)) {
+  // Firefox
+  scrollbar-width: thin;
+  scrollbar-color: $bg-color transparent;
+
+  // Chrome and others
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0.2rem transparent;
+    background: transparent;
+    margin: 1.1rem;
+  }
+
+  &::-webkit-scrollbar {
+    height: $height;
+    width: $width;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6rem;
+    width: $width;
+    background-color: $bg-color;
+  }
+}
+
 // Creating grid columns
 @mixin grid($total, $number) {
   flex: 0 0 calc(100% / (#{$total} / #{$number}));
