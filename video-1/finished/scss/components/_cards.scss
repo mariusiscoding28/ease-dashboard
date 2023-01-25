@@ -5,6 +5,7 @@
   position: relative;
   background-color: var(--card-bg-clr);
   border-radius: var(--default-brd-rad);
+  height: 100%;
   @include boxShadow;
 
   &__header {

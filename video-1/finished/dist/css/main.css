@@ -449,6 +449,27 @@ h6,
                   UTILITIES
 =================================================
 */
+[class*=e-overflow-] {
+  scrollbar-width: thin;
+  scrollbar-color: var(--e-gray-600-clr) transparent;
+}
+[class*=e-overflow-]::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0.2rem transparent;
+          box-shadow: inset 0 0 0.2rem transparent;
+  background: transparent;
+  margin: 1.1rem;
+}
+[class*=e-overflow-]::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+  background: transparent;
+}
+[class*=e-overflow-]::-webkit-scrollbar-thumb {
+  border-radius: 6rem;
+  width: 0.5rem;
+  background-color: var(--e-gray-600-clr);
+}
+
 .e-overflow-auto {
   overflow: auto !important;
 }
@@ -4785,6 +4806,7 @@ h6,
   position: relative;
   background-color: var(--card-bg-clr);
   border-radius: var(--default-brd-rad);
+  height: 100%;
   -webkit-box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.14);
           box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.14);
 }
@@ -4986,5 +5008,28 @@ h6,
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
+}
+
+.e-tbl {
+  width: 100%;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+.e-tbl__header {
+  background-color: var(--tbl-header-bg-clr);
+}
+.e-tbl__head {
+  /* thead th */
+  font-weight: var(--font-weight-bold);
+  font-family: var(--heading-font-family);
+  font-size: 1.4rem;
+}
+.e-tbl__row:not(:last-of-type) .e-tbl__data {
+  border-bottom: 0.1rem solid var(--brdr-clr);
+}
+.e-tbl__head, .e-tbl__data {
+  padding: 1.6rem;
+  text-align: left;
+  white-space: nowrap;
 }
 /*# sourceMappingURL=main.css.map */

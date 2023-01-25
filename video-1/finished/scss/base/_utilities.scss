@@ -8,5 +8,9 @@
 =================================================
 */
 
+[class*="e-overflow-"] {
+  @include customScrollbar;
+}
+
 // Generating the utility classes
 @include loop-deep-map($e-utilities);
