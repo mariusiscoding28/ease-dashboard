@@ -6,6 +6,7 @@
   width: 100%;
   overflow: hidden;
   border-collapse: collapse;
+  border: 0.1rem solid var(--brdr-clr);
 
   &__header {
     background-color: var(--tbl-header-bg-clr);

@@ -1,6 +1,7 @@
 const dropdown = () => {
   const _variables = {
     main: "e-dropdown",
+    menu: "e-dropdown__menu",
     target: "data-dropdown-target",
     active: "e-active",
   }
@@ -11,7 +12,9 @@ const dropdown = () => {
 
     const target = e.target.closest(`.${_variables.main}`)
 
-    if (!target) return
+    const targetedMenu = e.target.closest(`.${_variables.menu}`)
+
+    if (!target || targetedMenu) return
 
     const targetId = target.querySelector(`[${_variables.target}]`).getAttribute(_variables.target)
 
