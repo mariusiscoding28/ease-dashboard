@@ -31,3 +31,12 @@ i,
 span {
   display: inline-block;
 }
+
+a {
+  color: var(--global-text-clr);
+  @include transition;
+}
+
+button {
+  background-color: transparent;
+}

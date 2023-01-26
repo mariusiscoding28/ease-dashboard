@@ -167,6 +167,7 @@ $e-colors: (
   --btn-warn-text-clr: var(--e-warn-clr);
   --btn-danger-bg-clr: var(--e-danger-100-clr);
   --btn-danger-text-clr: var(--e-danger-clr);
+  --btn-icon-hvr-bg: var(--e-gray-clr);
 
   /* ************** TYPOGRAPHY ************** */
   --base-font-size: 62.5%; // 10px (10 / 16) * 100 = 62.5
@@ -211,12 +212,19 @@ $e-colors: (
 
   /* ************** COMPONENTS ************** */
   --default-brd-rad: 0.4rem;
+  /* Buttons */
   --default-btn-padding: 0.9rem 3rem;
   --default-btn-sm-padding: 0.6rem 2rem;
+  /* Badges */
   --default-bdg-padding: 0.4rem 1.2rem;
+  /* Forms */
   --default-input-padding: 0.9rem 3rem;
+  /* Dropdown */
   --default-dropdown-width: 22.5rem;
   --default-dropdown-mx-height: 35rem;
+  /* Navbar */
+  --default-navbar-height: 6rem;
+  --default-sidebar-nav-width: 25rem;
 }
 
 /* ************** TYPOGRAPHY ************** */

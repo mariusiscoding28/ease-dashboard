@@ -75,3 +75,17 @@
     }
   }
 }
+
+.dropdown {
+  &-header,
+  &-footer {
+    background-color: var(--tbl-header-bg-clr);
+  }
+
+  &-link {
+    &:hover,
+    &:focus {
+      color: var(--e-secondary-clr);
+    }
+  }
+}

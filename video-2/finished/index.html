@@ -23,6 +23,297 @@
 
   <body>
 
+    <header class="e-header e-header-fixed e-d-flex e-justify-between e-align-center">
+
+      <div class="e-container">
+
+        <div class="e-offset-12 e-offset-md-3 e-offset-lg-2">
+
+          <nav class="e-header__nav e-d-flex e-justify-between e-align-center">
+
+            <div class="e-header__left e-d-flex e-align-center e-mg-r-10 e-mg-r-0-md">
+
+              <div class="e-header__mobile e-mg-r-10 e-d-none-md">
+                <button type="button" class="e-icon-btn e-header__mobile--trigger" data-menu-target="main-menu"><i
+                    class="ri-menu-2-line e-fs-16"></i></button>
+              </div>
+
+              <div class="e-header__form">
+
+                <form class="e-form">
+                  <div class="e-form__group">
+                    <input type="text" class="e-form__input" placeholder="Search...">
+                    <i class="ri-search-line e-form__icon"></i>
+                  </div>
+                </form>
+
+              </div>
+
+            </div><!-- .e-header__left ends -->
+
+            <ul class="e-header__navitems e-header__sidebar-md-3 e-header__sidebar-lg-2 e-pd-y-20" id="main-menu">
+
+              <li class="e-header__list">
+                <a href="index.html" class="e-header__link--logo e-pd-20 e-d-flex e-align-center e-justify-center">
+                  <img src="images/ease-logo.svg" alt="Ease Dashboard logo">
+                </a>
+              </li>
+
+              <li class="e-header__list e-dropdown">
+                <a href="" class="e-header__link e-active e-pd-20 e-d-flex e-align-center e-justify-between"
+                  data-dropdown-target="submenu">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-dashboard-line e-mg-r-10"></i>Dashboard</span>
+                  <i class="ri-arrow-down-s-line"></i>
+                </a>
+                <ul class="e-dropdown__menu" id="submenu">
+                  <li><a href="index.html" class="e-header__sublink e-d-block e-pd-x-20 e-pd-y-10 e-active">Project</a>
+                  </li>
+                  <li><a href="ecommerce.html" class="e-header__sublink e-d-block e-pd-x-20 e-pd-y-10">eCommerce</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="e-header__list e-header__list--title e-fw-bld e-tt-uppercase e-pd-x-20 e-pd-y-10">Applications
+              </li>
+
+              <li class="e-header__list">
+                <a href="messages.html" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-message-2-line e-mg-r-10"></i>Messages</span>
+                  <span class="e-bdg e-bdg-danger">12</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="inbox.html" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-inbox-line e-mg-r-10"></i>Inbox</span>
+                  <span class="e-bdg e-bdg-danger">6</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-calendar-2-line e-mg-r-10"></i>Calendar</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-task-line e-mg-r-10"></i>Task</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-bar-chart-line e-mg-r-10"></i>Reports /
+                    Earnings</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-table-2 e-mg-r-10"></i>Kanban board</span>
+                </a>
+              </li>
+
+              <li class="e-header__list e-header__list--title e-fw-bld e-tt-uppercase e-pd-x-20 e-pd-y-10">Components
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-team-line e-mg-r-10"></i>Teams</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-group-2-line e-mg-r-10"></i>Clients</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-price-tag-2-line e-mg-r-10"></i>Pricing
+                    table</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-shopping-cart-line e-mg-r-10"></i>Products</span>
+                </a>
+              </li>
+
+              <li class="e-header__list e-header__list--title e-fw-bld e-tt-uppercase e-pd-x-20 e-pd-y-10">System
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-equalizer-line e-mg-r-10"></i>Settings</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-user-star-line e-mg-r-10"></i>Profile</span>
+                </a>
+              </li>
+
+              <li class="e-header__list e-header__list--employee-of-month">
+                <div class="e-card">
+                  <img src="images/employee-month.jpg" alt="Employee of the month">
+                  <div class="employee-details e-pd-20 e-ta-center">
+                    <h4>Employee of the month</h4>
+                    <h2>Casey W.</h2>
+                    <span class="e-fs-12 e-tt-capitalize">Senior software engineer</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="e-header__list e-pd-x-20">
+                <a href="#" class="e-btn e-d-flex e-pd-y-20">
+                  <span class="e-fs-16 e-d-flex e-align-center"><i class="ri-logout-box-r-line e-mg-r-10"></i>Log
+                    out</span>
+                </a>
+              </li>
+
+            </ul>
+            <!-- .e-header__navitems ends -->
+
+            <div class="e-header__right e-d-flex e-align-center">
+
+              <div class="theme-control e-mg-r-10">
+                <button type="button" class="theme-switcher e-btn-icon" data-current-theme="light">
+                  <i class="ri-moon-line theme-dark"></i>
+                  <i class="ri-sun-line theme-light"></i>
+                </button>
+              </div>
+
+              <div class="e-dropdown e-dropdown-abs-right e-d-in-flex e-mg-r-10">
+                <button type="button" class="e-btn e-btn-secondary e-btn-sq" data-dropdown-target="notifications">
+                  <i class="ri-notification-line e-fs-16"></i>
+                  <span class="e-bdg e-bdg-danger">4</span>
+                </button>
+
+                <div class="e-dropdown__menu" id="notifications">
+
+                  <div class="dropdown-header e-pd-20">
+                    <h6>Notifications</h6>
+                  </div>
+
+                  <ul class="dropdown-content">
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:47 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:05 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">Januray reports are ready</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">1:15 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New chat from Samantha Rue</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">1:00 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">Yearly plan is expiring soon</span>
+                      </a>
+                    </li>
+
+                  </ul>
+
+                  <div class="dropdown-footer e-pd-20">
+                    <button type="button" class="e-btn e-btn-secondary e-btn-link">Mark all as read</button>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="e-dropdown e-dropdown-abs-right e-d-in-flex e-align-center">
+                <button type="button" class="e-avat e-avat-35" data-dropdown-target="profile">
+                  <img src="images/user-f-1.jpg" alt="User" class="e-avat__img">
+                </button>
+
+                <div class="e-dropdown__menu" id="profile">
+
+                  <div class="dropdown-header e-pd-20">
+
+                    <div class="e-d-flex e-align-center">
+
+                      <div class="user-img e-mg-r-10">
+                        <div class="e-avat e-avat-40"><img src="images/user-f-1.jpg" alt="User" class="e-avat__img">
+                        </div>
+                      </div>
+                      <div class="user-details">
+                        <span class="e-fw-bld e-fs-14 e-d-block">Jane Matthew</span>
+                        <span class="e-fs-12">Project manager</span>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <ul class="dropdown-content">
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-user-star-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-14 e-fw-bld">Profile</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-equalizer-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-14 e-fw-bld">Settings</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-task-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-14 e-fw-bld">Tasks</span>
+                      </a>
+                    </li>
+
+                  </ul>
+
+                  <div class="dropdown-footer">
+                    <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                      <i class="ri-logout-box-r-line e-fs-18 e-mg-r-10"></i>
+                      <span class="e-fs-16 e-fw-bld">Sign out</span>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+            </div><!-- .e-header__right ends -->
+
+          </nav>
+
+        </div>
+
+      </div>
+
+    </header><!-- .e-header ends -->
+
     <main>
 
     </main>

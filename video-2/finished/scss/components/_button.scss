@@ -18,14 +18,16 @@
     @if $current-style == default {
       background-color: var(--btn-#{$current-style}-bg-clr);
       color: var(--btn-#{$current-style}-text-clr);
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: var(--e-primary-600-clr);
       }
     } @else {
       &.e-btn-#{$current-style} {
         background-color: var(--btn-#{$current-style}-bg-clr);
         color: var(--btn-#{$current-style}-text-clr);
-        &:hover {
+        &:hover,
+        &:focus {
           background-color: var(--e-#{$current-style}-300-clr);
         }
       }
@@ -46,8 +48,24 @@
     text-decoration: underline;
     background-color: transparent;
     text-transform: uppercase;
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: transparent;
     }
+  }
+}
+
+.e-btn-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  border-radius: 50%;
+  font-size: var(--icon-size);
+  background-color: transparent;
+  @include transition;
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-icon-hvr-bg);
   }
 }

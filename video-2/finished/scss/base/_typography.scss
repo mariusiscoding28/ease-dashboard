@@ -28,17 +28,3 @@ h6,
     font-size: var(--heading-#{$i});
   }
 }
-
-// $headings: (
-//   h1: 3rem,
-//   h2: 3rem,
-//   h3: 3rem,
-// );
-
-// $property: font-size font-weight;
-
-// $property: font-size;
-
-// @include loop-through-map($headings, null, $property: $property, $important: true);
-
-// @include loop-through-map($headings, $property: $property, $important: false, $responsive: false);
