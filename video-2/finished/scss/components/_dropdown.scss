@@ -17,6 +17,7 @@
     overflow: hidden auto;
     border-radius: var(--default-brd-rad);
     position: absolute;
+    z-index: 15;
     top: 120%;
     left: 0;
     opacity: 0;

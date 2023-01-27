@@ -6,7 +6,7 @@
 // $orange: #fd8b49;
 // $green: #5fab76;
 // $blue: #4a529d;
-// $red: #c44f4f;
+$red: #c44f4f;
 // $grey: #f3f3f9;
 
 $e-colors: (
@@ -220,11 +220,11 @@ $e-colors: (
   /* Forms */
   --default-input-padding: 0.9rem 3rem;
   /* Dropdown */
-  --default-dropdown-width: 22.5rem;
-  --default-dropdown-mx-height: 35rem;
+  --default-dropdown-width: 22.5rem; // vid 2
+  --default-dropdown-mx-height: 35rem; // vid 2
   /* Navbar */
-  --default-navbar-height: 6rem;
-  --default-sidebar-nav-width: 25rem;
+  --default-navbar-height: 6rem; // vid 2
+  --default-sidebar-nav-width: 25rem; // vid 2
 }
 
 /* ************** TYPOGRAPHY ************** */
@@ -277,7 +277,7 @@ $spacings: (
 $breakpoint-sm: 553px;
 $breakpoint-md: 901px;
 $breakpoint-lg: 1281px;
-$breakpoint-xl: 1440px;
+$breakpoint-xl: 1540px;
 
 // Breakpoint map
 $breakpoints-up: (

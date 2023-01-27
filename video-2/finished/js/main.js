@@ -150,3 +150,110 @@ const navbar = () => {
 }
 
 navbar()
+
+const progress = () => {
+  const _variables = {
+    main: [...document.querySelectorAll(".ease-progress")],
+    inner: "ease-progress__inner",
+    target: "data-current-progress",
+  }
+
+  if (_variables.main.length < 1) return
+
+  _variables.main.forEach(prog => {
+    const target = +prog.getAttribute(_variables.target)
+    const inner = prog.querySelector(`.${_variables.inner}`)
+
+    inner.style.width = `${target}%`
+  })
+
+}
+
+progress()
+
+const easeChart = () => {
+
+  // Project updates
+  const easeProject = document.querySelector("#ease-project");
+
+  const easeProjectColors = ["#dddde2", "#add4b8", "#bdbfff", "#c098a2"]
+
+  const data = {
+    labels: ['Sept - Oct', 'Nov - Dec', 'Jan - Feb'],
+    datasets: [
+      {
+        label: 'Total',
+        data: [125, 200, 576],
+        borderWidth: 1,
+        backgroundColor: easeProjectColors[0],
+        borderColor: easeProjectColors[0],
+      },
+      {
+        label: 'Completed',
+        data: [120, 185, 243],
+        borderWidth: 1,
+        backgroundColor: easeProjectColors[1],
+        borderColor: easeProjectColors[1],
+      },
+      {
+        label: 'In progress',
+        data: [5, 10, 102],
+        borderWidth: 1,
+        backgroundColor: easeProjectColors[2],
+        borderColor: easeProjectColors[2],
+      },
+      {
+        label: 'Delayed / canceled',
+        data: [0, 5, 231],
+        borderWidth: 1,
+        backgroundColor: easeProjectColors[3],
+        borderColor: easeProjectColors[3],
+      },
+    ]
+  }
+
+  new Chart(easeProject, {
+    type: 'bar',
+    data: data,
+    options: {
+      plugins: {
+        legend: {
+          display: false,
+        }
+      }
+    }
+  });
+
+  // Project earnings
+  const easeProjectEarn = document.querySelector("#ease-earnings");
+
+  const easeProjectEarnColors = ["#bdbfff", "#c098a2", "#add4b8", "#fdc4a1"]
+
+  const dataEarn = {
+    labels: ['Web / Mobile Applications', 'Branding / Marketing', 'Financial Analysis / Web / Mobile', 'Consultation'],
+    datasets: [
+      {
+        data: [13243, 6234, 10423, 11423],
+        borderWidth: 1,
+        backgroundColor: easeProjectEarnColors,
+        borderColor: easeProjectEarnColors,
+      },
+
+    ]
+  }
+
+  new Chart(easeProjectEarn, {
+    type: 'doughnut',
+    data: dataEarn,
+    options: {
+      plugins: {
+        legend: {
+          display: false,
+        }
+      }
+    }
+  });
+
+}
+
+easeChart()

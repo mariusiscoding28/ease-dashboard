@@ -28,3 +28,18 @@ h6,
     font-size: var(--heading-#{$i});
   }
 }
+
+.ease-section-heading {
+  .ease-title {
+    margin-bottom: 0.5rem;
+  }
+
+  // .sub-title {
+  //   color: var(--faded-text-clr);
+  // }
+}
+
+.ease-faded-text,
+.ease-section-heading .ease-sub-title {
+  color: var(--faded-text-clr);
+}
