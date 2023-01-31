@@ -151,6 +151,46 @@ const navbar = () => {
 
 navbar()
 
+// Modal
+const modal = () => {
+
+  const _variables = {
+    target: "data-modal-target",
+    active: "e-active",
+  }
+
+  document.addEventListener("click", (e) => {
+
+    const target = e.target.closest(`[${_variables.target}]`)
+
+    if (!target) return
+
+    const targetId = target.getAttribute(_variables.target)
+    const modal = document.querySelector(`#${targetId}`)
+
+    if (!modal) return
+
+    modal.classList.add(_variables.active)
+    document.body.style.overflow = "hidden"
+
+  })
+
+  window.addEventListener("mouseup", e => {
+    const target = e.target.closest(`[${_variables.target}]`) || e.target.closest(`.ease-subscription-plan`)
+
+    if (target) return
+    const modal = e.target.closest(".ease-modal")
+
+    if (!modal || modal && !modal.classList.contains(_variables.active)) return
+
+    modal.classList.remove(_variables.active)
+    document.body.removeAttribute("style")
+  })
+
+}
+
+modal()
+
 const progress = () => {
   const _variables = {
     main: [...document.querySelectorAll(".ease-progress")],

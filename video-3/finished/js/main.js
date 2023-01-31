@@ -151,6 +151,46 @@ const navbar = () => {
 
 navbar()
 
+// Modal
+const modal = () => {
+
+  const _variables = {
+    target: "data-modal-target",
+    active: "e-active",
+  }
+
+  document.addEventListener("click", (e) => {
+
+    const target = e.target.closest(`[${_variables.target}]`)
+
+    if (!target) return
+
+    const targetId = target.getAttribute(_variables.target)
+    const modal = document.querySelector(`#${targetId}`)
+
+    if (!modal) return
+
+    modal.classList.add(_variables.active)
+    document.body.style.overflow = "hidden"
+
+  })
+
+  window.addEventListener("mouseup", e => {
+    const target = e.target.closest(`[${_variables.target}]`) || e.target.closest(`.ease-subscription-plan`)
+
+    if (target) return
+    const modal = e.target.closest(".ease-modal")
+
+    if (!modal || modal && !modal.classList.contains(_variables.active)) return
+
+    modal.classList.remove(_variables.active)
+    document.body.removeAttribute("style")
+  })
+
+}
+
+modal()
+
 const progress = () => {
   const _variables = {
     main: [...document.querySelectorAll(".ease-progress")],
@@ -212,7 +252,7 @@ const easeChart = () => {
     ]
   }
 
-  new Chart(easeProject, {
+  if (easeProject) new Chart(easeProject, {
     type: 'bar',
     data: data,
     options: {
@@ -242,9 +282,84 @@ const easeChart = () => {
     ]
   }
 
-  new Chart(easeProjectEarn, {
+  if (easeProjectEarn) new Chart(easeProjectEarn, {
     type: 'doughnut',
     data: dataEarn,
+    options: {
+      plugins: {
+        legend: {
+          display: false,
+        }
+      }
+    }
+  });
+
+  // ECommerce 
+  // Revenue
+  const easeStoreRevenue = document.querySelector("#ease-revenue");
+  const easeRevenueColors = ["rgba(221, 221, 226, 0.25)", "rgba(192, 152, 162, 0.35)", "rgba(173, 212, 184, 0.45)", "rgba(253, 196, 161, 0.55)"]
+  const dataRevenue = {
+    labels: ['Aug', 'Sept', 'Oct', 'Nov', 'Dec', 'Jan'],
+    datasets: [
+      {
+        label: "Total orders",
+        data: [546, 241, 689, 1907, 6532, 679],
+        borderWidth: 1,
+        backgroundColor: easeRevenueColors,
+        borderColor: easeRevenueColors,
+        borderCapStyle: "round",
+        borderJoinStyle: "round",
+        fill: {
+          target: "origin",
+          below: "#bdbfff",
+        }
+      },
+      {
+        label: "Revenue",
+        data: [1678, 1321, 4907, 5672, 3905, 4230],
+        borderWidth: 1,
+        backgroundColor: easeRevenueColors,
+        borderColor: easeRevenueColors,
+        borderCapStyle: "round",
+        borderJoinStyle: "round",
+        fill: {
+          target: "origin",
+          below: "#bdbfff",
+        }
+      },
+      {
+        label: "Refunded",
+        data: [205, 600, 783, 200, 907, 1232],
+        borderWidth: 1,
+        backgroundColor: easeRevenueColors,
+        borderColor: easeRevenueColors,
+        borderCapStyle: "round",
+        borderJoinStyle: "round",
+        fill: {
+          target: "origin",
+          below: "#bdbfff",
+        }
+      },
+      {
+        label: "Daily profit",
+        data: [321, 212, 1002, 4017, 6732, 2531],
+        borderWidth: 1,
+        backgroundColor: easeRevenueColors,
+        borderColor: easeRevenueColors,
+        borderCapStyle: "round",
+        borderJoinStyle: "round",
+        fill: {
+          target: "origin",
+          below: "#bdbfff",
+        }
+      },
+
+    ]
+  }
+
+  if (easeStoreRevenue) new Chart(easeStoreRevenue, {
+    type: 'line',
+    data: dataRevenue,
     options: {
       plugins: {
         legend: {
