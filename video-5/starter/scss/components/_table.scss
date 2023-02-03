@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../layout/breakpoints" as *;
+
+.e-tbl {
+  width: 100%;
+  overflow: hidden;
+  border-collapse: collapse;
+  border: 0.1rem solid var(--brdr-clr);
+
+  &__header {
+    background-color: var(--tbl-header-bg-clr);
+  }
+
+  &__head {
+    /* thead th */
+    font-weight: var(--font-weight-bold);
+    font-family: var(--heading-font-family);
+    font-size: 1.4rem;
+  }
+
+  &__row:not(:last-of-type) &__data {
+    border-bottom: 0.1rem solid var(--brdr-clr);
+  }
+
+  &__head,
+  &__data {
+    padding: 1.6rem;
+    text-align: left;
+    white-space: nowrap;
+  }
+}
