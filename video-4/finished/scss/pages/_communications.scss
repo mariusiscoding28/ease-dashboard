@@ -3,7 +3,7 @@
 @use "../layout/breakpoints" as *;
 
 .ease-dashboard.ease-dashboard-communications {
-  .ease-message-block {
+  .ease-message-block > .e-row {
     position: relative;
   }
 
@@ -21,15 +21,19 @@
 
   // Chat
   .ease-message-box {
+    position: relative;
+
     .e-card__body {
       height: 100%;
-      max-height: 45rem;
+      max-height: 65rem;
       overflow: hidden auto;
       @include customScrollbar;
       @include respond(md) {
         max-height: 70rem;
+        margin-bottom: 8rem;
       }
     }
+
     .ease-messages-chat {
       .ease-chat {
         margin-bottom: 2rem;
@@ -57,6 +61,10 @@
     }
 
     .ease-message-footer {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
       .e-form__input {
         height: 100%;
         border-top-left-radius: 0;
@@ -72,18 +80,64 @@
       }
     }
   }
+
+  // Center
+  .ease-message-center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transform: translateX(-120%);
+    visibility: hidden;
+    @include transition;
+    &.e-active {
+      transform: translateX(0);
+      visibility: visible;
+    }
+
+    @include respond(md) {
+      position: static;
+      transform: translateX(0);
+      visibility: visible;
+      height: auto;
+    }
+  }
 }
 
 // Chat modal
-#ease-message-user-data {
+.ease-communication-modal {
   a:hover {
     color: var(--e-secondary-clr);
   }
 
-  .ease-message-user-data-modal {
+  .ease-communication-data-modal {
     .ease-chat-media .e-card img {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  > .e-container {
+    @include respond(lg) {
+      position: relative;
+
+      .ease-communication-data-modal {
+        position: relative;
+        top: var(--default-navbar-height);
+        // right: -$default-gutter;
+      }
+    }
+  }
+
+  @include respond(lg) {
+    background-color: rgba($color: #000000, $alpha: 0.02);
+    transform: translateX(120%);
+    visibility: hidden;
+    opacity: 1;
+    &.e-active {
+      transform: translateX(0);
     }
   }
 }

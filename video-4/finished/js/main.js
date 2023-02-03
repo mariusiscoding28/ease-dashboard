@@ -372,3 +372,82 @@ const easeChart = () => {
 }
 
 easeChart()
+
+const communicationComponents = () => {
+
+  const _variables = {
+    communicationTarget: "data-communication-target",
+    mainCommBox: "ease-message-center",
+    closeCommBoxTarget: document.querySelector("[data-close-target]"),
+    modalColumn: "ease-communication-data-modal",
+    active: "e-active",
+  }
+
+  // Opening the message box
+  document.addEventListener("click", e => {
+    const target = e.target.closest(`[${_variables.communicationTarget}]`)
+
+    if (!target) return
+
+    const targetId = target.getAttribute(_variables.communicationTarget)
+    const messageBox = document.querySelector(`#${targetId}`)
+
+    if (messageBox) messageBox.classList.add(_variables.active)
+  })
+
+  // Closing the message box
+  _variables.closeCommBoxTarget.addEventListener("click", () => {
+    const targetId = _variables.closeCommBoxTarget.getAttribute("data-close-target")
+    const messageBox = document.querySelector(`#${targetId}`)
+
+    if (messageBox) messageBox.classList.remove(_variables.active)
+  })
+
+  const messageBox = document.querySelector(`#${_variables.mainCommBox}`)
+  const communicationModal = document.querySelector(`.${_variables.modalColumn}`)
+
+  // Showing the modal on larger screen devices
+  let resizing, winWidth;
+  window.addEventListener("resize", (e) => {
+    clearTimeout(resizing)
+    resizing = setTimeout(updateModalOnResize, 500)
+  })
+
+  function updateModalOnResize() {
+    winWidth = window.innerWidth
+    let messageBoxHeight;
+
+    if (winWidth < 1281) return communicationModal.style.height = null
+
+    // Get the message box height
+    messageBoxHeight = messageBox.clientHeight
+    communicationModal.style.height = messageBoxHeight + "px"
+  }
+
+  updateModalOnResize()
+
+  // Update message box column
+
+  document.addEventListener("click", (e) => {
+
+    const commModal = document.querySelector(`#ease-message-user-data`)
+
+    if (winWidth < 1281) return
+
+    if (!commModal.classList.contains(_variables.active)) {
+
+      messageBox.classList.add("e-flex-md-8", "e-flex-lg-9")
+      messageBox.classList.remove("e-flex-md-4", "e-flex-lg-6")
+
+      return
+    }
+
+    messageBox.classList.remove("e-flex-md-8", "e-flex-lg-9")
+    messageBox.classList.add("e-flex-md-4", "e-flex-lg-6")
+    setTimeout(updateModalOnResize, 250)
+
+  })
+
+}
+
+communicationComponents()
