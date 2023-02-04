@@ -389,6 +389,8 @@ const communicationComponents = () => {
 
     if (!target) return
 
+    e.preventDefault()
+
     const targetId = target.getAttribute(_variables.communicationTarget)
     const messageBox = document.querySelector(`#${targetId}`)
 

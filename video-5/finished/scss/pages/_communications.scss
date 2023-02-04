@@ -111,7 +111,7 @@
   }
 }
 
-// Chat modal
+// Chat/Inbox modal
 .ease-communication-modal {
   a:hover {
     color: var(--e-secondary-clr);
@@ -143,5 +143,64 @@
     &.e-active {
       transform: translateX(0);
     }
+  }
+}
+
+// Inbox
+.ease-inbox-modal {
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: translateX(0);
+  opacity: 0;
+  visibility: hidden;
+  .ease-communication-data-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(120%);
+    @include transition;
+
+    .ease-inbox-full-email {
+      max-height: 25rem;
+      overflow: hidden auto;
+      margin-bottom: 3rem;
+      @include customScrollbar;
+    }
+
+    .e-form {
+      border: 0.2rem solid var(--e-gray-400-clr);
+      border-radius: var(--default-brd-rad);
+
+      &__group:not(:last-of-type) {
+        border-bottom: 0.2rem solid var(--e-gray-400-clr);
+      }
+
+      &__input {
+        background-color: transparent;
+        border: 0;
+        &:not([class*="e-form__textarea"]) {
+          color: var(--e-secondary-clr);
+        }
+      }
+
+      &__textarea {
+        height: 15rem;
+        resize: none;
+        line-height: 1.4;
+        text-indent: 0;
+        @include customScrollbar;
+      }
+
+      .attachments {
+        .ease-attachment {
+          padding: 0.2rem;
+          background-color: var(--e-secondary-100-clr);
+          color: var(--e-secondary-clr);
+          border-radius: var(--default-brd-rad);
+        }
+      }
+    }
+  }
+
+  &.e-active .ease-communication-data-modal {
+    transform: translateX(0);
   }
 }

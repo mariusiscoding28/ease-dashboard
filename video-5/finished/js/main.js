@@ -389,6 +389,8 @@ const communicationComponents = () => {
 
     if (!target) return
 
+    e.preventDefault()
+
     const targetId = target.getAttribute(_variables.communicationTarget)
     const messageBox = document.querySelector(`#${targetId}`)
 
@@ -417,7 +419,9 @@ const communicationComponents = () => {
     winWidth = window.innerWidth
     let messageBoxHeight;
 
-    if (winWidth < 1281) return communicationModal.style.height = null
+    // Added the "OR" statement after the creating the "Inbox page"
+
+    if (winWidth < 1281 || communicationModal.closest(".ease-communication-modal").classList.contains("ease-inbox-modal")) return communicationModal.style.height = null
 
     // Get the message box height
     if (!messageBox) return
@@ -433,7 +437,7 @@ const communicationComponents = () => {
 
     const commModal = document.querySelector(`#ease-message-user-data`)
 
-    if (winWidth < 1281) return
+    if (winWidth < 1281 || communicationModal.closest(".ease-communication-modal").classList.contains("ease-inbox-modal")) return
 
     if (!commModal.classList.contains(_variables.active)) {
 
