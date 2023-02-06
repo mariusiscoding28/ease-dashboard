@@ -35,6 +35,7 @@ const closeComponents = (type, event, variables) => {
 
 }
 
+// Dropdown
 const dropdown = () => {
   const _variables = {
     main: "e-dropdown",
@@ -57,43 +58,12 @@ const dropdown = () => {
 
     operateNavigations("dropdown", target, _variables);
 
-    // const targetId = target.querySelector(`[${_variables.target}]`).getAttribute(_variables.target)
-
-    // const activeMenu = document.querySelector(`#${targetId}`)
-
-    // const nonTargeted = _variables.dropDown.map(drop => {
-    //   const nonActiveId = drop.querySelector(`[${_variables.target}]`).getAttribute(_variables.target)
-    //   const nonActive = document.querySelector(`#${nonActiveId}`)
-
-    //   return nonActive
-    // })
-
-    // const filterExceptActive = nonTargeted.filter(target => target !== activeMenu)
-
-    // filterExceptActive.forEach(drop => drop.classList.remove(_variables.active))
-
-    // if (activeMenu) activeMenu.classList.toggle(_variables.active)
-
   })
 
-  window.addEventListener("mouseup", e => {
-
-    closeComponents("dropdown", e, _variables);
-
-    // const target = e.target.closest(`.${_variables.menu}`) || e.target.closest(`[${_variables.target}]`)
-
-    // if (target) return
-
-    // _variables.components.forEach(drop => {
-    //   const menu = drop.querySelector(`.${_variables.menu}`)
-    //   if (menu.classList.contains(_variables.active)) menu.classList.remove(_variables.active)
-    // })
-
-  })
+  window.addEventListener("mouseup", e => closeComponents("dropdown", e, _variables))
 }
 
-dropdown()
-
+// Navbar
 const navbar = () => {
   const _variables = {
     main: "e-header",
@@ -113,43 +83,11 @@ const navbar = () => {
 
     operateNavigations("navbar", targetBtn, _variables)
 
-    // const targetId = targetBtn.getAttribute(_variables.targetId)
-
-    // const activeMenu = document.querySelector(`#${targetId}`)
-
-    // const nonTargeted = _variables.components.map(head => {
-    //   const nonActiveId = head.querySelector(`[${_variables.targetId}]`).getAttribute(_variables.targetId)
-    //   const nonActive = document.querySelector(`#${nonActiveId}`)
-
-    //   return nonActive
-    // })
-
-    // const filterExceptActive = nonTargeted.filter(target => target !== activeMenu)
-
-    // filterExceptActive.forEach(drop => drop.classList.remove(_variables.active))
-
-    // if (activeMenu) activeMenu.classList.toggle(_variables.active)
-
   })
 
-  window.addEventListener("mouseup", e => {
-
-    closeComponents("navbar", e, _variables);
-
-    // const target = e.target.closest(`.${_variables.menu}`) || e.target.closest(_variables.target)
-
-    // if (target) return
-
-    // _variables.components.forEach(head => {
-    //   const menu = head.querySelector(`.${_variables.menu}`)
-    //   if (menu.classList.contains(_variables.active)) menu.classList.remove(_variables.active)
-    // })
-
-  })
+  window.addEventListener("mouseup", e => closeComponents("navbar", e, _variables))
 
 }
-
-navbar()
 
 // Modal
 const modal = () => {
@@ -189,8 +127,7 @@ const modal = () => {
 
 }
 
-modal()
-
+// Progress bars
 const progress = () => {
   const _variables = {
     main: [...document.querySelectorAll(".ease-progress")],
@@ -209,8 +146,7 @@ const progress = () => {
 
 }
 
-progress()
-
+// ChartJS charts
 const easeChart = () => {
 
   // Project updates
@@ -371,8 +307,7 @@ const easeChart = () => {
 
 }
 
-easeChart()
-
+// Chats and inbox
 const communicationComponents = () => {
 
   const _variables = {
@@ -382,6 +317,10 @@ const communicationComponents = () => {
     modalColumn: "ease-communication-data-modal",
     active: "e-active",
   }
+
+  const communicationComponent = document.querySelector(".ease-dashboard-communications")
+
+  if (!communicationComponent) return
 
   // Opening the message box
   document.addEventListener("click", e => {
@@ -405,54 +344,49 @@ const communicationComponents = () => {
     if (messageBox) messageBox.classList.remove(_variables.active)
   })
 
-  const messageBox = document.querySelector(`#${_variables.mainCommBox}`)
-  const communicationModal = document.querySelector(`.${_variables.modalColumn}`)
+  const leftCard = communicationComponent.querySelector(".ease-message-left")
+  const leftCardHeader = leftCard.querySelector(".e-card__header")
+  const leftCardBody = leftCard.querySelector(".e-card__body")
+  const centerCard = communicationComponent.querySelector(".ease-message-center")
+  const centerCardHeader = centerCard.querySelector(".e-card__header")
+  const centerCardBody = centerCard.querySelector(".e-card__body")
 
   // Showing the modal on larger screen devices
   let resizing, winWidth;
   window.addEventListener("resize", (e) => {
     clearTimeout(resizing)
-    resizing = setTimeout(updateModalOnResize, 500)
+    resizing = setTimeout(updateCardResize, 500)
   })
 
-  function updateModalOnResize() {
+  function updateCardResize() {
     winWidth = window.innerWidth
-    let messageBoxHeight;
 
-    // Added the "OR" statement after the creating the "Inbox page"
+    // Get the left card height (header & body)
+    const leftCHeaderH = leftCardHeader.clientHeight
+    const leftCBodyH = leftCardBody.clientHeight
 
-    if (winWidth < 1281 || communicationModal.closest(".ease-communication-modal").classList.contains("ease-inbox-modal")) return communicationModal.style.height = null
+    // Set center max height to the sum of left-card-header-height and left-card-body-height
+    if (winWidth >= 0 && winWidth < 553) return centerCardBody.style.maxHeight = "60rem"
 
-    // Get the message box height
-    if (!messageBox) return
-    messageBoxHeight = messageBox.clientHeight
-    communicationModal.style.height = messageBoxHeight + "px"
+    centerCardBody.style.maxHeight = `${leftCHeaderH + leftCBodyH}px`
+
   }
 
-  updateModalOnResize()
-
-  // Update message box column
-
-  document.addEventListener("click", (e) => {
-
-    const commModal = document.querySelector(`#ease-message-user-data`)
-
-    if (winWidth < 1281 || communicationModal.closest(".ease-communication-modal").classList.contains("ease-inbox-modal")) return
-
-    if (!commModal.classList.contains(_variables.active)) {
-
-      messageBox.classList.add("e-flex-md-8", "e-flex-lg-9")
-      messageBox.classList.remove("e-flex-md-4", "e-flex-lg-6")
-
-      return
-    }
-
-    messageBox.classList.remove("e-flex-md-8", "e-flex-lg-9")
-    messageBox.classList.add("e-flex-md-4", "e-flex-lg-6")
-    setTimeout(updateModalOnResize, 250)
-
-  })
+  updateCardResize()
 
 }
 
-communicationComponents()
+window.addEventListener("DOMContentLoaded", e => {
+  // Dropdown
+  dropdown()
+  // Navbar
+  navbar()
+  // Modal
+  modal()
+  // Progress
+  progress()
+  // Ease charts
+  easeChart()
+  // Chat & inbox
+  communicationComponents()
+})

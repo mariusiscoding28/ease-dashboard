@@ -19,24 +19,22 @@
     width: 100%;
   }
 
-  // Chat
+  .ease-message-left {
+    .e-card__body {
+      max-height: 70rem;
+      overflow: hidden auto;
+    }
+  }
+
+  // Chat - Center
   .ease-message-box {
     position: relative;
 
     .e-card__body {
       height: 100%;
-      max-height: 65rem;
+      margin-bottom: 8rem;
       overflow: hidden auto;
       @include customScrollbar;
-      @include respond(sm) {
-        max-height: 50rem;
-        margin-bottom: 8rem;
-      }
-
-      @include respond(md) {
-        max-height: 70rem;
-        margin-bottom: 8rem;
-      }
     }
 
     .ease-messages-chat {
@@ -86,8 +84,9 @@
     }
   }
 
-  // Center
-  .ease-message-center {
+  // Center and inbox
+  .ease-message-center,
+  .ease-inbox-block .ease-message-center {
     position: absolute;
     top: 0;
     left: 0;
@@ -96,17 +95,33 @@
     z-index: 10;
     transform: translateX(-120%);
     visibility: hidden;
+    overflow: hidden;
     @include transition;
     &.e-active {
       transform: translateX(0);
       visibility: visible;
     }
+  }
 
+  // Center and inbox
+  .ease-message-center,
+  .ease-inbox-block .ease-message-center {
     @include respond(sm) {
       position: static;
       transform: translateX(0);
       visibility: visible;
       height: auto;
+    }
+  }
+
+  // Inbox
+  .ease-inbox-block {
+    .ease-message-left .e-card {
+      overflow: hidden;
+      .e-card__body {
+        overflow: hidden auto;
+        @include customScrollbar;
+      }
     }
   }
 }
@@ -118,31 +133,16 @@
   }
 
   .ease-communication-data-modal {
+    transform: translateX(120%);
+    @include transition;
     .ease-chat-media .e-card img {
       width: 100%;
       height: 100%;
     }
   }
 
-  > .e-container {
-    @include respond(lg) {
-      position: relative;
-
-      .ease-communication-data-modal {
-        position: relative;
-        top: var(--default-navbar-height);
-      }
-    }
-  }
-
-  @include respond(lg) {
-    background-color: rgba($color: #000000, $alpha: 0.02);
-    transform: translateX(120%);
-    visibility: hidden;
-    opacity: 1;
-    &.e-active {
-      transform: translateX(0);
-    }
+  &.e-active .ease-communication-data-modal {
+    transform: translateX(0);
   }
 }
 
@@ -152,55 +152,45 @@
   transform: translateX(0);
   opacity: 0;
   visibility: hidden;
-  .ease-communication-data-modal {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(120%);
-    @include transition;
 
-    .ease-inbox-full-email {
-      max-height: 25rem;
-      overflow: hidden auto;
-      margin-bottom: 3rem;
+  .ease-inbox-full-email {
+    max-height: 25rem;
+    overflow: hidden auto;
+    margin-bottom: 3rem;
+    @include customScrollbar;
+  }
+
+  .e-form {
+    border: 0.2rem solid var(--e-gray-400-clr);
+    border-radius: var(--default-brd-rad);
+
+    &__group:not(:last-of-type) {
+      border-bottom: 0.2rem solid var(--e-gray-400-clr);
+    }
+
+    &__input {
+      background-color: transparent;
+      border: 0;
+      &:not([class*="e-form__textarea"]) {
+        color: var(--e-secondary-clr);
+      }
+    }
+
+    &__textarea {
+      height: 15rem;
+      resize: none;
+      line-height: 1.4;
+      text-indent: 0;
       @include customScrollbar;
     }
 
-    .e-form {
-      border: 0.2rem solid var(--e-gray-400-clr);
-      border-radius: var(--default-brd-rad);
-
-      &__group:not(:last-of-type) {
-        border-bottom: 0.2rem solid var(--e-gray-400-clr);
-      }
-
-      &__input {
-        background-color: transparent;
-        border: 0;
-        &:not([class*="e-form__textarea"]) {
-          color: var(--e-secondary-clr);
-        }
-      }
-
-      &__textarea {
-        height: 15rem;
-        resize: none;
-        line-height: 1.4;
-        text-indent: 0;
-        @include customScrollbar;
-      }
-
-      .attachments {
-        .ease-attachment {
-          padding: 0.2rem;
-          background-color: var(--e-secondary-100-clr);
-          color: var(--e-secondary-clr);
-          border-radius: var(--default-brd-rad);
-        }
+    .attachments {
+      .ease-attachment {
+        padding: 0.2rem;
+        background-color: var(--e-secondary-100-clr);
+        color: var(--e-secondary-clr);
+        border-radius: var(--default-brd-rad);
       }
     }
-  }
-
-  &.e-active .ease-communication-data-modal {
-    transform: translateX(0);
   }
 }
