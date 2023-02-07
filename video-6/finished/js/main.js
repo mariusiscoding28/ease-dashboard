@@ -149,6 +149,8 @@ const progress = () => {
 // ChartJS charts
 const easeChart = () => {
 
+  Chart.defaults.color = '#c9c9cd';
+
   // Project updates
   const easeProject = document.querySelector("#ease-project");
 
@@ -391,6 +393,12 @@ const lightDarkTheme = () => {
     currentTheme = themeSwitcher.getAttribute("data-current-theme")
     currentTheme = window.localStorage.setItem("theme", currentTheme)
     document.body.classList.toggle(`e-theme-dark`)
+
+
+    if (document.body.classList.contains("e-theme-dark")) console.log("Yes");
+
+
+
   })
 
   currentTheme = window.localStorage.getItem("theme");
