@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../layout/breakpoints" as *;
+
+body.e-theme-dark {
+  --global-bg-clr: var(--e-dark-300-clr);
+  --sidebar-bg-clr: var(--e-dark-400-clr);
+  --sidebar-menu-item-hvr-bg-clr: var(--e-dark-200-clr);
+  --sidebar-menu-item-active-brd-clr: var(--e-dark-400-clr);
+  --sidebar-empl-of-month-bg-clr: rgba(0, 0, 0, 0.8);
+  /* Navbar */
+  --navbar-bg-clr: var(--e-dark-300-clr);
+  /* Card */
+  --card-bg-clr: var(--e-dark-200-clr);
+  /* Border */
+  --brdr-clr: var(--e-gray-300-clr);
+  /* Table */
+  --tbl-header-bg-clr: var(--e-dark-400-clr);
+  /* Typography */
+  --global-text-clr: var(--e-gray-50-clr);
+  /* Form */
+  --input-bg-clr: var(--e-dark-300-clr);
+  --input-brdr-clr: var(--e-dark-400-clr);
+  --textarea-brdr-clr: var(--e-dark-300-clr);
+  --btn-icon-hvr-bg: var(--e-dark-300-clr);
+
+  // Client overview
+  .ease-dashboard .ease-client-overview .ease-level-silver {
+    color: var(--global-text-clr);
+  }
+
+  // Footer
+  .ease-footer {
+    --navbar-bg-clr: var(--e-dark-200-clr);
+  }
+
+  // Chat & inbox
+  .ease-dashboard.ease-dashboard-communications {
+    --e-gray-100-clr: var(--e-dark-100-clr);
+  }
+}

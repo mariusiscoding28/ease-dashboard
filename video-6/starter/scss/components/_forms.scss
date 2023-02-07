@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.e-form {
+  width: 100%;
+  &__group {
+    position: relative;
+    width: 100%;
+  }
+
+  &__input {
+    --default-input-padding: 1rem 2rem 1rem 4rem;
+    background-color: var(--input-bg-clr);
+    border: 0.1rem solid transparent;
+    padding: var(--default-input-padding);
+    display: block;
+    width: 100%;
+    border-radius: var(--default-brd-rad);
+    @include transition;
+
+    &:hover,
+    &:focus {
+      border-color: var(--input-brdr-clr);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+  }
+}
