@@ -287,3 +287,30 @@ $buttons: default primary secondary success warn danger;
 $badges: secondary success warn danger;
 // ========= Avatar ============ //
 $avatars: 30 35 40 45 50;
+
+
+// MIXIN
+@mixin customScrollbar($width: 0.5rem, $height: 0.5rem, $bg-color: var(--e-gray-600-clr)) {
+  // Firefox
+  scrollbar-width: thin;
+  scrollbar-color: $bg-color transparent;
+
+  // Chrome and others
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0.2rem transparent;
+    background: transparent;
+    margin: 1.1rem;
+  }
+
+  &::-webkit-scrollbar {
+    height: $height;
+    width: $width;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6rem;
+    width: $width;
+    background-color: $bg-color;
+  }
+}
