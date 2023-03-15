@@ -1,0 +1,7 @@
+// Chart JS
+--Project overiew bar chart colors:
+["#dddde2", "#add4b8", "#bdbfff", "#c098a2"]
+--Project earnings doughnut chart colors:
+["#bdbfff", "#c098a2", "#add4b8", "#fdc4a1"]
+--Ecommerce revenue line chart colors
+["rgba(221, 221, 226, 0.25)", "rgba(192, 152, 162, 0.35)", "rgba(173, 212, 184, 0.45)", "rgba(253, 196, 161, 0.55)"]

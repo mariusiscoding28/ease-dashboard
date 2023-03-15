@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="dist/css/main.css" />
+    <!-- Your page title-->
+    <title>Ease - Dashboard</title>
+    <!-- Place Custom Favicon here-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+
+  <body>
+
+    <header class="e-header e-header-fixed e-d-flex e-justify-between e-align-center">
+
+      <div class="e-container">
+
+        <div class="e-offset-12 e-offset-md-3 e-offset-lg-2">
+
+          <nav class="e-header__nav e-d-flex e-justify-between e-align-center">
+
+            <div class="e-header__left e-d-flex e-align-center e-mg-r-10 e-mg-r-0-md">
+
+              <div class="e-header__mobile e-mg-r-10 e-d-none-md">
+                <button type="button" class="e-icon-btn e-header__mobile--trigger" data-menu-target="main-menu">
+                  <i class="ri-menu-2-line e-fs-16"></i>
+                </button>
+              </div>
+
+              <div class="e-header__form">
+
+                <form class="e-form">
+                  <div class="e-form__group">
+                    <input type="text" class="e-form__input" placeholder="Search...">
+                    <i class="ri-search-line e-form__icon"></i>
+                  </div>
+                </form>
+
+              </div>
+
+            </div><!-- .e-header__left ends -->
+
+            <ul class="e-header__navitems e-header__sidebar-md-3 e-header__sidebar-lg-2 e-pd-y-20" id="main-menu">
+
+              <li class="e-header__list">
+                <a href="index.html" class="e-header__link--logo e-pd-20 e-d-flex e-align-center e-justify-center">
+                  <img src="images/ease-logo.svg" alt="Ease Dashboard logo">
+                </a>
+              </li>
+
+              <li class="e-header__list e-dropdown">
+                <a href="" class="e-header__link e-active e-pd-20 e-d-flex e-align-center e-justify-between"
+                  data-dropdown-target="submenu">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-dashboard-line e-mg-r-10"></i>Dashboard</span>
+                  <i class="ri-arrow-down-s-line"></i>
+                </a>
+                <ul class="e-dropdown__menu" id="submenu">
+                  <li><a href="index.html" class="e-header__sublink e-d-block e-pd-x-20 e-pd-y-10 e-active">Project</a>
+                  </li>
+                  <li><a href="ecommerce.html" class="e-header__sublink e-d-block e-pd-x-20 e-pd-y-10">eCommerce</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="e-header__list e-header__list--title e-fw-bld e-tt-uppercase e-pd-x-20 e-pd-y-10">Applications
+              </li>
+
+              <li class="e-header__list">
+                <a href="messages.html" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-message-2-line e-mg-r-10"></i>Messages</span>
+                  <span class="e-bdg e-bdg-danger">12</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="inbox.html" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-inbox-line e-mg-r-10"></i>Inbox</span>
+                  <span class="e-bdg e-bdg-danger">6</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-calendar-2-line e-mg-r-10"></i>Calendar</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-task-line e-mg-r-10"></i>Task</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-bar-chart-line e-mg-r-10"></i>Reports /
+                    Earnings</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-table-2 e-mg-r-10"></i>Kanban board</span>
+                </a>
+              </li>
+
+              <li class="e-header__list e-header__list--title e-fw-bld e-tt-uppercase e-pd-x-20 e-pd-y-10">Components
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-team-line e-mg-r-10"></i>Teams</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-group-2-line e-mg-r-10"></i>Clients</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-price-tag-2-line e-mg-r-10"></i>Pricing
+                    table</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-shopping-cart-line e-mg-r-10"></i>Products</span>
+                </a>
+              </li>
+
+              <li class="e-header__list e-header__list--title e-fw-bld e-tt-uppercase e-pd-x-20 e-pd-y-10">System
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-equalizer-line e-mg-r-10"></i>Settings</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-user-star-line e-mg-r-10"></i>Profile</span>
+                </a>
+              </li>
+
+              <li class="e-header__list e-header__list--employee-of-month">
+                <div class="e-card">
+                  <img src="images/employee-month.jpg" alt="Employee of the month">
+                  <div class="employee-details e-pd-20 e-ta-center">
+                    <h4>Employee of the month</h4>
+                    <h2>Casey W.</h2>
+                    <span class="e-fs-12 e-tt-capitalize">Senior software engineer</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="e-header__list e-pd-x-20">
+                <a href="#" class="e-btn e-d-flex e-pd-y-20">
+                  <span class="e-fs-16 e-d-flex e-align-center"><i class="ri-logout-box-r-line e-mg-r-10"></i>Log
+                    out</span>
+                </a>
+              </li>
+
+            </ul><!-- .e-header__navitems ends -->
+
+            <div class="e-header__right e-d-flex e-align-center">
+
+              <div class="site-alert e-mg-r-10">
+                <button type="button" class="ease-modal-btn e-btn-icon"
+                  data-modal-target="subscription-reminder"></button>
+              </div>
+
+              <div class="theme-control e-mg-r-10">
+                <button type="button" class="theme-switcher e-btn-icon" data-current-theme="light">
+                  <i class="ri-moon-line theme-dark"></i>
+                  <i class="ri-sun-line theme-light"></i>
+                </button>
+              </div>
+
+              <div class="e-dropdown e-dropdown-abs-right e-d-in-flex e-mg-r-10">
+
+                <button type="button" class="e-btn e-btn-secondary e-btn-sq" data-dropdown-target="notifications">
+                  <i class="ri-notification-line e-fs-16"></i>
+                  <span class="e-bdg e-bdg-danger">4</span>
+                </button>
+
+                <div class="e-dropdown__menu" id="notifications">
+
+                  <div class="dropdown-header e-pd-20">
+                    <h6>Notifications</h6>
+                  </div>
+
+                  <ul class="dropdown-content">
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:47 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:47 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:47 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:47 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                  </ul>
+
+                  <div class="dropdown-footer e-pd-20">
+                    <button type="button" class="e-btn e-btn-secondary e-btn-link">Mark all as read</button>
+                  </div>
+
+                </div><!-- .e-dropdown__menu ends -->
+
+              </div><!-- e-dropdown ends -->
+
+              <div class="e-dropdown e-dropdown-abs-right e-d-in-flex e-align-center">
+
+                <button type="button" class="e-avat e-avat-35" data-dropdown-target="profile">
+                  <img src="images/user-f-1.jpg" alt="" class="e-avat__img">
+                </button>
+
+                <div class="e-dropdown__menu" id="profile">
+
+                  <div class="dropdown-header e-pd-20">
+
+                    <div class="e-d-flex e-align-center">
+
+                      <div class="user-img e-mg-r-10">
+                        <div class="e-avat e-avat-40">
+                          <img src="images/user-f-1.jpg" alt="User" class="e-avat__img">
+                        </div>
+                      </div>
+
+                      <div class="user-details">
+                        <span class="e-fw-bld e-fs-14 e-d-block">Jane Matthew</span>
+                        <span class="e-fs-12">Project manager</span>
+                      </div>
+
+                    </div>
+
+                  </div><!-- .dropdown-header ends -->
+
+                  <ul class="dropdown-content">
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-user-star-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-14 e-fw-bld">Profile</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-equalizer-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-14 e-fw-bld">Settings</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-task-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-14 e-fw-bld">Tasks</span>
+                      </a>
+                    </li>
+
+                  </ul>
+
+                  <div class="dropdown-footer">
+                    <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                      <i class="ri-logout-box-r-line e-fs-18 e-mg-r-10"></i>
+                      <span class="e-fs-16 e-fw-bld">Sign out</span>
+                    </a>
+                  </div>
+
+                </div><!-- .e-dropdown__menu ends -->
+
+              </div><!-- e-dropdown ends -->
+
+            </div><!-- .e-header__right ends -->
+
+          </nav>
+
+        </div>
+
+      </div>
+
+
+    </header><!-- .e-header ends -->
+
+    <main>
+
+      <div class="ease-dashboard">
+
+        <div class="e-container">
+
+          <div class="e-offset-12 e-offset-md-3 e-offset-lg-2">
+
+            <div class="ease-section-heading e-pd-y-20">
+              <h4 class="ease-title">Good morning, Jane!</h4>
+              <p class="ease-sub-title">Your dashboard and components are refreshed</p>
+            </div>
+
+            <section class="ease-overview e-pd-y-20">
+
+              <div class="e-row">
+
+                <div class="e-flex-sm-6 e-flex-lg-3 e-mg-b-20 e-mg-b-0-lg">
+
+                  <div class="e-card">
+
+                    <div class="e-card__header">
+                      <span class="e-card__title e-fw-bld">Active projects</span>
+                      <span class="e-btn-icon e-btn-icon-static"><i class="ri-bar-chart-line"></i></span>
+                    </div>
+
+                    <div class="e-card__body e-d-flex e-justify-between e-align-end">
+
+                      <div class="left-side">
+                        <h2 class="e-mg-b-10">125</h2>
+                        <p class="e-fs-12 e-d-flex e-align-center">
+                          <span class="ease-indicator-up e-mg-r-10 e-d-in-flex e-align-center"><i
+                              class="ri-arrow-up-line"></i> 12.5%</span>
+                          <span class="ease-faded-text">From last week</span>
+                        </p>
+                      </div>
+
+                      <div class="right-side">
+                        <div class="e-bdg e-bdg-danger ease-bdg"><i class="ri-folders-line"></i></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="e-flex-sm-6 e-flex-lg-3 e-mg-b-20 e-mg-b-0-lg">
+
+                  <div class="e-card">
+
+                    <div class="e-card__header">
+                      <span class="e-card__title e-fw-bld">Avg project earnings</span>
+                      <span class="e-btn-icon e-btn-icon-static"><i class="ri-bar-chart-line"></i></span>
+                    </div>
+
+                    <div class="e-card__body e-d-flex e-justify-between e-align-end">
+
+                      <div class="left-side">
+                        <h2 class="e-mg-b-10">$5,436.07</h2>
+                        <p class="e-fs-12 e-d-flex e-align-center">
+                          <span class="ease-indicator-up e-mg-r-10 e-d-in-flex e-align-center"><i
+                              class="ri-arrow-up-line"></i>
+                            15.7%</span>
+                          <span class="ease-faded-text">From last week</span>
+                        </p>
+                      </div>
+
+                      <div class="right-side">
+                        <div class="e-bdg e-bdg-secondary ease-bdg"><i class="ri-money-dollar-circle-line"></i></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="e-flex-sm-6 e-flex-lg-3 e-mg-b-20 e-mg-b-0-sm">
+
+                  <div class="e-card">
+
+                    <div class="e-card__header">
+                      <span class="e-card__title e-fw-bld">Revenue</span>
+                      <span class="e-btn-icon e-btn-icon-static"><i class="ri-bar-chart-line"></i></span>
+                    </div>
+
+                    <div class="e-card__body e-d-flex e-justify-between e-align-end">
+
+                      <div class="left-side">
+                        <h2 class="e-mg-b-10">$62,789.06</h2>
+                        <p class="e-fs-12 e-d-flex e-align-center">
+                          <span class="ease-indicator-down e-mg-r-10 e-d-in-flex e-align-center"><i
+                              class="ri-arrow-down-line"></i>
+                            4%</span>
+                          <span class="ease-faded-text">From last month</span>
+                        </p>
+                      </div>
+
+                      <div class="right-side">
+                        <div class="e-bdg e-bdg-success ease-bdg"><i class="ri-line-chart-line"></i></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="e-flex-sm-6 e-flex-lg-3">
+
+                  <div class="e-card">
+
+                    <div class="e-card__header">
+                      <span class="e-card__title e-fw-bld">Miscellaneous</span>
+                      <span class="e-btn-icon e-btn-icon-static"><i class="ri-bar-chart-line"></i></span>
+                    </div>
+
+                    <div class="e-card__body e-d-flex e-justify-between">
+
+                      <div class="ease-box e-ta-center">
+                        <h2 class="e-mg-b-10">12</h2>
+                        <p class="e-fs-12 ease-faded-text">Messages</p>
+                      </div>
+                      <div class="ease-box e-ta-center">
+                        <h2 class="e-mg-b-10">6</h2>
+                        <p class="e-fs-12 ease-faded-text">Inbox</p>
+                      </div>
+                      <div class="ease-box e-ta-center">
+                        <h2 class="e-mg-b-10">4</h2>
+                        <p class="e-fs-12 ease-faded-text">Notifications</p>
+                      </div>
+                      <div class="ease-box e-ta-center">
+                        <h2 class="e-mg-b-10">1</h2>
+                        <p class="e-fs-12 ease-faded-text">Alerts</p>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </section><!-- .ease-overview ends -->
+
+            <section class="ease-project-updates e-pd-y-20">
+
+              <div class="e-row">
+
+                <div class="e-flex-md-7 e-mg-b-20 e-mg-b-0-md">
+
+                  <div class="e-card">
+
+                    <div class="e-card__header">
+                      <span class="e-card__title e-fw-bld">Project's updates</span>
+
+                      <div class="e-d-flex e-align-center">
+                        <button type="button" class="e-btn e-btn-sm e-btn-primary e-mg-r-10">
+                          <i class="ri-arrow-up-line e-mg-r-10"></i>
+                          Export
+                        </button>
+
+                        <button type="button" class="e-btn e-btn-secondary e-btn-sq">
+                          <i class="ri-add-line"></i>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="e-card__body e-pd-0">
+
+                      <div class="e-overflow-auto">
+
+                        <table class="e-tbl">
+
+                          <thead class="e-tbl__header">
+                            <tr class="e-tbl__row">
+                              <th class="e-tbl__head">Name</th>
+                              <th class="e-tbl__head">Teams</th>
+                              <th class="e-tbl__head">Progress</th>
+                              <th class="e-tbl__head">Status</th>
+                              <th class="e-tbl__head">Budget</th>
+                              <th class="e-tbl__head">Deadline</th>
+                            </tr>
+                          </thead>
+
+                          <tbody class="e-tbl__body">
+
+                            <tr class="e-tbl__row">
+                              <td class="e-tbl__data">FitPro website analysis</td>
+                              <td class="e-tbl__data">
+                                <div class="e-avat-group">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-2.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                  <div class="e-avat e-avat-30"><img src="images/user-f-3.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                  <div class="e-avat e-avat-30"><img src="images/user-f-2.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                  <div class="e-avat e-avat-30"><img src="images/user-f-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+                              </td>
+                              <td class="e-tbl__data">
+                                <div class="ease-progress" data-current-progress="35">
+                                  <span class="ease-progress__inner"></span>
+                                </div>
+                              </td>
+                              <td class="e-tbl__data">
+                                <div class="e-bdg e-bdg-secondary">In progress</div>
+                              </td>
+                              <td class="e-tbl__data">
+                                $7,345.98
+                              </td>
+                              <td class="e-tbl__data">
+                                July 16, 2023
+                              </td>
+                            </tr>
+
+                            <tr class="e-tbl__row">
+                              <td class="e-tbl__data">Gmail re-branding</td>
+                              <td class="e-tbl__data">
+                                <div class="e-avat-group">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-2.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                  <div class="e-avat e-avat-30"><img src="images/user-f-3.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                  <div class="e-avat e-avat-30"><img src="images/user-f-2.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+                              </td>
+                              <td class="e-tbl__data">
+                                <div class="ease-progress" data-current-progress="0">
+                                  <span class="ease-progress__inner"></span>
+                                </div>
+                              </td>
+                              <td class="e-tbl__data">
+                                <div class="e-bdg e-bdg-danger">Canceled</div>
+                              </td>
+                              <td class="e-tbl__data">
+                                $7,345.98
+                              </td>
+                              <td class="e-tbl__data">
+                                July 16, 2023
+                              </td>
+                            </tr>
+
+                            <tr class="e-tbl__row">
+                              <td class="e-tbl__data">WordPress deployment</td>
+                              <td class="e-tbl__data">
+                                <div class="e-avat-group">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-2.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+                              </td>
+                              <td class="e-tbl__data">
+                                <div class="ease-progress" data-current-progress="100">
+                                  <span class="ease-progress__inner"></span>
+                                </div>
+                              </td>
+                              <td class="e-tbl__data">
+                                <div class="e-bdg e-bdg-success">Completed</div>
+                              </td>
+                              <td class="e-tbl__data">
+                                $7,345.98
+                              </td>
+                              <td class="e-tbl__data">
+                                July 16, 2023
+                              </td>
+                            </tr>
+
+                            <tr class="e-tbl__row">
+                              <td class="e-tbl__data">Website design for EatPro</td>
+                              <td class="e-tbl__data">
+                                <div class="e-avat-group">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-2.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                  <div class="e-avat e-avat-30"><img src="images/user-f-3.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                  <div class="e-avat e-avat-30"><img src="images/user-f-2.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                  <div class="e-avat e-avat-30"><img src="images/user-f-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+                              </td>
+                              <td class="e-tbl__data">
+                                <div class="ease-progress" data-current-progress="0">
+                                  <span class="ease-progress__inner"></span>
+                                </div>
+                              </td>
+                              <td class="e-tbl__data">
+                                <div class="e-bdg e-bdg-warn">Pending</div>
+                              </td>
+                              <td class="e-tbl__data">
+                                $7,345.98
+                              </td>
+                              <td class="e-tbl__data">
+                                July 16, 2023
+                              </td>
+                            </tr>
+
+                            <tr class="e-tbl__row">
+                              <td class="e-tbl__data">Wireframe for Amazon App</td>
+                              <td class="e-tbl__data">
+                                <div class="e-avat-group">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-2.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                  <div class="e-avat e-avat-30"><img src="images/user-f-3.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                  <div class="e-avat e-avat-30"><img src="images/user-f-2.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                  <div class="e-avat e-avat-30"><img src="images/user-f-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+                              </td>
+                              <td class="e-tbl__data">
+                                <div class="ease-progress" data-current-progress="82">
+                                  <span class="ease-progress__inner"></span>
+                                </div>
+                              </td>
+                              <td class="e-tbl__data">
+                                <div class="e-bdg e-bdg-secondary">In progress</div>
+                              </td>
+                              <td class="e-tbl__data">
+                                $7,345.98
+                              </td>
+                              <td class="e-tbl__data">
+                                July 16, 2023
+                              </td>
+                            </tr>
+
+                          </tbody>
+
+                        </table>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="e-flex-md-5">
+
+                  <div class="e-card">
+
+                    <div class="e-card__header">
+
+                      <span class="e-card__title e-fw-bld">Featured project</span>
+                      <a href="#" class="e-btn e-btn-sq e-btn-secondary"><i class="ri-arrow-right-up-line"></i></a>
+
+                    </div>
+
+                    <div class="e-card__body e-d-flex e-align-center">
+
+                      <div class="e-row e-align-center">
+
+                        <div class="e-flex-sm-7 e-flex-md-12 e-flex-lg-7 e-mg-b-20 e-mg-b-0-lg">
+
+                          <div class="ease-section-heading e-pd-y-20">
+                            <h4 class="ease-title">FitPro website</h4>
+                            <p class="e-fs-12 ease-sub-title">Website analysis</p>
+                          </div>
+
+                          <p class="e-mg-b-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat,
+                            commodi ducimus velit eveniet delectus minima vitae ad fuga repellendus expedita ipsa. Et
+                            quisquam ea aperiam, numquam reprehenderit facilis aut quam. Aspernatur exercitationem nisi
+                            illo cumque!</p>
+
+                          <div class="e-avat-group">
+                            <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt="" class="e-avat__img">
+                            </div>
+                            <div class="e-avat e-avat-30"><img src="images/user-m-2.jpg" alt="" class="e-avat__img">
+                            </div>
+                            <div class="e-avat e-avat-30"><img src="images/user-f-3.jpg" alt="" class="e-avat__img">
+                            </div>
+                            <div class="e-avat e-avat-30"><img src="images/user-f-2.jpg" alt="" class="e-avat__img">
+                            </div>
+                            <div class="e-avat e-avat-30"><img src="images/user-f-1.jpg" alt="" class="e-avat__img">
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="e-flex-sm-5 e-flex-md-12 e-flex-lg-5">
+
+                          <div class="e-card ease-featured-project e-overflow-hidden">
+                            <img src="images/fitness-lg.jpg" alt="">
+                            <div class="decoration"><img src="images/decoration.svg" alt=""></div>
+                          </div>
+
+                        </div>
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </section><!-- .ease-project-updates ends -->
+
+            <section class="ease-project-overview e-pd-y-20">
+
+              <div class="e-row">
+
+                <div class="e-flex-lg-6 e-mg-b-20 e-mg-b-0-lg">
+
+                  <div class="e-card">
+
+                    <div class="e-card__header">
+                      <span class="e-card__title e-fw-bld">Projects overview</span>
+
+                      <div class="e-d-in-block e-dropdown e-dropdown-abs-right">
+                        <button type="button" class="e-btn-icon" data-dropdown-target="project-overview">
+                          <i class="ri-more-2-line"></i>
+                        </button>
+
+                        <div class="e-dropdown__menu" id="project-overview">
+
+                          <ul class="dropdown-content">
+
+                            <li class="dropdown-list"><a href="#" class="dropdown-link e-d-block e-pd-10">Completed</a>
+                            </li>
+
+                            <li class="dropdown-list"><a href="#" class="dropdown-link e-d-block e-pd-10">In
+                                progress</a></li>
+
+                            <li class="dropdown-list"><a href="#" class="dropdown-link e-d-block e-pd-10">Delayed /
+                                canceled</a></li>
+
+                          </ul>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="e-card__body e-pd-0">
+
+                      <div class="e-tbl__header e-pd-20 e-ta-center e-overflow-hidden">
+
+                        <div class="e-row">
+
+                          <div class="e-flex-6 e-flex-sm-3 e-mg-b-8 e-mg-b-0-sm">
+                            <div class="e-h2">576</div>
+                            <span class="e-fs-12">Total projects</span>
+                          </div>
+
+                          <div class="e-flex-6 e-flex-sm-3 e-mg-b-8 e-mg-b-0-sm">
+                            <div class="e-h2">243</div>
+                            <span class="e-fs-12 e-bdg e-bdg-success">Completed</span>
+                          </div>
+
+                          <div class="e-flex-6 e-flex-sm-3">
+                            <div class="e-h2">102</div>
+                            <span class="e-fs-12 e-bdg e-bdg-secondary">In progress</span>
+                          </div>
+
+                          <div class="e-flex-6 e-flex-sm-3">
+                            <div class="e-h2">231</div>
+                            <span class="e-fs-12 e-bdg e-bdg-danger">Delayed/canceled</span>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                      <div class="ease-chart e-pd-20">
+                        <canvas id="ease-project"></canvas>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="e-flex-lg-6">
+
+                  <div class="e-card">
+
+                    <div class="e-card__header">
+                      <span class="e-card__title e-fw-bld">Project's earnings</span>
+                    </div>
+
+                    <div class="e-card__body e-d-flex e-fd-column e-align-center">
+
+                      <div class="e-row e-mg-b-20">
+
+                        <div class="e-flex-6 e-flex-sm-3 e-mg-b-8 e-mg-b-0-sm">
+                          <div class="e-h2">$13,243.75</div>
+                          <span class="e-fs-12 e-bdg e-bdg-secondary e-tt-capitalize">Web / mobile applications</span>
+                        </div>
+
+                        <div class="e-flex-6 e-flex-sm-3 e-mg-b-8 e-mg-b-0-sm">
+                          <div class="e-h2">$6,234.75</div>
+                          <span class="e-fs-12 e-bdg e-bdg-danger e-tt-capitalize">Branding / marketing</span>
+                        </div>
+
+                        <div class="e-flex-6 e-flex-sm-3">
+                          <div class="e-h2">$10,423.75</div>
+                          <span class="e-fs-12 e-bdg e-bdg-success e-tt-capitalize">Financial analysis / web /
+                            mobile</span>
+                        </div>
+
+                        <div class="e-flex-6 e-flex-sm-3">
+                          <div class="e-h2">$11,423.75</div>
+                          <span class="e-fs-12 e-bdg e-bdg-warn e-tt-capitalize">Consultation</span>
+                        </div>
+
+                      </div>
+
+                      <div class="ease-earning-chart e-d-flex e-justify-center e-align-center">
+                        <canvas id="ease-earnings"></canvas>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </section><!-- .ease-project-overview ends -->
+
+            <section class="ease-client-overview e-pd-y-20">
+
+              <div class="e-card ease-client">
+
+                <div class="e-card__header">
+                  <span class="e-card__title e-fw-bld">Client overview</span>
+                </div>
+
+                <div class="e-card__body e-pd-0">
+
+                  <div class="e-overflow-auto">
+
+                    <table class="e-tbl">
+
+                      <thead class="e-tbl__header">
+                        <tr class="e-tbl__row">
+                          <th class="e-tbl__head">Name</th>
+                          <th class="e-tbl__head">Project</th>
+                          <th class="e-tbl__head">Joined</th>
+                          <th class="e-tbl__head">Spend</th>
+                          <th class="e-tbl__head">Level</th>
+                        </tr>
+                      </thead>
+
+                      <tbody class="e-tbl__body">
+
+                        <tr class="e-tbl__row">
+
+                          <td class="e-tbl__data">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10">
+                                <div class="e-avat e-avat-30"><img src="images/fitness-sm.jpg" alt=""
+                                    class="e-avat__img">
+                                </div>
+                              </div>
+
+                              <div class="user-details">
+                                <span class="e-h5 e-d-block">FitPro</span>
+                                <span class="e-fs-12">John D.</span>
+                              </div>
+
+                            </div>
+
+                          </td>
+
+                          <td class="e-tbl__data">FitPro website analysis</td>
+
+                          <td class="e-tbl__data">July 16, 2023</td>
+                          <td class="e-tbl__data">$27,345.98</td>
+                          <td class="e-tbl__data"><span class="ease-level-gold e-fw-md">Gold</span></td>
+                        </tr>
+
+                        <tr class="e-tbl__row">
+
+                          <td class="e-tbl__data">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10">
+                                <div class="e-avat e-avat-30"><img src="images/fruit-2.jpg" alt="" class="e-avat__img">
+                                </div>
+                              </div>
+
+                              <div class="user-details">
+                                <span class="e-h5 e-d-block">EatPro</span>
+                                <span class="e-fs-12">Jackson D.</span>
+                              </div>
+
+                            </div>
+
+                          </td>
+
+                          <td class="e-tbl__data">Website design for EatPro</td>
+
+                          <td class="e-tbl__data">July 16, 2023</td>
+                          <td class="e-tbl__data">$17,345.98</td>
+                          <td class="e-tbl__data"><span class="ease-level-silver e-fw-md">Silver</span></td>
+                        </tr>
+
+                        <tr class="e-tbl__row">
+
+                          <td class="e-tbl__data">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10">
+                                <div class="e-avat e-avat-30"><img src="images/shoe-1.jpg" alt="" class="e-avat__img">
+                                </div>
+                              </div>
+
+                              <div class="user-details">
+                                <span class="e-h5 e-d-block">Nike</span>
+                                <span class="e-fs-12">Riley R.</span>
+                              </div>
+
+                            </div>
+
+                          </td>
+
+                          <td class="e-tbl__data">Marketing &amp; branding</td>
+
+                          <td class="e-tbl__data">July 16, 2023</td>
+                          <td class="e-tbl__data">$47,345.98</td>
+                          <td class="e-tbl__data"><span class="ease-level-gold e-fw-md">Gold</span></td>
+                        </tr>
+
+                        <tr class="e-tbl__row">
+
+                          <td class="e-tbl__data">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10">
+                                <div class="e-avat e-avat-30"><img src="images/fruit-1.jpg" alt="" class="e-avat__img">
+                                </div>
+                              </div>
+
+                              <div class="user-details">
+                                <span class="e-h5 e-d-block">Instacart</span>
+                                <span class="e-fs-12">Williams W.</span>
+                              </div>
+
+                            </div>
+
+                          </td>
+
+                          <td class="e-tbl__data">Marketing &amp; branding</td>
+
+                          <td class="e-tbl__data">July 16, 2023</td>
+                          <td class="e-tbl__data">$22,345.98</td>
+                          <td class="e-tbl__data"><span class="ease-level-gold e-fw-md">Gold</span></td>
+                        </tr>
+
+                        <tr class="e-tbl__row">
+
+                          <td class="e-tbl__data">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10">
+                                <div class="e-avat e-avat-30"><img src="images/bag.jpg" alt="" class="e-avat__img">
+                                </div>
+                              </div>
+
+                              <div class="user-details">
+                                <span class="e-h5 e-d-block">Amazon</span>
+                                <span class="e-fs-12">Jeff B.</span>
+                              </div>
+
+                            </div>
+
+                          </td>
+
+                          <td class="e-tbl__data">Wireframe for Amazon App</td>
+
+                          <td class="e-tbl__data">July 16, 2023</td>
+                          <td class="e-tbl__data">$12,345.98</td>
+                          <td class="e-tbl__data"><span class="ease-level-silver e-fw-md">Silver</span></td>
+                        </tr>
+
+                      </tbody>
+
+                    </table>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </section><!-- .ease-client-overview ends -->
+
+            <section class="ease-communication-overview e-pd-y-20">
+
+              <div class="e-row">
+
+                <div class="e-flex-md-6 e-mg-b-20 e-mg-b-0-md">
+
+                  <div class="e-card ease-communication">
+
+                    <div class="e-card__header">
+                      <span class="e-card__title e-fw-bld">Message updates</span>
+
+                      <div class="e-d-flex e-align-center">
+                        <span class="e-fs-12 ease-faded-text">Refreshed 1h ago</span>
+                        <div class="e-mg-l-10">
+                          <button type="button" class="e-btn-icon"><i class="ri-refresh-line"></i></button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="e-card__body e-pd-0">
+
+                      <div class="ease-message">
+
+                        <div class="e-tbl__header e-d-flex e-justify-between e-align-center e-pd-x-20 e-pd-y-16">
+                          <span>Messages</span>
+                          <a href="messages.html" class="e-btn e-btn-secondary e-btn-link e-tt-none">View all</a>
+                        </div>
+
+                        <div class="e-tbl__row">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Johnathan R.</span>
+                                  <p class="e-fs-12 ease-content">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    elit. Eos voluptate odio saepe voluptatum magnam voluptas!</p>
+                                </div>
+
+                              </div>
+
+                              <span class="ease-meta e-fs-12 ease-faded-text">02/02/23 || 09:45 AM</span>
+
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <div class="e-tbl__row">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-f-2.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Samantha R.</span>
+                                  <p class="e-fs-12 ease-content">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    elit. Eos voluptate odio saepe voluptatum magnam voluptas!</p>
+                                </div>
+
+                              </div>
+
+                              <span class="ease-meta e-fs-12 ease-faded-text">02/01/23 || 07:25 AM</span>
+
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="e-flex-md-6">
+
+                  <div class="e-card ease-communication">
+
+                    <div class="e-card__header">
+                      <span class="e-card__title e-fw-bld">Inbox updates</span>
+
+                      <div class="e-d-flex e-align-center">
+                        <span class="e-fs-12 ease-faded-text">Refreshed 1h ago</span>
+                        <div class="e-mg-l-10">
+                          <button type="button" class="e-btn-icon"><i class="ri-refresh-line"></i></button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="e-card__body e-pd-0">
+
+                      <div class="ease-inbox">
+
+                        <div class="e-tbl__header e-d-flex e-justify-between e-align-center e-pd-x-20 e-pd-y-16">
+                          <span>Inbox</span>
+                          <a href="inbox.html" class="e-btn e-btn-secondary e-btn-link e-tt-none">View all</a>
+                        </div>
+
+                        <div class="e-tbl__row">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex-lg">
+
+                                <div class="left-side e-d-flex e-mg-r-10-lg">
+
+                                  <div class="e-mg-r-10">
+                                    <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                        class="e-avat__img"></div>
+                                  </div>
+
+                                  <div class="ease-communication-details">
+                                    <span class="e-h5 e-d-block">Johnathan R.</span>
+                                    <p class="e-fs-12">johnathan.r@example.com</p>
+                                  </div>
+
+                                </div>
+
+                                <div class="right-side">
+                                  <div class="ease-communication-details">
+                                    <span class="e-h5 e-d-block">Re: Wireframe</span>
+                                    <p class="e-fs-12">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                      Voluptatum velit rem tempora?</p>
+                                  </div>
+                                </div>
+
+                              </div>
+
+                              <span class="ease-meta e-fs-12 ease-faded-text">02/02/23 || 09:45 AM</span>
+
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <div class="e-tbl__row">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex-lg">
+
+                                <div class="left-side e-d-flex e-mg-r-10-lg">
+
+                                  <div class="e-mg-r-10">
+                                    <div class="e-avat e-avat-30"><img src="images/user-f-2.jpg" alt=""
+                                        class="e-avat__img"></div>
+                                  </div>
+
+                                  <div class="ease-communication-details">
+                                    <span class="e-h5 e-d-block">Samantha R.</span>
+                                    <p class="e-fs-12">samantha.r@example.com</p>
+                                  </div>
+
+                                </div>
+
+                                <div class="right-side">
+                                  <div class="ease-communication-details">
+                                    <span class="e-h5 e-d-block">Re: Today's meet</span>
+                                    <p class="e-fs-12">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                      Voluptatum velit rem tempora?</p>
+                                  </div>
+                                </div>
+
+                              </div>
+
+                              <span class="ease-meta e-fs-12 ease-faded-text">02/01/23 || 07:45 AM</span>
+
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </section><!-- .ease-communication-overview ends -->
+
+          </div><!-- .e-offset-* ends -->
+
+        </div><!-- .e-container ends -->
+
+      </div><!-- .ease-dashboard ends -->
+
+    </main>
+
+    <!-- Modal -->
+    <div class="ease-modal e-d-flex e-fd-column e-justify-center e-align-center e-pd-20" id="subscription-reminder">
+
+      <div class="e-container">
+
+        <div class="e-row e-justify-center e-align-center">
+
+          <div class="e-flex-sm-3 e-flex-xl-2">
+
+            <div class="e-card ease-subscription-plan ease-modal-inner">
+
+              <div class="e-card__header e-ta-center e-justify-center">
+                <span class="e-card__title e-fw-bld">Reminder - Subscription</span>
+              </div>
+
+              <div class="e-card__body e-ta-center e-overflow-hidden">
+
+                <div class="e-h2">Subscription</div>
+                <span class="e-fs-12">Expires in 10 days</span>
+
+                <p class="e-mg-y-10">This is a reminder to renew your yearly subscription plan.</p>
+
+                <div class="e-h2">$4,623.76</div>
+                <span class="e-d-block e-fs-12 e-mg-b-10">1 Year - Renews in 2024</span>
+
+                <a href="#" class="e-btn e-fs-16">Renew plan</a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div><!-- .ease-modal ends -->
+
+    <footer class="ease-footer e-pd-y-20">
+
+      <div class="e-container">
+
+        <div class="e-offset-12 e-offset-md-3 e-offset-lg-2">
+          <p>&copy; 2023 / Ease / Designed &amp; developed by <a href="#"
+              class="e-btn e-btn-secondary e-btn-link e-tt-none">Marius is Coding</a></p>
+        </div>
+
+      </div>
+
+    </footer>
+
+    <!-- ChartJS script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Main (custom) script-->
+    <script src="dist/js/main.min.js"></script>
+  </body>
+
+</html>

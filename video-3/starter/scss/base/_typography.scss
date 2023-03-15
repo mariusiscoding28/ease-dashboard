@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// Headings
+h1,
+.e-h1,
+h2,
+.e-h2,
+h3,
+.e-h3,
+h4,
+.e-h4,
+h5,
+.e-h5,
+h6,
+.e-h6 {
+  font-family: var(--heading-font-family);
+  color: inherit;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--heading-line-height);
+  margin-bottom: 0;
+}
+
+// Headings
+@for $i from 1 through 6 {
+  h#{$i},
+  .e-h#{$i} {
+    font-size: var(--heading-#{$i});
+  }
+}
+
+.ease-section-heading {
+  .ease-title {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.ease-faded-text,
+.ease-section-heading .ease-sub-title {
+  color: var(--faded-text-clr);
+}

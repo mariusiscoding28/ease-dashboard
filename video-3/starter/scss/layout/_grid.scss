@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "breakpoints" as *;
+
+/* ******************* LAYOUT AND GRID ****************** */
+.e-container,
+[class*="e-container-"] {
+  width: var(--container-default);
+  margin: 0 auto;
+}
+
+// Creating various containers based on screen sizes
+@each $size, $value in $containers {
+  .e-container-#{$size} {
+    @include respond(#{$size}) {
+      max-width: $value;
+    }
+  }
+}
+
+// Row and columns
+.e-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$default-gutter;
+  margin-right: -$default-gutter;
+
+  > [class*="e-flex-"] {
+    width: 100%;
+    max-width: 100%;
+    padding-right: $default-gutter;
+    padding-left: $default-gutter;
+  }
+
+  @for $i from 1 through $total-cols {
+    .e-flex-#{$i} {
+      @include grid($total-cols, $i);
+    }
+  }
+
+  @each $break, $value in $containers {
+    @include respond(#{$break}) {
+      @for $i from 1 through $total-cols {
+        .e-flex-#{$break}-#{$i} {
+          @include grid($total-cols, $i);
+        }
+      }
+    }
+  }
+}
+
+// Offset columns - Non-responsive
+@include offset-grid($total-cols, false);
+// Offset columns - Responsive
+@include offset-grid($total-cols, true);
