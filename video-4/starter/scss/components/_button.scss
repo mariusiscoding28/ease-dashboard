@@ -1,0 +1,70 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.e-btn {
+  border: 0;
+  border-radius: var(--default-brd-rad);
+  cursor: pointer;
+  padding: var(--default-btn-padding);
+  font-size: var(--btn-size);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  @include transition;
+
+  // Generating different styles
+  @each $current-style in $buttons {
+    @if $current-style == default {
+      background-color: var(--btn-#{$current-style}-bg-clr);
+      color: var(--btn-#{$current-style}-text-clr);
+      &:hover {
+        background-color: var(--e-primary-600-clr);
+      }
+    } @else {
+      &.e-btn-#{$current-style} {
+        background-color: var(--btn-#{$current-style}-bg-clr);
+        color: var(--btn-#{$current-style}-text-clr);
+        &:hover {
+          background-color: var(--e-#{$current-style}-300-clr);
+        }
+      }
+    }
+  }
+
+  &.e-btn-sm,
+  &.e-btn-sq {
+    padding: var(--default-btn-sm-padding);
+  }
+
+  &.e-btn-sq {
+    width: calc(2rem + var(--btn-size));
+  }
+
+  &.e-btn-link {
+    padding: 0;
+    text-decoration: underline;
+    background-color: transparent;
+    text-transform: uppercase;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.e-btn-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  border-radius: 50%;
+  text-align: center;
+  font-size: var(--icon-size);
+  background-color: transparent;
+  @include transition;
+
+  &:hover,
+  &:focus,
+  &.e-btn-icon-static {
+    background-color: var(--btn-icon-hvr-bg);
+  }
+}

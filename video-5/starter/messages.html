@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="dist/css/main.css" />
+    <!-- Your page title-->
+    <title>Ease - Messages - Dashboard</title>
+    <!-- Place Custom Favicon here-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+
+  <body>
+
+    <header class="e-header e-header-fixed e-d-flex e-justify-between e-align-center">
+
+      <div class="e-container">
+
+        <div class="e-offset-12 e-offset-md-3 e-offset-lg-2">
+
+          <nav class="e-header__nav e-d-flex e-justify-between e-align-center">
+
+            <div class="e-header__left e-d-flex e-align-center e-mg-r-10 e-mg-r-0-md">
+
+              <div class="e-header__mobile e-mg-r-10 e-d-none-md">
+                <button type="button" class="e-icon-btn e-header__mobile--trigger" data-menu-target="main-menu">
+                  <i class="ri-menu-2-line e-fs-16"></i>
+                </button>
+              </div>
+
+              <div class="e-header__form">
+
+                <form class="e-form">
+                  <div class="e-form__group">
+                    <input type="text" class="e-form__input" placeholder="Search...">
+                    <i class="ri-search-line e-form__icon"></i>
+                  </div>
+                </form>
+
+              </div>
+
+            </div><!-- .e-header__left ends -->
+
+            <ul class="e-header__navitems e-header__sidebar-md-3 e-header__sidebar-lg-2 e-pd-y-20" id="main-menu">
+
+              <li class="e-header__list">
+                <a href="index.html" class="e-header__link--logo e-pd-20 e-d-flex e-align-center e-justify-center">
+                  <img src="images/ease-logo.svg" alt="Ease Dashboard logo">
+                </a>
+              </li>
+
+              <li class="e-header__list e-dropdown">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between"
+                  data-dropdown-target="submenu">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-dashboard-line e-mg-r-10"></i>Dashboard</span>
+                  <i class="ri-arrow-down-s-line"></i>
+                </a>
+                <ul class="e-dropdown__menu" id="submenu">
+                  <li><a href="index.html" class="e-header__sublink e-d-block e-pd-x-20 e-pd-y-10">Project</a>
+                  </li>
+                  <li><a href="ecommerce.html" class="e-header__sublink e-d-block e-pd-x-20 e-pd-y-10">eCommerce</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="e-header__list e-header__list--title e-fw-bld e-tt-uppercase e-pd-x-20 e-pd-y-10">Applications
+              </li>
+
+              <li class="e-header__list">
+                <a href="messages.html"
+                  class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between e-active">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-message-2-line e-mg-r-10"></i>Messages</span>
+                  <span class="e-bdg e-bdg-danger">12</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="inbox.html" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-inbox-line e-mg-r-10"></i>Inbox</span>
+                  <span class="e-bdg e-bdg-danger">6</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-calendar-2-line e-mg-r-10"></i>Calendar</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-task-line e-mg-r-10"></i>Task</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-bar-chart-line e-mg-r-10"></i>Reports /
+                    Earnings</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-table-2 e-mg-r-10"></i>Kanban board</span>
+                </a>
+              </li>
+
+              <li class="e-header__list e-header__list--title e-fw-bld e-tt-uppercase e-pd-x-20 e-pd-y-10">Components
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-team-line e-mg-r-10"></i>Teams</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-group-2-line e-mg-r-10"></i>Clients</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-price-tag-2-line e-mg-r-10"></i>Pricing
+                    table</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-shopping-cart-line e-mg-r-10"></i>Products</span>
+                </a>
+              </li>
+
+              <li class="e-header__list e-header__list--title e-fw-bld e-tt-uppercase e-pd-x-20 e-pd-y-10">System
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-equalizer-line e-mg-r-10"></i>Settings</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-user-star-line e-mg-r-10"></i>Profile</span>
+                </a>
+              </li>
+
+              <li class="e-header__list e-header__list--employee-of-month">
+                <div class="e-card">
+                  <img src="images/employee-month.jpg" alt="Employee of the month">
+                  <div class="employee-details e-pd-20 e-ta-center">
+                    <h4>Employee of the month</h4>
+                    <h2>Casey W.</h2>
+                    <span class="e-fs-12 e-tt-capitalize">Senior software engineer</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="e-header__list e-pd-x-20">
+                <a href="#" class="e-btn e-d-flex e-pd-y-20">
+                  <span class="e-fs-16 e-d-flex e-align-center"><i class="ri-logout-box-r-line e-mg-r-10"></i>Log
+                    out</span>
+                </a>
+              </li>
+
+            </ul><!-- .e-header__navitems ends -->
+
+            <div class="e-header__right e-d-flex e-align-center">
+
+              <div class="site-alert e-mg-r-10">
+                <button type="button" class="ease-modal-btn e-btn-icon"
+                  data-modal-target="subscription-reminder"></button>
+              </div>
+
+              <div class="theme-control e-mg-r-10">
+                <button type="button" class="theme-switcher e-btn-icon" data-current-theme="light">
+                  <i class="ri-moon-line theme-dark"></i>
+                  <i class="ri-sun-line theme-light"></i>
+                </button>
+              </div>
+
+              <div class="e-dropdown e-dropdown-abs-right e-d-in-flex e-mg-r-10">
+
+                <button type="button" class="e-btn e-btn-secondary e-btn-sq" data-dropdown-target="notifications">
+                  <i class="ri-notification-line e-fs-16"></i>
+                  <span class="e-bdg e-bdg-danger">4</span>
+                </button>
+
+                <div class="e-dropdown__menu" id="notifications">
+
+                  <div class="dropdown-header e-pd-20">
+                    <h6>Notifications</h6>
+                  </div>
+
+                  <ul class="dropdown-content">
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:47 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:47 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:47 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:47 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                  </ul>
+
+                  <div class="dropdown-footer e-pd-20">
+                    <button type="button" class="e-btn e-btn-secondary e-btn-link">Mark all as read</button>
+                  </div>
+
+                </div><!-- .e-dropdown__menu ends -->
+
+              </div><!-- e-dropdown ends -->
+
+              <div class="e-dropdown e-dropdown-abs-right e-d-in-flex e-align-center">
+
+                <button type="button" class="e-avat e-avat-35" data-dropdown-target="profile">
+                  <img src="images/user-f-1.jpg" alt="" class="e-avat__img">
+                </button>
+
+                <div class="e-dropdown__menu" id="profile">
+
+                  <div class="dropdown-header e-pd-20">
+
+                    <div class="e-d-flex e-align-center">
+
+                      <div class="user-img e-mg-r-10">
+                        <div class="e-avat e-avat-40">
+                          <img src="images/user-f-1.jpg" alt="User" class="e-avat__img">
+                        </div>
+                      </div>
+
+                      <div class="user-details">
+                        <span class="e-fw-bld e-fs-14 e-d-block">Jane Matthew</span>
+                        <span class="e-fs-12">Project manager</span>
+                      </div>
+
+                    </div>
+
+                  </div><!-- .dropdown-header ends -->
+
+                  <ul class="dropdown-content">
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-user-star-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-14 e-fw-bld">Profile</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-equalizer-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-14 e-fw-bld">Settings</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-task-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-14 e-fw-bld">Tasks</span>
+                      </a>
+                    </li>
+
+                  </ul>
+
+                  <div class="dropdown-footer">
+                    <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                      <i class="ri-logout-box-r-line e-fs-18 e-mg-r-10"></i>
+                      <span class="e-fs-16 e-fw-bld">Sign out</span>
+                    </a>
+                  </div>
+
+                </div><!-- .e-dropdown__menu ends -->
+
+              </div><!-- e-dropdown ends -->
+
+            </div><!-- .e-header__right ends -->
+
+          </nav>
+
+        </div>
+
+      </div>
+
+
+    </header><!-- .e-header ends -->
+
+    <main>
+
+      <div class="ease-dashboard ease-dashboard-communications ease-dashboard-messages">
+
+        <div class="e-container">
+
+          <div class="e-offset-12 e-offset-md-3 e-offset-lg-2">
+
+            <section class="ease-message-block e-pd-y-20">
+
+              <div class="e-row">
+
+                <div class="e-flex-md-4 e-flex-sm-6 e-flex-lg-3 ease-message-left">
+
+                  <div class="e-card">
+
+                    <div class="e-card__header e-d-block">
+
+                      <div class="e-d-flex e-justify-between e-align-center e-mg-b-20">
+                        <h3>Messages</h3>
+                        <span class="e-bdg e-bdg-danger">12</span>
+                      </div>
+
+                      <form class="e-form">
+                        <div class="e-form__group">
+                          <input type="text" class="e-form__input" placeholder="Search...">
+                          <i class="ri-search-line e-form__icon"></i>
+                        </div>
+                      </form>
+
+                    </div>
+
+                    <div class="e-card__body e-pd-0">
+
+                      <div class="ease-message-options e-d-flex e-justify-between e-align-center e-pd-x-20 e-pd-y-10">
+
+                        <div class="e-d-flex">
+                          <button type="button" class="e-btn-icon e-mg-r-8"><i
+                              class="ri-checkbox-blank-line"></i></button>
+                          <button type="button" class="e-btn-icon e-mg-r-8"><i class="ri-delete-bin-line"></i></button>
+                          <button type="button" class="e-btn-icon e-mg-r-8"><i class="ri-heart-line"></i></button>
+                          <button type="button" class="e-btn-icon"><i class="ri-reply-line"></i></button>
+                        </div>
+
+                        <div class="e-d-flex">
+                          <button type="button" class="e-btn-icon e-mg-r-8"><i class="ri-refresh-line"></i></button>
+                          <button type="button" class="e-btn-icon"><i class="ri-chat-new-line"></i></button>
+                        </div>
+
+                      </div><!-- .ease-message-options ends -->
+
+                      <ul class="ease-messages-content ease-communication">
+
+                        <li class="e-tbl__row ease-messages-row" data-communication-target="ease-message-center">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Johnathan R.</span>
+                                  <p class="e-fs-12 ease-content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.</p>
+                                </div>
+
+                                <span class="ease-meta e-fs-12">09:45 AM</span>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row e-active"
+                          data-communication-target="ease-message-center">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Johnathan R.</span>
+                                  <p class="e-fs-12 ease-content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.</p>
+                                </div>
+
+                                <span class="ease-meta e-fs-12">09:45 AM</span>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-communication-target="ease-message-center">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Johnathan R.</span>
+                                  <p class="e-fs-12 ease-content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.</p>
+                                </div>
+
+                                <span class="ease-meta e-fs-12">09:45 AM</span>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-communication-target="ease-message-center">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Johnathan R.</span>
+                                  <p class="e-fs-12 ease-content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.</p>
+                                </div>
+
+                                <span class="ease-meta e-fs-12">09:45 AM</span>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-communication-target="ease-message-center">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Johnathan R.</span>
+                                  <p class="e-fs-12 ease-content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.</p>
+                                </div>
+
+                                <span class="ease-meta e-fs-12">09:45 AM</span>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-communication-target="ease-message-center">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Johnathan R.</span>
+                                  <p class="e-fs-12 ease-content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.</p>
+                                </div>
+
+                                <span class="ease-meta e-fs-12">09:45 AM</span>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-communication-target="ease-message-center">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Johnathan R.</span>
+                                  <p class="e-fs-12 ease-content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.</p>
+                                </div>
+
+                                <span class="ease-meta e-fs-12">09:45 AM</span>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-communication-target="ease-message-center">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Johnathan R.</span>
+                                  <p class="e-fs-12 ease-content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.</p>
+                                </div>
+
+                                <span class="ease-meta e-fs-12">09:45 AM</span>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                      </ul>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="e-flex-md-8 e-flex-sm-6 e-flex-lg-9 ease-message-center" id="ease-message-center">
+
+                  <div class="e-card ease-message-box">
+
+                    <div class="e-card__header">
+
+                      <div class="e-d-flex e-align-center">
+
+                        <div class="e-mg-r-10 e-d-none-sm">
+                          <button type="button" class="e-btn-icon e-fs-20" data-close-target="ease-message-center"><i
+                              class="ri-arrow-left-line"></i></button>
+                        </div>
+
+                        <div class="e-mg-r-10">
+                          <div class="e-avat e-avat-40"><img src="images/user-f-3.jpg" alt="" class="e-avat__img"></div>
+                        </div>
+
+                        <div class="user-details">
+                          <span class="e-h5 e-d-block">Samantha Rue</span>
+                          <span class="e-fs-12 ease-indicator-up">Online</span>
+                        </div>
+
+                      </div><!-- .e-d-flex ends -->
+
+                      <div class="e-d-flex">
+                        <button type="button" class="e-btn-icon e-mg-r-8"><i class="ri-video-chat-line"></i></button>
+                        <button type="button" class="e-btn-icon ease-modal-btn"
+                          data-modal-target="ease-message-user-data"><i class="ri-information-line"></i></button>
+                      </div>
+
+                    </div>
+
+                    <div class="e-card__body e-pd-0 e-pd-t-20">
+
+                      <div class="ease-messages-chat e-d-flex e-fd-column e-pd-x-20">
+
+                        <div class="e-d-flex ease-chat chat-is-you">
+
+                          <div class="e-mg-r-10">
+                            <div class="e-avat e-avat-30"><img src="images/user-f-3.jpg" alt="" class="e-avat__img">
+                            </div>
+                          </div>
+
+                          <div class="chat-bubble e-pd-20">
+                            <p class="e-mg-b-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                              aspernatur sit reiciendis?</p>
+                            <span class="e-fs-12 ease-faded-text">09:45 AM</span>
+                          </div>
+
+                        </div><!-- .ease-chat ends -->
+
+                        <div class="e-d-flex ease-chat chat-is-me">
+
+                          <div class="chat-bubble e-pd-20">
+                            <p class="e-mg-b-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                              aspernatur sit reiciendis?</p>
+                            <span class="e-fs-12 ease-faded-text">09:45 AM</span>
+                          </div>
+
+                        </div><!-- .ease-chat ends -->
+
+                        <div class="e-d-flex ease-chat chat-is-you">
+
+                          <div class="e-mg-r-10">
+                            <div class="e-avat e-avat-30"><img src="images/user-f-3.jpg" alt="" class="e-avat__img">
+                            </div>
+                          </div>
+
+                          <div class="chat-bubble e-pd-20">
+                            <p class="e-mg-b-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                              aspernatur sit reiciendis?</p>
+                            <span class="e-fs-12 ease-faded-text">09:45 AM</span>
+                          </div>
+
+                        </div><!-- .ease-chat ends -->
+
+                        <div class="e-d-flex ease-chat chat-is-me">
+
+                          <div class="chat-bubble e-pd-20">
+                            <p class="e-mg-b-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                              aspernatur sit reiciendis?</p>
+                            <span class="e-fs-12 ease-faded-text">09:45 AM</span>
+                          </div>
+
+                        </div><!-- .ease-chat ends -->
+
+                        <div class="e-d-flex ease-chat chat-is-you">
+
+                          <div class="e-mg-r-10">
+                            <div class="e-avat e-avat-30"><img src="images/user-f-3.jpg" alt="" class="e-avat__img">
+                            </div>
+                          </div>
+
+                          <div class="chat-bubble e-pd-20">
+                            <p class="e-mg-b-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                              aspernatur sit reiciendis?</p>
+                            <span class="e-fs-12 ease-faded-text">09:45 AM</span>
+                          </div>
+
+                        </div><!-- .ease-chat ends -->
+
+                        <div class="e-d-flex ease-chat chat-is-me">
+
+                          <div class="chat-bubble e-pd-20">
+                            <p class="e-mg-b-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                              aspernatur sit reiciendis?</p>
+                            <span class="e-fs-12 ease-faded-text">09:45 AM</span>
+                          </div>
+
+                        </div><!-- .ease-chat ends -->
+
+                        <div class="e-d-flex ease-chat chat-is-you">
+
+                          <div class="e-mg-r-10">
+                            <div class="e-avat e-avat-30"><img src="images/user-f-3.jpg" alt="" class="e-avat__img">
+                            </div>
+                          </div>
+
+                          <div class="chat-bubble e-pd-20">
+                            <p class="e-mg-b-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                              aspernatur sit reiciendis?</p>
+                            <span class="e-fs-12 ease-faded-text">09:45 AM</span>
+                          </div>
+
+                        </div><!-- .ease-chat ends -->
+
+                        <div class="e-d-flex ease-chat chat-is-me">
+
+                          <div class="chat-bubble e-pd-20">
+                            <p class="e-mg-b-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                              aspernatur sit reiciendis?</p>
+                            <span class="e-fs-12 ease-faded-text">09:45 AM</span>
+                          </div>
+
+                        </div><!-- .ease-chat ends -->
+
+                        <div class="e-d-flex ease-chat chat-is-you">
+
+                          <div class="e-mg-r-10">
+                            <div class="e-avat e-avat-30"><img src="images/user-f-3.jpg" alt="" class="e-avat__img">
+                            </div>
+                          </div>
+
+                          <div class="chat-bubble e-pd-20">
+                            <p class="e-mg-b-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                              aspernatur sit reiciendis?</p>
+                            <span class="e-fs-12 ease-faded-text">09:45 AM</span>
+                          </div>
+
+                        </div><!-- .ease-chat ends -->
+
+                        <div class="e-d-flex ease-chat chat-is-me">
+
+                          <div class="chat-bubble e-pd-20">
+                            <p class="e-mg-b-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                              aspernatur sit reiciendis?</p>
+                            <span class="e-fs-12 ease-faded-text">09:45 AM</span>
+                          </div>
+
+                        </div><!-- .ease-chat ends -->
+
+                      </div>
+
+                    </div><!-- .e-card__body ends -->
+
+                    <div class="ease-message-footer e-pd-20">
+
+                      <form class="e-form">
+
+                        <div class="e-d-flex e-align-center">
+                          <span class="e-form__input options e-d-in-flex e-align-center">
+                            <i class="ri-mic-line e-mg-r-8"></i>
+                            <i class="ri-attachment-2 e-mg-r-8"></i>
+                            <span>|</span>
+                          </span>
+                          <div class="e-form__group e-d-flex e-align-center">
+                            <input type="text" class="e-form__input" placeholder="Message...">
+                          </div>
+                        </div>
+
+                      </form>
+
+                    </div><!-- .ease-message-footer ends -->
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </section><!-- .ease-message-block ends -->
+
+          </div><!-- .e-offset-* ends -->
+
+        </div><!-- .e-container ends -->
+
+      </div><!-- .ease-dashboard ends -->
+
+    </main>
+
+    <!-- Modal -->
+
+    <!-- Chat modal -->
+    <div class="ease-modal ease-communication-modal e-pd-y-20" id="ease-message-user-data">
+
+      <div class="e-container">
+
+        <div class="e-offset-12 e-offset-md-3 e-offset-lg-2">
+
+          <div class="e-row e-justify-end e-align-center">
+
+            <div class="e-flex-md-4 e-flex-lg-3 ease-communication-data-modal">
+
+              <div class="e-card ease-modal-inner">
+
+                <div class="e-card__header">
+
+                  <div class="e-d-flex e-align-center">
+
+                    <div class="e-mg-r-10">
+                      <div class="e-avat e-avat-50"><img src="images/user-f-3.jpg" alt="" class="e-avat__img"></div>
+                    </div>
+
+                    <div class="user-details">
+                      <span class="e-h5 e-d-block">Samantha Rue</span>
+                      <span class="e-fs-12 ease-faded-text">Frontend Engineer | @samantha.r</span>
+                    </div>
+
+                  </div><!-- .e-d-flex ends -->
+
+                </div>
+
+                <div class="e-card__body">
+
+                  <div class="e-mg-b-20">
+
+                    <h4>Actions</h4>
+
+                    <ul class="e-mg-t-20">
+                      <li class="e-mg-b-10">
+                        <a href="#" class="e-d-flex e-align-center"><i class="ri-user-star-line e-mg-r-8"></i> Add to
+                          favorites</a>
+                      </li>
+                      <li class="e-mg-b-10">
+                        <a href="#" class="e-d-flex e-align-center"><i class="ri-group-2-line e-mg-r-8"></i> Start group
+                          chat</a>
+                      </li>
+                      <li class="e-mg-b-10">
+                        <a href="#" class="e-d-flex e-align-center"><i class="ri-user-unfollow-line e-mg-r-8"></i> Block
+                          user</a>
+                      </li>
+                      <li class="e-mg-b-10">
+                        <a href="#" class="e-d-flex e-align-center"><i class="ri-chat-off-line e-mg-r-8"></i> Mute
+                          notifications</a>
+                      </li>
+                      <li>
+                        <a href="#" class="e-d-flex e-align-center"><i class="ri-chat-history-line e-mg-r-8"></i> View
+                          chat history</a>
+                      </li>
+                    </ul>
+
+                  </div>
+
+                  <div class="e-mg-b-20">
+
+                    <h4>Documents</h4>
+
+                    <ul class="e-mg-t-20">
+                      <li class="e-mg-b-10">
+                        <a href="#" class="e-d-flex e-align-center"><i class="ri-folder-zip-line e-mg-r-8"></i>
+                          ease_financial_010123.zip</a>
+                      </li>
+                      <li class="e-mg-b-10">
+                        <a href="#" class="e-d-flex e-align-center"><i class="ri-file-pdf-line e-mg-r-8"></i>
+                          client_orders.pdf</a>
+                      </li>
+                      <li class="e-mg-b-10">
+                        <a href="#" class="e-d-flex e-align-center"><i class="ri-file-text-line e-mg-r-8"></i>
+                          practical_sql_query.txt</a>
+                      </li>
+                      <li>
+                        <a href="#" class="e-d-flex e-align-center"><i class="ri-file-code-line e-mg-r-8"></i>
+                          index.html</a>
+                      </li>
+                    </ul>
+
+                  </div>
+
+                  <div class="ease-chat-media">
+
+                    <h4>Media</h4>
+
+                    <div class="e-row e-mg-t-20">
+
+                      <div class="e-flex-4 e-mg-b-20">
+                        <div class="e-card e-overflow-hidden">
+                          <img src="images/shoe-1.jpg" alt="">
+                        </div>
+                      </div>
+
+                      <div class="e-flex-4 e-mg-b-20">
+                        <div class="e-card e-overflow-hidden">
+                          <img src="images/fitness-sm.jpg" alt="">
+                        </div>
+                      </div>
+
+                      <div class="e-flex-4 e-mg-b-20">
+                        <div class="e-card e-overflow-hidden">
+                          <img src="images/shoe-2.jpg" alt="">
+                        </div>
+                      </div>
+
+                      <div class="e-flex-4 e-mg-b-20">
+                        <div class="e-card e-overflow-hidden">
+                          <img src="images/fruit-1.jpg" alt="">
+                        </div>
+                      </div>
+
+                      <div class="e-flex-4 e-mg-b-20">
+                        <div class="e-card e-overflow-hidden">
+                          <img src="images/fruit-2.jpg" alt="">
+                        </div>
+                      </div>
+
+                      <div class="e-flex-4 e-mg-b-20">
+                        <div class="e-card e-overflow-hidden">
+                          <img src="images/bag.jpg" alt="">
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div><!-- .ease-modal ends -->
+
+    <div class="ease-modal e-d-flex e-fd-column e-justify-center e-align-center e-pd-20" id="subscription-reminder">
+
+      <div class="e-container">
+
+        <div class="e-row e-justify-center e-align-center">
+
+          <div class="e-flex-sm-3 e-flex-xl-2">
+
+            <div class="e-card ease-subscription-plan ease-modal-inner">
+
+              <div class="e-card__header e-ta-center e-justify-center">
+                <span class="e-card__title e-fw-bld">Reminder - Subscription</span>
+              </div>
+
+              <div class="e-card__body e-ta-center e-overflow-hidden">
+
+                <div class="e-h2">Subscription</div>
+                <span class="e-fs-12">Expires in 10 days</span>
+
+                <p class="e-mg-y-10">This is a reminder to renew your yearly subscription plan.</p>
+
+                <div class="e-h2">$4,623.76</div>
+                <span class="e-d-block e-fs-12 e-mg-b-10">1 Year - Renews in 2024</span>
+
+                <a href="#" class="e-btn e-fs-16">Renew plan</a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div><!-- .ease-modal ends -->
+
+    <footer class="ease-footer e-pd-y-20">
+
+      <div class="e-container">
+
+        <div class="e-offset-12 e-offset-md-3 e-offset-lg-2">
+          <p>&copy; 2023 / Ease / Designed &amp; developed by <a href="#"
+              class="e-btn e-btn-secondary e-btn-link e-tt-none">Marius is Coding</a></p>
+        </div>
+
+      </div>
+
+    </footer>
+
+    <!-- ChartJS script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Main (custom) script-->
+    <script src="dist/js/main.min.js"></script>
+  </body>
+
+</html>

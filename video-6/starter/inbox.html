@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="dist/css/main.css" />
+    <!-- Your page title-->
+    <title>Ease - Inbox - Dashboard</title>
+    <!-- Place Custom Favicon here-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+
+  <body>
+
+    <header class="e-header e-header-fixed e-d-flex e-justify-between e-align-center">
+
+      <div class="e-container">
+
+        <div class="e-offset-12 e-offset-md-3 e-offset-lg-2">
+
+          <nav class="e-header__nav e-d-flex e-justify-between e-align-center">
+
+            <div class="e-header__left e-d-flex e-align-center e-mg-r-10 e-mg-r-0-md">
+
+              <div class="e-header__mobile e-mg-r-10 e-d-none-md">
+                <button type="button" class="e-icon-btn e-header__mobile--trigger" data-menu-target="main-menu">
+                  <i class="ri-menu-2-line e-fs-16"></i>
+                </button>
+              </div>
+
+              <div class="e-header__form">
+
+                <form class="e-form">
+                  <div class="e-form__group">
+                    <input type="text" class="e-form__input" placeholder="Search...">
+                    <i class="ri-search-line e-form__icon"></i>
+                  </div>
+                </form>
+
+              </div>
+
+            </div><!-- .e-header__left ends -->
+
+            <ul class="e-header__navitems e-header__sidebar-md-3 e-header__sidebar-lg-2 e-pd-y-20" id="main-menu">
+
+              <li class="e-header__list">
+                <a href="index.html" class="e-header__link--logo e-pd-20 e-d-flex e-align-center e-justify-center">
+                  <img src="images/ease-logo.svg" alt="Ease Dashboard logo">
+                </a>
+              </li>
+
+              <li class="e-header__list e-dropdown">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between"
+                  data-dropdown-target="submenu">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-dashboard-line e-mg-r-10"></i>Dashboard</span>
+                  <i class="ri-arrow-down-s-line"></i>
+                </a>
+                <ul class="e-dropdown__menu" id="submenu">
+                  <li><a href="index.html" class="e-header__sublink e-d-block e-pd-x-20 e-pd-y-10">Project</a>
+                  </li>
+                  <li><a href="ecommerce.html" class="e-header__sublink e-d-block e-pd-x-20 e-pd-y-10">eCommerce</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="e-header__list e-header__list--title e-fw-bld e-tt-uppercase e-pd-x-20 e-pd-y-10">Applications
+              </li>
+
+              <li class="e-header__list">
+                <a href="messages.html" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-message-2-line e-mg-r-10"></i>Messages</span>
+                  <span class="e-bdg e-bdg-danger">12</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="inbox.html" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between e-active">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-inbox-line e-mg-r-10"></i>Inbox</span>
+                  <span class="e-bdg e-bdg-danger">6</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-calendar-2-line e-mg-r-10"></i>Calendar</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-task-line e-mg-r-10"></i>Task</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-bar-chart-line e-mg-r-10"></i>Reports /
+                    Earnings</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-table-2 e-mg-r-10"></i>Kanban board</span>
+                </a>
+              </li>
+
+              <li class="e-header__list e-header__list--title e-fw-bld e-tt-uppercase e-pd-x-20 e-pd-y-10">Components
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-team-line e-mg-r-10"></i>Teams</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-group-2-line e-mg-r-10"></i>Clients</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-price-tag-2-line e-mg-r-10"></i>Pricing
+                    table</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-shopping-cart-line e-mg-r-10"></i>Products</span>
+                </a>
+              </li>
+
+              <li class="e-header__list e-header__list--title e-fw-bld e-tt-uppercase e-pd-x-20 e-pd-y-10">System
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-equalizer-line e-mg-r-10"></i>Settings</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-user-star-line e-mg-r-10"></i>Profile</span>
+                </a>
+              </li>
+
+              <li class="e-header__list e-header__list--employee-of-month">
+                <div class="e-card">
+                  <img src="images/employee-month.jpg" alt="Employee of the month">
+                  <div class="employee-details e-pd-20 e-ta-center">
+                    <h4>Employee of the month</h4>
+                    <h2>Casey W.</h2>
+                    <span class="e-fs-12 e-tt-capitalize">Senior software engineer</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="e-header__list e-pd-x-20">
+                <a href="#" class="e-btn e-d-flex e-pd-y-20">
+                  <span class="e-fs-16 e-d-flex e-align-center"><i class="ri-logout-box-r-line e-mg-r-10"></i>Log
+                    out</span>
+                </a>
+              </li>
+
+            </ul><!-- .e-header__navitems ends -->
+
+            <div class="e-header__right e-d-flex e-align-center">
+
+              <div class="site-alert e-mg-r-10">
+                <button type="button" class="ease-modal-btn e-btn-icon"
+                  data-modal-target="subscription-reminder"></button>
+              </div>
+
+              <div class="theme-control e-mg-r-10">
+                <button type="button" class="theme-switcher e-btn-icon" data-current-theme="light">
+                  <i class="ri-moon-line theme-dark"></i>
+                  <i class="ri-sun-line theme-light"></i>
+                </button>
+              </div>
+
+              <div class="e-dropdown e-dropdown-abs-right e-d-in-flex e-mg-r-10">
+
+                <button type="button" class="e-btn e-btn-secondary e-btn-sq" data-dropdown-target="notifications">
+                  <i class="ri-notification-line e-fs-16"></i>
+                  <span class="e-bdg e-bdg-danger">4</span>
+                </button>
+
+                <div class="e-dropdown__menu" id="notifications">
+
+                  <div class="dropdown-header e-pd-20">
+                    <h6>Notifications</h6>
+                  </div>
+
+                  <ul class="dropdown-content">
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:47 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:47 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:47 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:47 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                  </ul>
+
+                  <div class="dropdown-footer e-pd-20">
+                    <button type="button" class="e-btn e-btn-secondary e-btn-link">Mark all as read</button>
+                  </div>
+
+                </div><!-- .e-dropdown__menu ends -->
+
+              </div><!-- e-dropdown ends -->
+
+              <div class="e-dropdown e-dropdown-abs-right e-d-in-flex e-align-center">
+
+                <button type="button" class="e-avat e-avat-35" data-dropdown-target="profile">
+                  <img src="images/user-f-1.jpg" alt="" class="e-avat__img">
+                </button>
+
+                <div class="e-dropdown__menu" id="profile">
+
+                  <div class="dropdown-header e-pd-20">
+
+                    <div class="e-d-flex e-align-center">
+
+                      <div class="user-img e-mg-r-10">
+                        <div class="e-avat e-avat-40">
+                          <img src="images/user-f-1.jpg" alt="User" class="e-avat__img">
+                        </div>
+                      </div>
+
+                      <div class="user-details">
+                        <span class="e-fw-bld e-fs-14 e-d-block">Jane Matthew</span>
+                        <span class="e-fs-12">Project manager</span>
+                      </div>
+
+                    </div>
+
+                  </div><!-- .dropdown-header ends -->
+
+                  <ul class="dropdown-content">
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-user-star-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-14 e-fw-bld">Profile</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-equalizer-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-14 e-fw-bld">Settings</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-task-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-14 e-fw-bld">Tasks</span>
+                      </a>
+                    </li>
+
+                  </ul>
+
+                  <div class="dropdown-footer">
+                    <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                      <i class="ri-logout-box-r-line e-fs-18 e-mg-r-10"></i>
+                      <span class="e-fs-16 e-fw-bld">Sign out</span>
+                    </a>
+                  </div>
+
+                </div><!-- .e-dropdown__menu ends -->
+
+              </div><!-- e-dropdown ends -->
+
+            </div><!-- .e-header__right ends -->
+
+          </nav>
+
+        </div>
+
+      </div>
+
+
+    </header><!-- .e-header ends -->
+
+    <main>
+
+      <div class="ease-dashboard ease-dashboard-communications ease-dashboard-inbox">
+
+        <div class="e-container">
+
+          <div class="e-offset-12 e-offset-md-3 e-offset-lg-2">
+
+            <section class="ease-message-block e-pd-y-20">
+
+              <div class="e-row">
+
+                <div class="e-flex-md-4 e-flex-sm-6 e-flex-lg-3 ease-message-left">
+
+                  <div class="e-card">
+
+                    <div class="e-card__header e-d-block">
+
+                      <div class="e-d-flex e-justify-between e-align-center e-mg-b-20">
+                        <h3>Inbox</h3>
+                        <span class="e-bdg e-bdg-danger">6</span>
+                      </div>
+
+                      <a href="#" class="e-btn">Compose</a>
+
+                    </div>
+
+                    <div class="e-card__body e-pd-0 e-d-flex e-fd-column e-justify-between">
+
+                      <ul class="ease-inbox-content e-pd-20">
+
+                        <li data-communication-target="ease-message-center">
+
+                          <a href="#" class="e-d-flex e-justify-between e-align-center e-pd-y-8">
+                            <span class="e-d-flex e-align-center"><i class="ri-inbox-line e-mg-r-10"></i>Inbox</span>
+                            <span>6</span>
+                          </a>
+
+                        </li>
+
+                        <li>
+
+                          <a href="#" class="e-d-flex e-justify-between e-align-center e-pd-y-8">
+                            <span class="e-d-flex e-align-center"><i class="ri-star-line e-mg-r-10"></i>Starred</span>
+                          </a>
+
+                        </li>
+
+                        <li>
+
+                          <a href="#" class="e-d-flex e-justify-between e-align-center e-pd-y-8">
+                            <span class="e-d-flex e-align-center"><i class="ri-time-line e-mg-r-10"></i>Snoozed</span>
+                          </a>
+
+                        </li>
+
+                        <li>
+
+                          <a href="#" class="e-d-flex e-justify-between e-align-center e-pd-y-8">
+                            <span class="e-d-flex e-align-center"><i
+                                class="ri-send-plane-2-line e-mg-r-10"></i>Sent</span>
+                          </a>
+
+                        </li>
+
+                        <li>
+
+                          <a href="#" class="e-d-flex e-justify-between e-align-center e-pd-y-8">
+                            <span class="e-d-flex e-align-center"><i class="ri-draft-line e-mg-r-10"></i>Drafts</span>
+                          </a>
+
+                        </li>
+
+                        <li>
+
+                          <a href="#" class="e-d-flex e-justify-between e-align-center e-pd-y-8">
+                            <span class="e-d-flex e-align-center"><i class="ri-spam-line e-mg-r-10"></i>Spam</span>
+                          </a>
+
+                        </li>
+
+                        <li>
+
+                          <a href="#" class="e-d-flex e-justify-between e-align-center e-pd-y-8">
+                            <span class="e-d-flex e-align-center"><i
+                                class="ri-delete-bin-line e-mg-r-10"></i>Trash</span>
+                          </a>
+
+                        </li>
+
+                      </ul><!-- .ease-inbox-content ends -->
+
+                      <ul class="ease-messages-content ease-communication">
+
+                        <li class="e-pd-20 ease-faded-text e-tt-uppercase">Contacts</li>
+
+                        <li class="e-tbl__row ease-messages-row">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Johnathan R.</span>
+                                  <span class="ease-faded-text">johnatha.r@ease.com</span>
+                                </div>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Johnathan R.</span>
+                                  <span class="ease-faded-text">johnatha.r@ease.com</span>
+                                </div>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Johnathan R.</span>
+                                  <span class="ease-faded-text">johnatha.r@ease.com</span>
+                                </div>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Johnathan R.</span>
+                                  <span class="ease-faded-text">johnatha.r@ease.com</span>
+                                </div>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Johnathan R.</span>
+                                  <span class="ease-faded-text">johnatha.r@ease.com</span>
+                                </div>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Johnathan R.</span>
+                                  <span class="ease-faded-text">johnatha.r@ease.com</span>
+                                </div>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Johnathan R.</span>
+                                  <span class="ease-faded-text">johnatha.r@ease.com</span>
+                                </div>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row">
+
+                          <div class="e-tbl__data e-pd-x-20">
+
+                            <div class="ease-communication-content">
+
+                              <div class="e-d-flex">
+
+                                <div class="e-mg-r-10">
+                                  <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                      class="e-avat__img"></div>
+                                </div>
+
+                                <div class="ease-communication-details">
+                                  <span class="e-h5 e-d-block">Johnathan R.</span>
+                                  <span class="ease-faded-text">johnatha.r@ease.com</span>
+                                </div>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                      </ul>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="e-flex-md-8 e-flex-sm-6 e-flex-lg-9 ease-message-center" id="ease-message-center">
+
+                  <div class="e-card ease-message-box">
+
+                    <div class="e-card__header e-d-block e-d-flex-md">
+
+                      <div class="e-d-flex e-align-center">
+
+                        <div class="e-mg-r-10 e-d-none-sm">
+                          <button type="button" class="e-btn-icon e-fs-20" data-close-target="ease-message-center"><i
+                              class="ri-arrow-left-line"></i></button>
+                        </div>
+
+                        <div class="ease-message-options">
+
+                          <div class="e-d-flex">
+                            <button type="button" class="e-btn-icon e-mg-r-8"><i
+                                class="ri-checkbox-blank-line"></i></button>
+                            <button type="button" class="e-btn-icon e-mg-r-8"><i
+                                class="ri-delete-bin-line"></i></button>
+                            <button type="button" class="e-btn-icon e-mg-r-8"><i class="ri-star-line"></i></button>
+                            <button type="button" class="e-btn-icon"><i class="ri-reply-line"></i></button>
+                            <button type="button" class="e-btn-icon"><i class="ri-refresh-line"></i></button>
+                          </div>
+
+                        </div><!-- .ease-message-options ends -->
+
+                      </div><!-- .e-d-flex ends -->
+
+                      <div class="e-d-flex e-align-center">
+                        <span class="ease-faded-text">1-50 of 562</span>
+                        <span class="e-mg-l-10">
+                          <button type="button" class="e-btn-icon"><i class="ri-arrow-left-s-line"></i></button>
+                          <button type="button" class="e-btn-icon"><i class="ri-arrow-right-s-line"></i></button>
+                        </span>
+                      </div>
+
+                    </div>
+
+                    <div class="e-card__body ease-inbox-body e-pd-0">
+
+                      <ul class="ease-inbox-messages ease-communication">
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="e-tbl__row ease-messages-row" data-modal-target="ease-message-user-data">
+
+                          <div class="e-tbl__data e-pd-x-20 e-pd-y-10">
+
+                            <div class="e-d-flex e-align-center">
+
+                              <div class="e-mg-r-10 e-d-flex">
+                                <span class="e-btn-icon"><i class="ri-checkbox-blank-line"></i></span>
+                                <span class="e-btn-icon"><i class="ri-star-line"></i></span>
+                              </div>
+
+                              <div class="ease-communication-details e-mg-r-10">
+                                <span class="e-h5 e-d-block">Samantha Rue</span>
+                              </div>
+
+                              <div class="e-flex-auto">
+                                <p><span class="e-fw-bld">Quarterly meeting - </span> Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing elit. Nesciunt earum similique sapiente.</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                      </ul><!-- .ease-inbox-messages ends -->
+
+                    </div><!-- .e-card__body ends -->
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </section><!-- .ease-message-block ends -->
+
+          </div><!-- .e-offset-* ends -->
+
+        </div><!-- .e-container ends -->
+
+      </div><!-- .ease-dashboard ends -->
+
+    </main>
+
+    <!-- Modal -->
+
+    <!-- Chat modal -->
+    <div class="ease-modal ease-communication-modal ease-inbox-modal e-pd-y-20" id="ease-message-user-data">
+
+      <div class="e-container">
+
+        <div class="e-offset-12 e-offset-md-3 e-offset-lg-2">
+
+          <div class="e-row e-justify-end e-align-center">
+
+            <div class="e-flex-md-7 e-flex-lg-6 ease-communication-data-modal">
+
+              <div class="e-card ease-modal-inner">
+
+                <div class="e-card__header e-d-block">
+
+                  <div class="e-d-flex">
+                    <button type="button" class="e-btn-icon e-mg-r-8"><i class="ri-delete-bin-line"></i></button>
+                    <button type="button" class="e-btn-icon e-mg-r-8"><i class="ri-star-line"></i></button>
+                    <button type="button" class="e-btn-icon"><i class="ri-reply-line"></i></button>
+                  </div><!-- .e-d-flex ends -->
+
+                  <h4 class="e-mg-y-20">Quarterly Meeting</h4>
+
+                  <div class="e-d-flex e-align-center">
+
+                    <div class="e-mg-r-10">
+                      <div class="e-avat e-avat-40"><img src="images/user-f-3.jpg" alt="" class="e-avat__img"></div>
+                    </div>
+
+                    <div class="user-details">
+                      <span class="e-h5 e-d-block">Samantha Rue <span
+                          class="e-fs-12 ease-faded-text e-fw-reg">&lt;samantha.r@ease.com&gt;</span></span>
+                      <span class="e-fs-12 ease-faded-text"> to me</span>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="e-card__body e-d-flex e-fd-column e-justify-between">
+
+                  <div class="ease-inbox-full-email">
+                    <p>Hi Jane,</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia neque magnam accusantium
+                      laboriosam minus pariatur unde cumque, animi labore in perferendis architecto vero a hic possimus
+                      aut iste minima dignissimos dicta temporibus deleniti vitae at quos voluptatum! Porro dicta odio
+                      hic iste, impedit quisquam quod.</p>
+                  </div><!-- .ease-inbox-full-email ends -->
+
+                  <div class="ease-inbox-email-reply">
+
+                    <form class="e-form">
+                      <div class="e-form__group e-d-flex e-align-center e-pd-l-20">
+                        <span class="e-tt-uppercase e-flex-auto e-mg-r-10">Reply to:</span>
+                        <input type="text" class="e-form__input e-pd-l-10" value="Samantha Rue">
+                      </div>
+
+                      <div class="e-form__group e-pd-l-20">
+
+                        <textarea
+                          class="e-form__input e-form__textarea e-pd-l-0">Hi Samantha,
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ad rerum ullam adipisci, sit libero quidem, inventore qui officiis eaque distinctio esse necessitatibus unde dignissimos?</textarea>
+
+                        <div class="attachments e-pd-l-0 e-pd-20">
+                          <div class="e-d-in-flex e-align-center ease-attachment">
+                            <i class="ri-file-zip-line e-mg-r-10"></i>
+                            ease_financial_report.zip
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="e-form__group e-d-flex e-justify-between e-align-center e-pd-l-20 e-pd-8">
+                        <div class="e-d-flex">
+                          <button type="button" class="e-btn-icon"><i class="ri-attachment-line"></i></button>
+                          <button type="button" class="e-btn-icon"><i class="ri-delete-bin-line"></i></button>
+                        </div>
+                        <button type="submit" class="e-btn e-btn-sm">Send</button>
+                      </div>
+                    </form>
+
+                  </div><!-- .ease-inbox-email-reply ends -->
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div><!-- .ease-modal ends -->
+
+    <div class="ease-modal e-d-flex e-fd-column e-justify-center e-align-center e-pd-20" id="subscription-reminder">
+
+      <div class="e-container">
+
+        <div class="e-row e-justify-center e-align-center">
+
+          <div class="e-flex-sm-3 e-flex-xl-2">
+
+            <div class="e-card ease-subscription-plan ease-modal-inner">
+
+              <div class="e-card__header e-ta-center e-justify-center">
+                <span class="e-card__title e-fw-bld">Reminder - Subscription</span>
+              </div>
+
+              <div class="e-card__body e-ta-center e-overflow-hidden">
+
+                <div class="e-h2">Subscription</div>
+                <span class="e-fs-12">Expires in 10 days</span>
+
+                <p class="e-mg-y-10">This is a reminder to renew your yearly subscription plan.</p>
+
+                <div class="e-h2">$4,623.76</div>
+                <span class="e-d-block e-fs-12 e-mg-b-10">1 Year - Renews in 2024</span>
+
+                <a href="#" class="e-btn e-fs-16">Renew plan</a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div><!-- .ease-modal ends -->
+
+    <footer class="ease-footer e-pd-y-20">
+
+      <div class="e-container">
+
+        <div class="e-offset-12 e-offset-md-3 e-offset-lg-2">
+          <p>&copy; 2023 / Ease / Designed &amp; developed by <a href="#"
+              class="e-btn e-btn-secondary e-btn-link e-tt-none">Marius is Coding</a></p>
+        </div>
+
+      </div>
+
+    </footer>
+
+    <!-- ChartJS script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Main (custom) script-->
+    <script src="dist/js/main.min.js"></script>
+  </body>
+
+</html>

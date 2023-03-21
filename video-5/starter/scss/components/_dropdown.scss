@@ -1,0 +1,91 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../layout/breakpoints" as *;
+
+.e-dropdown {
+  position: relative;
+
+  [data-dropdown-target] {
+    cursor: pointer;
+  }
+
+  &__menu {
+    background-color: var(--card-bg-clr);
+    width: var(--default-dropdown-width);
+    height: auto;
+    max-height: var(--default-dropdown-mx-height);
+    overflow: hidden auto;
+    border-radius: var(--default-brd-rad);
+    position: absolute;
+    top: 120%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    @include transition;
+    @include boxShadow;
+    @include customScrollbar;
+
+    &.e-active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  // Absolutely positioning
+  &.e-dropdown-abs-left &__menu {
+    /* Absolute left positioning */
+    left: 0;
+    right: auto;
+  }
+
+  &.e-dropdown-abs-center &__menu {
+    /* Absolute center positioning */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.e-dropdown-abs-right &__menu {
+    /* Absolute right positioning */
+    left: auto;
+    right: 0;
+  }
+
+  // Responsive absolute positioning
+  @each $break, $value in $containers {
+    @include respond(#{$break}) {
+      &.e-dropdown-abs-left-#{$break} &__menu {
+        /* Absolute left positioning */
+        left: 0;
+        right: auto;
+        transform: translateX(0);
+      }
+
+      &.e-dropdown-abs-center-#{$break} &__menu {
+        /* Absolute center positioning */
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &.e-dropdown-abs-right-#{$break} &__menu {
+        /* Absolute right positioning */
+        left: auto;
+        right: 0;
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+.dropdown {
+  &-header,
+  &-footer {
+    background-color: var(--tbl-header-bg-clr);
+  }
+
+  &-link {
+    &:hover,
+    &:focus {
+      color: var(--e-secondary-clr);
+    }
+  }
+}

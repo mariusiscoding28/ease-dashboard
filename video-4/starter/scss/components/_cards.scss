@@ -1,0 +1,27 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.e-card {
+  position: relative;
+  background-color: var(--card-bg-clr);
+  border-radius: var(--default-brd-rad);
+  height: 100%;
+  @include boxShadow;
+
+  &__header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1rem solid var(--brdr-clr);
+  }
+
+  &__title {
+    font-size: var(--card-title);
+    font-family: var(--heading-font-family);
+  }
+
+  &__body {
+    padding: 2rem;
+  }
+}

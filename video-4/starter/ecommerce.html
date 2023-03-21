@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="dist/css/main.css" />
+    <!-- Your page title-->
+    <title>Ease - Dashboard</title>
+    <!-- Place Custom Favicon here-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+
+  <body>
+
+    <header class="e-header e-header-fixed e-d-flex e-justify-between e-align-center">
+
+      <div class="e-container">
+
+        <div class="e-offset-12 e-offset-md-3 e-offset-lg-2">
+
+          <nav class="e-header__nav e-d-flex e-justify-between e-align-center">
+
+            <div class="e-header__left e-d-flex e-align-center e-mg-r-10 e-mg-r-0-md">
+
+              <div class="e-header__mobile e-mg-r-10 e-d-none-md">
+                <button type="button" class="e-icon-btn e-header__mobile--trigger" data-menu-target="main-menu">
+                  <i class="ri-menu-2-line e-fs-16"></i>
+                </button>
+              </div>
+
+              <div class="e-header__form">
+
+                <form class="e-form">
+                  <div class="e-form__group">
+                    <input type="text" class="e-form__input" placeholder="Search...">
+                    <i class="ri-search-line e-form__icon"></i>
+                  </div>
+                </form>
+
+              </div>
+
+            </div><!-- .e-header__left ends -->
+
+            <ul class="e-header__navitems e-header__sidebar-md-3 e-header__sidebar-lg-2 e-pd-y-20" id="main-menu">
+
+              <li class="e-header__list">
+                <a href="index.html" class="e-header__link--logo e-pd-20 e-d-flex e-align-center e-justify-center">
+                  <img src="images/ease-logo.svg" alt="Ease Dashboard logo">
+                </a>
+              </li>
+
+              <li class="e-header__list e-dropdown">
+                <a href="" class="e-header__link e-active e-pd-20 e-d-flex e-align-center e-justify-between"
+                  data-dropdown-target="submenu">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-dashboard-line e-mg-r-10"></i>Dashboard</span>
+                  <i class="ri-arrow-down-s-line"></i>
+                </a>
+                <ul class="e-dropdown__menu" id="submenu">
+                  <li><a href="index.html" class="e-header__sublink e-d-block e-pd-x-20 e-pd-y-10">Project</a>
+                  </li>
+                  <li><a href="ecommerce.html"
+                      class="e-header__sublink e-d-block e-pd-x-20 e-pd-y-10 e-active">eCommerce</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="e-header__list e-header__list--title e-fw-bld e-tt-uppercase e-pd-x-20 e-pd-y-10">Applications
+              </li>
+
+              <li class="e-header__list">
+                <a href="messages.html" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-message-2-line e-mg-r-10"></i>Messages</span>
+                  <span class="e-bdg e-bdg-danger">12</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="inbox.html" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-inbox-line e-mg-r-10"></i>Inbox</span>
+                  <span class="e-bdg e-bdg-danger">6</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-calendar-2-line e-mg-r-10"></i>Calendar</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-task-line e-mg-r-10"></i>Task</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-bar-chart-line e-mg-r-10"></i>Reports /
+                    Earnings</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-table-2 e-mg-r-10"></i>Kanban board</span>
+                </a>
+              </li>
+
+              <li class="e-header__list e-header__list--title e-fw-bld e-tt-uppercase e-pd-x-20 e-pd-y-10">Components
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-team-line e-mg-r-10"></i>Teams</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-group-2-line e-mg-r-10"></i>Clients</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i class="ri-price-tag-2-line e-mg-r-10"></i>Pricing
+                    table</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-shopping-cart-line e-mg-r-10"></i>Products</span>
+                </a>
+              </li>
+
+              <li class="e-header__list e-header__list--title e-fw-bld e-tt-uppercase e-pd-x-20 e-pd-y-10">System
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-equalizer-line e-mg-r-10"></i>Settings</span>
+                </a>
+              </li>
+
+              <li class="e-header__list">
+                <a href="" class="e-header__link e-pd-20 e-d-flex e-align-center e-justify-between">
+                  <span class="e-fs-14 e-d-flex e-align-center"><i
+                      class="ri-user-star-line e-mg-r-10"></i>Profile</span>
+                </a>
+              </li>
+
+              <li class="e-header__list e-header__list--employee-of-month">
+                <div class="e-card">
+                  <img src="images/employee-month.jpg" alt="Employee of the month">
+                  <div class="employee-details e-pd-20 e-ta-center">
+                    <h4>Employee of the month</h4>
+                    <h2>Casey W.</h2>
+                    <span class="e-fs-12 e-tt-capitalize">Senior software engineer</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="e-header__list e-pd-x-20">
+                <a href="#" class="e-btn e-d-flex e-pd-y-20">
+                  <span class="e-fs-16 e-d-flex e-align-center"><i class="ri-logout-box-r-line e-mg-r-10"></i>Log
+                    out</span>
+                </a>
+              </li>
+
+            </ul><!-- .e-header__navitems ends -->
+
+            <div class="e-header__right e-d-flex e-align-center">
+
+              <div class="site-alert e-mg-r-10">
+                <button type="button" class="ease-modal-btn e-btn-icon"
+                  data-modal-target="subscription-reminder"></button>
+              </div>
+
+              <div class="theme-control e-mg-r-10">
+                <button type="button" class="theme-switcher e-btn-icon" data-current-theme="light">
+                  <i class="ri-moon-line theme-dark"></i>
+                  <i class="ri-sun-line theme-light"></i>
+                </button>
+              </div>
+
+              <div class="e-dropdown e-dropdown-abs-right e-d-in-flex e-mg-r-10">
+
+                <button type="button" class="e-btn e-btn-secondary e-btn-sq" data-dropdown-target="notifications">
+                  <i class="ri-notification-line e-fs-16"></i>
+                  <span class="e-bdg e-bdg-danger">4</span>
+                </button>
+
+                <div class="e-dropdown__menu" id="notifications">
+
+                  <div class="dropdown-header e-pd-20">
+                    <h6>Notifications</h6>
+                  </div>
+
+                  <ul class="dropdown-content">
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:47 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:47 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:47 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2:47 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                  </ul>
+
+                  <div class="dropdown-footer e-pd-20">
+                    <button type="button" class="e-btn e-btn-secondary e-btn-link">Mark all as read</button>
+                  </div>
+
+                </div><!-- .e-dropdown__menu ends -->
+
+              </div><!-- e-dropdown ends -->
+
+              <div class="e-dropdown e-dropdown-abs-right e-d-in-flex e-align-center">
+
+                <button type="button" class="e-avat e-avat-35" data-dropdown-target="profile">
+                  <img src="images/user-f-1.jpg" alt="" class="e-avat__img">
+                </button>
+
+                <div class="e-dropdown__menu" id="profile">
+
+                  <div class="dropdown-header e-pd-20">
+
+                    <div class="e-d-flex e-align-center">
+
+                      <div class="user-img e-mg-r-10">
+                        <div class="e-avat e-avat-40">
+                          <img src="images/user-f-1.jpg" alt="User" class="e-avat__img">
+                        </div>
+                      </div>
+
+                      <div class="user-details">
+                        <span class="e-fw-bld e-fs-14 e-d-block">Jane Matthew</span>
+                        <span class="e-fs-12">Project manager</span>
+                      </div>
+
+                    </div>
+
+                  </div><!-- .dropdown-header ends -->
+
+                  <ul class="dropdown-content">
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-user-star-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-14 e-fw-bld">Profile</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-equalizer-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-14 e-fw-bld">Settings</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-task-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-14 e-fw-bld">Tasks</span>
+                      </a>
+                    </li>
+
+                  </ul>
+
+                  <div class="dropdown-footer">
+                    <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                      <i class="ri-logout-box-r-line e-fs-18 e-mg-r-10"></i>
+                      <span class="e-fs-16 e-fw-bld">Sign out</span>
+                    </a>
+                  </div>
+
+                </div><!-- .e-dropdown__menu ends -->
+
+              </div><!-- e-dropdown ends -->
+
+            </div><!-- .e-header__right ends -->
+
+          </nav>
+
+        </div>
+
+      </div>
+
+
+    </header><!-- .e-header ends -->
+
+    <main>
+
+      <div class="ease-dashboard ease-dashboard-ecommerce">
+
+        <div class="e-container">
+
+          <div class="e-offset-12 e-offset-md-3 e-offset-lg-2">
+
+            <div class="ease-section-heading e-pd-y-20">
+              <h4 class="ease-title">Good morning, Jane!</h4>
+              <p class="ease-sub-title">Your dashboard and components are refreshed</p>
+            </div>
+
+            <section class="ease-overview e-pd-y-20">
+
+              <div class="e-row">
+
+                <div class="e-flex-sm-6 e-flex-lg-3 e-mg-b-20 e-mg-b-0-lg">
+
+                  <div class="e-card">
+
+                    <div class="e-card__header">
+                      <span class="e-card__title e-fw-bld">Seller of the month</span>
+                      <span class="e-btn-icon e-btn-icon-static"><i class="ri-bar-chart-line"></i></span>
+                    </div>
+
+                    <div class="e-card__body e-d-flex e-justify-between e-align-end">
+
+                      <div class="left-side">
+                        <h2 class="e-mg-b-10">$12.5k</h2>
+                        <p class="e-fs-12 e-d-flex e-align-center">
+                          <span class="ease-indicator-up e-mg-r-10 e-d-in-flex e-align-center"><i
+                              class="ri-arrow-up-line"></i> 12.5%</span>
+                          <span class="ease-faded-text">From last week</span>
+                        </p>
+                      </div>
+
+                      <div class="right-side">
+                        <div class="e-bdg e-bdg-danger ease-bdg"><i class="ri-trophy-line"></i></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="e-flex-sm-6 e-flex-lg-3 e-mg-b-20 e-mg-b-0-lg">
+
+                  <div class="e-card">
+
+                    <div class="e-card__header">
+                      <span class="e-card__title e-fw-bld">Active orders</span>
+                      <span class="e-btn-icon e-btn-icon-static"><i class="ri-bar-chart-line"></i></span>
+                    </div>
+
+                    <div class="e-card__body e-d-flex e-justify-between e-align-end">
+
+                      <div class="left-side">
+                        <h2 class="e-mg-b-10">127</h2>
+                        <p class="e-fs-12 e-d-flex e-align-center">
+                          <span class="ease-indicator-up e-mg-r-10 e-d-in-flex e-align-center"><i
+                              class="ri-arrow-up-line"></i>
+                            15.7%</span>
+                          <span class="ease-faded-text">From last week</span>
+                        </p>
+                      </div>
+
+                      <div class="right-side">
+                        <div class="e-bdg e-bdg-secondary ease-bdg"><i class="ri-money-dollar-circle-line"></i></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="e-flex-sm-6 e-flex-lg-3 e-mg-b-20 e-mg-b-0-sm">
+
+                  <div class="e-card">
+
+                    <div class="e-card__header">
+                      <span class="e-card__title e-fw-bld">Revenue</span>
+                      <span class="e-btn-icon e-btn-icon-static"><i class="ri-bar-chart-line"></i></span>
+                    </div>
+
+                    <div class="e-card__body e-d-flex e-justify-between e-align-end">
+
+                      <div class="left-side">
+                        <h2 class="e-mg-b-10">$62,789.06</h2>
+                        <p class="e-fs-12 e-d-flex e-align-center">
+                          <span class="ease-indicator-down e-mg-r-10 e-d-in-flex e-align-center"><i
+                              class="ri-arrow-down-line"></i>
+                            4%</span>
+                          <span class="ease-faded-text">From last month</span>
+                        </p>
+                      </div>
+
+                      <div class="right-side">
+                        <div class="e-bdg e-bdg-success ease-bdg"><i class="ri-line-chart-line"></i></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="e-flex-sm-6 e-flex-lg-3">
+
+                  <div class="e-card">
+
+                    <div class="e-card__header">
+                      <span class="e-card__title e-fw-bld">New customers</span>
+                      <span class="e-btn-icon e-btn-icon-static"><i class="ri-bar-chart-line"></i></span>
+                    </div>
+
+                    <div class="e-card__body e-d-flex e-justify-between e-align-end">
+
+                      <div class="left-side">
+                        <h2 class="e-mg-b-10">1,223</h2>
+                        <p class="e-fs-12 e-d-flex e-align-center">
+                          <span class="ease-indicator-up e-mg-r-10 e-d-in-flex e-align-center"><i
+                              class="ri-arrow-up-line"></i>
+                            4%</span>
+                          <span class="ease-faded-text">From last month</span>
+                        </p>
+                      </div>
+
+                      <div class="right-side">
+                        <div class="e-bdg e-bdg-warn ease-bdg"><i class="ri-group-line"></i></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </section><!-- .ease-overview ends -->
+
+            <section class="ease-store-revenue e-pd-y-20">
+
+              <div class="e-card">
+
+                <div class="e-card__header">
+                  <span class="e-card__title e-fw-bld">Revenue</span>
+                </div>
+
+                <div class="e-card__body e-pd-0">
+
+                  <div class="e-tbl__header e-pd-20 e-ta-center e-overflow-hidden">
+
+                    <div class="e-row">
+
+                      <div class="e-flex-6 e-flex-sm-3 e-mg-b-8 e-mg-b-0-sm">
+                        <div class="e-h2">679</div>
+                        <span class="e-fs-12">Total orders</span>
+                      </div>
+
+                      <div class="e-flex-6 e-flex-sm-3 e-mg-b-8 e-mg-b-0-sm">
+                        <div class="e-h2">$24.23k</div>
+                        <span class="e-fs-12">Revenue</span>
+                      </div>
+
+                      <div class="e-flex-6 e-flex-sm-3">
+                        <div class="e-h2">$1,232</div>
+                        <span class="e-fs-12">Refunded</span>
+                      </div>
+
+                      <div class="e-flex-6 e-flex-sm-3">
+                        <div class="e-h2">$2,531</div>
+                        <span class="e-fs-12">Daily profit</span>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="e-row e-align-center">
+
+                    <div class="e-flex-md-9 e-mg-b-20 e-mg-b-0-md">
+
+                      <div class="ease-chart e-pd-20">
+                        <canvas id="ease-revenue"></canvas>
+                      </div>
+
+                    </div>
+
+                    <div class="e-flex-md-3">
+
+                      <div class="ease-revenue-summery e-pd-20">
+
+                        <div class="e-mg-b-20">
+                          <h2>$79,798.80</h2>
+                          <span class="ease-faded-text e-fs-12 e-fw-med e-tt-uppercase">Total balance</span>
+                        </div>
+
+                        <div class="e-mg-b-10">
+                          <h2>$10,426.90</h2>
+                          <span class="ease-faded-text e-fs-12">Revenue</span>
+                        </div>
+
+                        <div class="e-mg-b-10">
+                          <h2>$6,426.90</h2>
+                          <span class="ease-faded-text e-fs-12">Expenses</span>
+                        </div>
+
+                        <div class="e-mg-b-10">
+                          <h2>$3,426.90</h2>
+                          <span class="ease-faded-text e-fs-12">Profits</span>
+                        </div>
+
+                        <a href="#" class="e-btn">Read report</a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+            </section><!-- .ease-store-revenue ends -->
+
+            <section class="ease-recent-orders e-pd-y-20">
+
+              <div class="e-row">
+
+                <div class="e-flex-md-6 e-flex-lg-7 e-mg-b-20 e-mg-b-0-md">
+
+                  <div class="e-card ease-orders">
+
+                    <div class="e-card__header">
+                      <span class="e-card__title e-fw-bld">Recent orders</span>
+                    </div>
+
+                    <div class="e-card__body e-pd-0">
+
+                      <div class="e-overflow-auto">
+
+                        <table class="e-tbl">
+
+                          <thead class="e-tbl__header">
+                            <tr class="e-tbl__row">
+                              <th class="e-tbl__head">Order ID</th>
+                              <th class="e-tbl__head">Customers</th>
+                              <th class="e-tbl__head">Item</th>
+                              <th class="e-tbl__head">Quantity</th>
+                              <th class="e-tbl__head">Total price</th>
+                              <th class="e-tbl__head">Status</th>
+                            </tr>
+                          </thead>
+
+                          <tbody class="e-tbl__body">
+
+                            <tr class="e-tbl__row">
+                              <td class="e-tbl__data">#P1011</td>
+
+                              <td class="e-tbl__data">
+
+                                <div class="e-d-flex e-align-center">
+
+                                  <div class="e-mg-r-10">
+                                    <div class="e-avat e-avat-30"><img src="images/user-f-3.jpg" alt=""
+                                        class="e-avat__img">
+                                    </div>
+                                  </div>
+
+                                  <div class="user-details">
+                                    <span class="e-fs-12">Brie Doyle</span>
+                                  </div>
+
+                                </div>
+
+                              </td>
+
+                              <td class="e-tbl__data">T-Shirts</td>
+
+                              <td class="e-tbl__data">12</td>
+
+                              <td class="e-tbl__data">$431</td>
+
+                              <td class="e-tbl__data"><span class="e-bdg e-bdg-success">Paid</span></td>
+                            </tr>
+
+                            <tr class="e-tbl__row">
+                              <td class="e-tbl__data">#P1012</td>
+
+                              <td class="e-tbl__data">
+
+                                <div class="e-d-flex e-align-center">
+
+                                  <div class="e-mg-r-10">
+                                    <div class="e-avat e-avat-30"><img src="images/user-m-2.jpg" alt=""
+                                        class="e-avat__img">
+                                    </div>
+                                  </div>
+
+                                  <div class="user-details">
+                                    <span class="e-fs-12">Ryan Dun</span>
+                                  </div>
+
+                                </div>
+
+                              </td>
+
+                              <td class="e-tbl__data">Blue skateboard</td>
+
+                              <td class="e-tbl__data">3</td>
+
+                              <td class="e-tbl__data">$210</td>
+
+                              <td class="e-tbl__data"><span class="e-bdg e-bdg-success">Paid</span></td>
+                            </tr>
+
+                            <tr class="e-tbl__row">
+                              <td class="e-tbl__data">#P1013</td>
+
+                              <td class="e-tbl__data">
+
+                                <div class="e-d-flex e-align-center">
+
+                                  <div class="e-mg-r-10">
+                                    <div class="e-avat e-avat-30"><img src="images/user-f-2.jpg" alt=""
+                                        class="e-avat__img">
+                                    </div>
+                                  </div>
+
+                                  <div class="user-details">
+                                    <span class="e-fs-12">Michelle Wen</span>
+                                  </div>
+
+                                </div>
+
+                              </td>
+
+                              <td class="e-tbl__data">The Ultimate JavaScript Guide</td>
+
+                              <td class="e-tbl__data">1</td>
+
+                              <td class="e-tbl__data">$64</td>
+
+                              <td class="e-tbl__data"><span class="e-bdg e-bdg-warn">Pending</span></td>
+                            </tr>
+
+                            <tr class="e-tbl__row">
+                              <td class="e-tbl__data">#P1014</td>
+
+                              <td class="e-tbl__data">
+
+                                <div class="e-d-flex e-align-center">
+
+                                  <div class="e-mg-r-10">
+                                    <div class="e-avat e-avat-30"><img src="images/user-f-1.jpg" alt=""
+                                        class="e-avat__img">
+                                    </div>
+                                  </div>
+
+                                  <div class="user-details">
+                                    <span class="e-fs-12">Casey Smith</span>
+                                  </div>
+
+                                </div>
+
+                              </td>
+
+                              <td class="e-tbl__data">LG UltraWide 29in IPS Monitor</td>
+
+                              <td class="e-tbl__data">1</td>
+
+                              <td class="e-tbl__data">$149</td>
+
+                              <td class="e-tbl__data"><span class="e-bdg e-bdg-danger">Canceled</span></td>
+                            </tr>
+
+                            <tr class="e-tbl__row">
+                              <td class="e-tbl__data">#P1015</td>
+
+                              <td class="e-tbl__data">
+
+                                <div class="e-d-flex e-align-center">
+
+                                  <div class="e-mg-r-10">
+                                    <div class="e-avat e-avat-30"><img src="images/user-m-1.jpg" alt=""
+                                        class="e-avat__img">
+                                    </div>
+                                  </div>
+
+                                  <div class="user-details">
+                                    <span class="e-fs-12">Kyle Smith</span>
+                                  </div>
+
+                                </div>
+
+                              </td>
+
+                              <td class="e-tbl__data">Men's Gray Sneakers - Size 9</td>
+
+                              <td class="e-tbl__data">2</td>
+
+                              <td class="e-tbl__data">$176</td>
+
+                              <td class="e-tbl__data"><span class="e-bdg e-bdg-success">Paid</span></td>
+                            </tr>
+
+                          </tbody>
+
+                        </table>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="e-flex-md-6 e-flex-lg-5">
+
+                  <div class="e-card ease-orders">
+
+                    <div class="e-card__header">
+                      <span class="e-card__title e-fw-bld">Top selling categories</span>
+                    </div>
+
+                    <div class="e-card__body e-pd-0">
+
+                      <div class="e-overflow-auto">
+
+                        <table class="e-tbl">
+
+                          <thead class="e-tbl__header">
+                            <tr class="e-tbl__row">
+                              <th class="e-tbl__head">Name</th>
+                              <th class="e-tbl__head">Quantity</th>
+                              <th class="e-tbl__head">Earning</th>
+                              <th class="e-tbl__head">Status</th>
+                            </tr>
+                          </thead>
+
+                          <tbody class="e-tbl__body">
+
+                            <tr class="e-tbl__row">
+                              <td class="e-tbl__data">
+
+                                <div class="e-d-flex e-align-center">
+
+                                  <div class="e-mg-r-10">
+                                    <div class="e-avat e-avat-30"><img src="images/user-f-1.jpg" alt=""
+                                        class="e-avat__img">
+                                    </div>
+                                  </div>
+
+                                  <div class="user-details">
+                                    <span class="e-fs-12">Clothing</span>
+                                  </div>
+
+                                </div>
+
+                              </td>
+
+                              <td class="e-tbl__data">3,626</td>
+
+                              <td class="e-tbl__data">$42,312.19</td>
+
+                              <td class="e-tbl__data"><span class="e-bdg e-bdg-success">In stock</span></td>
+                            </tr>
+
+                            <tr class="e-tbl__row">
+                              <td class="e-tbl__data">
+
+                                <div class="e-d-flex e-align-center">
+
+                                  <div class="e-mg-r-10">
+                                    <div class="e-avat e-avat-30"><img src="images/shoe-1.jpg" alt=""
+                                        class="e-avat__img">
+                                    </div>
+                                  </div>
+
+                                  <div class="user-details">
+                                    <span class="e-fs-12">Footwear</span>
+                                  </div>
+
+                                </div>
+
+                              </td>
+
+                              <td class="e-tbl__data">1,124</td>
+
+                              <td class="e-tbl__data">$32,312.19</td>
+
+                              <td class="e-tbl__data"><span class="e-bdg e-bdg-success">In stock</span></td>
+                            </tr>
+
+                            <tr class="e-tbl__row">
+                              <td class="e-tbl__data">
+
+                                <div class="e-d-flex e-align-center">
+
+                                  <div class="e-mg-r-10">
+                                    <div class="e-avat e-avat-30"><img src="images/user-f-2.jpg" alt=""
+                                        class="e-avat__img">
+                                    </div>
+                                  </div>
+
+                                  <div class="user-details">
+                                    <span class="e-fs-12">Electronics</span>
+                                  </div>
+
+                                </div>
+
+                              </td>
+
+                              <td class="e-tbl__data">563</td>
+
+                              <td class="e-tbl__data">$22,312.19</td>
+
+                              <td class="e-tbl__data"><span class="e-bdg e-bdg-warn">Low stock</span></td>
+                            </tr>
+
+                            <tr class="e-tbl__row">
+                              <td class="e-tbl__data">
+
+                                <div class="e-d-flex e-align-center">
+
+                                  <div class="e-mg-r-10">
+                                    <div class="e-avat e-avat-30"><img src="images/fruit-2.jpg" alt=""
+                                        class="e-avat__img">
+                                    </div>
+                                  </div>
+
+                                  <div class="user-details">
+                                    <span class="e-fs-12">Foods</span>
+                                  </div>
+
+                                </div>
+
+                              </td>
+
+                              <td class="e-tbl__data">231</td>
+
+                              <td class="e-tbl__data">$4,312.19</td>
+
+                              <td class="e-tbl__data"><span class="e-bdg e-bdg-warn">Low stock</span></td>
+                            </tr>
+
+                            <tr class="e-tbl__row">
+                              <td class="e-tbl__data">
+
+                                <div class="e-d-flex e-align-center">
+
+                                  <div class="e-mg-r-10">
+                                    <div class="e-avat e-avat-30"><img src="images/bag.jpg" alt="" class="e-avat__img">
+                                    </div>
+                                  </div>
+
+                                  <div class="user-details">
+                                    <span class="e-fs-12">Books</span>
+                                  </div>
+
+                                </div>
+
+                              </td>
+
+                              <td class="e-tbl__data">0</td>
+
+                              <td class="e-tbl__data">$1,312.19</td>
+
+                              <td class="e-tbl__data"><span class="e-bdg e-bdg-danger">Out of stock</span></td>
+                            </tr>
+
+                          </tbody>
+
+                        </table>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </section><!-- .ease-recent-orders ends -->
+
+          </div><!-- .e-offset-* ends -->
+
+        </div><!-- .e-container ends -->
+
+      </div><!-- .ease-dashboard ends -->
+
+    </main>
+
+    <!-- Modal -->
+    <div class="ease-modal e-d-flex e-fd-column e-justify-center e-align-center e-pd-20" id="subscription-reminder">
+
+      <div class="e-container">
+
+        <div class="e-row e-justify-center e-align-center">
+
+          <div class="e-flex-sm-3 e-flex-xl-2">
+
+            <div class="e-card ease-subscription-plan ease-modal-inner">
+
+              <div class="e-card__header e-ta-center e-justify-center">
+                <span class="e-card__title e-fw-bld">Reminder - Subscription</span>
+              </div>
+
+              <div class="e-card__body e-ta-center e-overflow-hidden">
+
+                <div class="e-h2">Subscription</div>
+                <span class="e-fs-12">Expires in 10 days</span>
+
+                <p class="e-mg-y-10">This is a reminder to renew your yearly subscription plan.</p>
+
+                <div class="e-h2">$4,623.76</div>
+                <span class="e-d-block e-fs-12 e-mg-b-10">1 Year - Renews in 2024</span>
+
+                <a href="#" class="e-btn e-fs-16">Renew plan</a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div><!-- .ease-modal ends -->
+
+    <footer class="ease-footer e-pd-y-20">
+
+      <div class="e-container">
+
+        <div class="e-offset-12 e-offset-md-3 e-offset-lg-2">
+          <p>&copy; 2023 / Ease / Designed &amp; developed by <a href="#"
+              class="e-btn e-btn-secondary e-btn-link e-tt-none">Marius is Coding</a></p>
+        </div>
+
+      </div>
+
+    </footer>
+
+    <!-- ChartJS script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Main (custom) script-->
+    <script src="dist/js/main.min.js"></script>
+  </body>
+
+</html>

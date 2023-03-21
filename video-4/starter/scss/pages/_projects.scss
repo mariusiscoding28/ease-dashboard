@@ -1,0 +1,133 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../layout/breakpoints" as *;
+
+.ease-dashboard {
+  margin-top: var(--default-navbar-height);
+
+  // Indicator
+  .ease-indicator- {
+    &up {
+      color: var(--e-success-clr);
+    }
+    &down {
+      color: var(--e-danger-clr);
+    }
+
+    &up,
+    &down {
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .ease-bdg {
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    line-height: 3rem;
+    font-size: 1.6rem;
+  }
+
+  // Progress bar
+  .ease-progress {
+    width: 100%;
+    height: 0.8rem;
+    position: relative;
+    background-color: var(--e-gray-200-clr);
+    border-radius: 2.5rem;
+    overflow: hidden;
+
+    &__inner {
+      position: absolute;
+      width: 0%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: var(--e-success-clr);
+    }
+  }
+
+  // Featured project
+  .ease-featured-project {
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .decoration {
+      position: absolute;
+      left: -12rem;
+      bottom: -6rem;
+      width: 200%;
+    }
+
+    @include respond(md) {
+      max-height: 15rem;
+      .decoration {
+        bottom: -12rem;
+      }
+    }
+
+    @include respond(lg) {
+      max-height: 100%;
+      .decoration {
+        bottom: -6rem;
+      }
+    }
+  }
+
+  // Client overview
+  .ease-client-overview {
+    .ease-level-gold {
+      color: var(--e-warn-clr);
+    }
+    .ease-level-silver {
+      color: var(--e-gray-600-clr);
+    }
+
+    .ease-client .user-details {
+      span {
+        line-height: 0.6;
+        &:first-of-type {
+          margin-top: 0.8rem;
+        }
+      }
+    }
+  }
+
+  // Communication
+  .ease-communication {
+    .e-tbl__row .e-tbl__data {
+      white-space: normal;
+    }
+
+    &-content {
+      position: relative;
+    }
+
+    .ease-meta {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  // Chart
+  .ease-earning-chart {
+    width: 50%;
+  }
+}
+
+// Subscription reminder
+.ease-subscription-plan {
+  background-color: var(--e-primary-clr);
+  color: var(--e-gray-50-clr);
+}
+
+// Footer
+.ease-footer {
+  background-color: var(--navbar-bg-clr);
+}

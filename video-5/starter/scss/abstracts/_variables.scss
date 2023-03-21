@@ -1,0 +1,303 @@
+@use "sass:map";
+
+// Colors
+// $primary: #34426f;
+// $secondary: #7d83ff;
+// $orange: #fd8b49;
+// $green: #5fab76;
+// $blue: #4a529d;
+// $red: #c44f4f;
+// $grey: #f3f3f9;
+
+$e-colors: (
+  "primary": (
+    name: primary,
+    variations: (
+      main: #34426f,
+      100: #a9b0c2,
+      200: #a0a8bc,
+      300: #969fb5,
+      400: #2f3c65,
+      500: #181f34,
+      600: #161c2f,
+    ),
+  ),
+  "secondary": (
+    name: secondary,
+    variations: (
+      main: #7d83ff,
+      100: #bdbfff,
+      200: #c3c5ff,
+      300: #c8caff,
+      400: #414384,
+      500: #3b3d78,
+      600: #36376d,
+    ),
+  ),
+  "orange": (
+    name: "warn",
+    variations: (
+      main: #fd8b49,
+      100: #fdc4a1,
+      200: #fdc9aa,
+      300: #fdceb2,
+      400: #fda977,
+      500: #fda069,
+      600: #fd965a,
+    ),
+  ),
+  "green": (
+    name: "success",
+    variations: (
+      main: #5fab76,
+      100: #add4b8,
+      200: #b4d8be,
+      300: #bbdcc4,
+      400: #87c097,
+      500: #7bba8d,
+      600: #6eb382,
+    ),
+  ),
+  "blue": (
+    name: "info",
+    variations: (
+      main: #4a529d,
+      100: #9faac4,
+      200: #a8b2c9,
+      300: #b0b9ce,
+      400: #7184a9,
+      500: #6378a0,
+      600: #536b97,
+    ),
+  ),
+  "red": (
+    name: "danger",
+    variations: (
+      main: #c44f4f,
+      100: #c098a2,
+      200: #c6a1aa,
+      300: #cbaab2,
+      400: #a36978,
+      500: #9a5a6a,
+      600: #a85661,
+    ),
+  ),
+  "gray": (
+    name: "gray",
+    variations: (
+      main: #f3f3f9,
+      50: #fefefe,
+      100: #fafafa,
+      200: #f5f5fa,
+      300: #f7f7fa,
+      400: #dddde2,
+      500: #c9c9cd,
+      600: #9191a1,
+    ),
+  ),
+);
+
+:root {
+  @each $block, $children in $e-colors {
+    @each $child, $value in $children {
+      $name: map.get($children, name);
+      $mainClrs: map.get($children, main);
+      $variation: map.get($children, variations);
+
+      @if type-of($value) == map {
+        @each $item, $val in $value {
+          @if $item == main {
+            --e-#{$name}-clr: #{$val};
+          } @else {
+            --e-#{$name}-#{$item}-clr: #{$val};
+          }
+        }
+      }
+    }
+  }
+
+  /* ************** COLORS ************** */
+  --global-bg-clr: var(--e-gray-clr);
+  /* Sidebar */
+  --sidebar-bg-clr: var(--e-primary-clr);
+  --sidebar-menu-item-clr: var(--e-gray-50-clr);
+  --sidebar-menu-item-hvr-bg-clr: var(--e-primary-400-clr);
+  --sidebar-menu-item-active-brd-clr: var(--e-secondary-clr);
+  --sidebar-menu-title-clr: var(--e-gray-500-clr);
+  --sidebar-empl-of-month-bg-clr: rgba(52, 66, 111, 0.8);
+  /* Navbar */
+  --navbar-bg-clr: var(--e-gray-50-clr);
+  /* Card */
+  --card-bg-clr: var(--e-gray-50-clr);
+  /* Border */
+  --brdr-clr: var(--e-gray-300-clr);
+  /* Table */
+  --tbl-header-bg-clr: var(--e-gray-100-clr);
+  /* Typography */
+  --global-text-clr: var(--e-primary-600-clr);
+  --faded-text-clr: var(--e-gray-500-clr);
+  --link-clr: var(--e-secondary-clr);
+  /* Icon */
+  --default-icon-clr: var(--e-primary-600-clr);
+  --default-icon-hvr-bg-clr: var(--e-gray-clr);
+  /* Badges */
+  --bdg-success-bg-clr: var(--e-success-100-clr);
+  --bdg-success-text-clr: var(--e-success-clr);
+  --bdg-secondary-bg-clr: var(--e-secondary-100-clr);
+  --bdg-secondary-text-clr: var(--e-secondary-clr);
+  --bdg-warn-bg-clr: var(--e-warn-100-clr);
+  --bdg-warn-text-clr: var(--e-warn-clr);
+  --bdg-danger-bg-clr: var(--e-danger-100-clr);
+  --bdg-danger-text-clr: var(--e-danger-clr);
+  /* Form */
+  --input-bg-clr: var(--e-gray-clr);
+  --input-brdr-clr: var(--e-primary-clr);
+  --textarea-bg-clr: transparent;
+  --textarea-brdr-clr: var(--e-gray-clr);
+  /* Button */
+  --btn-default-bg-clr: var(--e-primary-400-clr);
+  --btn-default-text-clr: var(--e-gray-50-clr);
+  --btn-primary-bg-clr: var(--e-primary-100-clr);
+  --btn-primary-text-clr: var(--e-primary-clr);
+  --btn-secondary-bg-clr: var(--e-secondary-100-clr);
+  --btn-secondary-text-clr: var(--e-secondary-clr);
+  --btn-success-bg-clr: var(--e-success-100-clr);
+  --btn-success-text-clr: var(--e-success-clr);
+  --btn-warn-bg-clr: var(--e-warn-100-clr);
+  --btn-warn-text-clr: var(--e-warn-clr);
+  --btn-danger-bg-clr: var(--e-danger-100-clr);
+  --btn-danger-text-clr: var(--e-danger-clr);
+  --btn-icon-hvr-bg: var(--e-gray-clr);
+
+  /* ************** TYPOGRAPHY ************** */
+  --base-font-size: 62.5%; // 10px (10 / 16) * 100 = 62.5
+  --heading-font-family: "Manrope", sans-serif;
+  --body-font-family: "Poppins", sans-serif;
+  --heading-1: 2.8rem;
+  --heading-2: 2.4rem;
+  --heading-3: 2rem;
+  --heading-4: 1.8rem;
+  --heading-5: 1.6rem;
+  --heading-6: 1.6rem;
+  --paragraph-size: 1.4rem;
+  --card-title: 1.6rem;
+  --small-text: 1.2rem;
+  --menu-item: 1.4rem;
+  --icon-size: 1.4rem;
+  --dropdown-item: 1.3rem;
+  --bdg-size: 1rem;
+  --btn-size: 1.4rem;
+  --heading-line-height: 1.4;
+  --default-line-height: 1.5;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* ************** SPACING ************** */
+  --spacing-0: 0;
+  --spacing-xs: 0.8rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.2rem;
+  --spacing-lg: 1.4rem;
+  --spacing-xl: 1.6rem;
+  --spacing-18: 1.8rem;
+  --spacing-20: 2rem;
+
+  /* ************** LAYOUT ************** */
+  --container-default: 90%;
+  --container-sm: 87.5rem;
+  --container-md: 121.5rem;
+  --container-lg: 131.5rem;
+  --container-xl: 156rem;
+
+  /* ************** COMPONENTS ************** */
+  --default-brd-rad: 0.4rem;
+  --default-btn-padding: 0.9rem 3rem;
+  --default-btn-sm-padding: 0.6rem 2rem;
+  --default-bdg-padding: 0.4rem 1.2rem;
+  --default-input-padding: 0.9rem 3rem;
+  --default-dropdown-width: 22.5rem;
+  --default-dropdown-mx-height: 35rem;
+  // Navbar
+  --default-navbar-height: 6rem;
+  --default-sidebar-nav-width: 25rem;
+}
+
+/* ************** TYPOGRAPHY ************** */
+
+$font-sizes: (
+  6: 0.6rem,
+  8: 0.8rem,
+  10: 1rem,
+  12: 1.2rem,
+  14: 1.4rem,
+  16: 1.6rem,
+  18: 1.8rem,
+  20: 2rem,
+  22: 2.2rem,
+  24: 2.4rem,
+  26: 2.6rem,
+  28: 2.8rem,
+  30: 3rem,
+  32: 3.2rem,
+  34: 3.4rem,
+  36: 3.6rem,
+  38: 3.8rem,
+  40: 4rem,
+  42: 4.2rem,
+  44: 4.4rem,
+  46: 4.6rem,
+  48: 4.8rem,
+  50: 5rem,
+);
+
+$font-weights: (
+  reg: var(--font-weight-regular),
+  med: var(--font-weight-medium),
+  bld: var(--font-weight-bold),
+);
+
+/* ************** SPACINGS ************** */
+$spacings: (
+  0: var(--spacing-0),
+  8: var(--spacing-xs),
+  10: var(--spacing-sm),
+  12: var(--spacing-md),
+  14: var(--spacing-lg),
+  16: var(--spacing-xl),
+  18: var(--spacing-18),
+  20: var(--spacing-20),
+);
+
+/* ************** LAYOUT ************** */
+$breakpoint-sm: 553px;
+$breakpoint-md: 901px;
+$breakpoint-lg: 1281px;
+$breakpoint-xl: 1440px;
+
+// Breakpoint map
+$breakpoints-up: (
+  sm: $breakpoint-sm,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg,
+  xl: $breakpoint-xl,
+);
+
+$default-gutter: 1.5rem;
+$total-cols: 12;
+
+$containers: (
+  sm: var(--container-sm),
+  md: var(--container-md),
+  lg: var(--container-lg),
+  xl: var(--container-xl),
+);
+
+/* ************** COMPONENTS ************** */
+
+// ========= Buttons ============ //
+$buttons: default primary secondary success warn danger;
+// ========= Badges ============ //
+$badges: secondary success warn danger;
+// ========= Avatar ============ //
+$avatars: 30 35 40 45 50;

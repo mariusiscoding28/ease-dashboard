@@ -1,0 +1,160 @@
+@use "sass:map";
+@use "variables" as *;
+@use "../layout/breakpoints" as *;
+
+// Transition
+@mixin transition($property: all, $duration: 0.3s, $delay: 0s, $easing-function: ease-out) {
+  transition: $property $duration $delay $easing-function;
+}
+
+// Box shadow
+@mixin boxShadow($x: 0, $y: 0, $blur: 0.15rem, $color: rgba(#000, 0.14)) {
+  box-shadow: $x $y $blur $color;
+}
+
+// Custom scroll bar
+@mixin customScrollbar($width: 0.5rem, $height: 0.5rem, $bg-color: var(--e-gray-600-clr)) {
+  // Firefox
+  scrollbar-width: thin;
+  scrollbar-color: $bg-color transparent;
+
+  // Chrome and others
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0.2rem transparent;
+    background: transparent;
+    margin: 1.1rem;
+  }
+
+  &::-webkit-scrollbar {
+    height: $height;
+    width: $width;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6rem;
+    width: $width;
+    background-color: $bg-color;
+  }
+}
+
+// Creating grid columns
+@mixin grid($total, $number) {
+  flex: 0 0 calc(100% / (#{$total} / #{$number}));
+  max-width: calc(100% / (#{$total} / #{$number}));
+}
+
+// Creating offset grid
+@mixin offset-grid($total-cols, $responsive) {
+  @if $responsive {
+    @each $break, $value in $containers {
+      @include respond(#{$break}) {
+        @for $i from 1 through $total-cols {
+          .e-offset-#{$break}-#{$i} {
+            @if $i == $total-cols {
+              margin-left: 0;
+              flex: 0 0 100%;
+              max-width: 100%;
+            } @else {
+              margin-left: calc(100% / (#{$total-cols} / #{$i}));
+              flex: 0 0 calc(100% * ((#{$total-cols} - #{$i}) / #{$total-cols}));
+              max-width: calc(100% * ((#{$total-cols} - #{$i}) / #{$total-cols}));
+            }
+          }
+        }
+      }
+    }
+  } @else {
+    @for $i from 1 through $total-cols {
+      .e-offset-#{$i} {
+        @if $i == $total-cols {
+          margin-left: 0;
+          flex: 0 0 100%;
+          max-width: 100%;
+        } @else {
+          margin-left: calc(100% / (#{$total-cols} / #{$i}));
+          flex: 0 0 calc(100% * ((#{$total-cols} - #{$i}) / #{$total-cols}));
+          max-width: calc(100% * ((#{$total-cols} - #{$i}) / #{$total-cols}));
+        }
+      }
+    }
+  }
+}
+
+// Looping through property if contains more than 1
+@mixin loop-list-property($property, $value, $important) {
+  @if type-of($property) == list {
+    // Loop through the list
+    @each $curr-property in $property {
+      #{$curr-property}: #{$value} if($important, !important, unquote(""));
+    }
+  } @else {
+    #{$property}: #{$value} if($important, !important, unquote(""));
+  }
+}
+
+/* Mixin to loop through a map */
+@mixin loop-through-map($map, $base-class: "e-", $suffix: null, $property: null, $responsive: true, $important: true) {
+  // Loop through the original map
+  @each $child, $value in $map {
+    @if $value != null {
+      @if $base-class == null {
+        // Creating the selector
+        #{$child} {
+          @include loop-list-property($property, $value, $important);
+        }
+      } @else {
+        // Selecting classes
+        .#{$base-class}#{$child}#{$suffix} {
+          @include loop-list-property($property, $value, $important);
+        }
+      }
+    }
+  }
+
+  // RESPONSIVE
+  @if $responsive {
+    // Looping through the breakpoint map
+    @each $break, $value in $containers {
+      @include respond(#{$break}) {
+        // Loop through the original map
+        @each $child, $value in $map {
+          @if $value != null {
+            @if $base-class == null {
+              // Creating the selector
+              #{$child} {
+                @include loop-list-property($property, $value, $important);
+              }
+            } @else {
+              // Selecting classes
+              .#{$base-class}#{$child}#{$suffix}-#{$break} {
+                @include loop-list-property($property, $value, $important);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Looping through complex map
+@mixin loop-deep-map($deep-map) {
+  // First level of the map
+  @each $block, $children in $deep-map {
+    // Second level of the map
+    @each $subblock, $values in $children {
+      // Variables
+      $base-class: map.get($children, class);
+      $suffix: map.get($children, suffix);
+      $property: map.get($children, property);
+      $responsive: if(map-has-key($children, responsive), map.get($children, responsive), true);
+      $important: if(map-has-key($children, important), map.get($children, important), true);
+
+      // Calling the loop mixin to loop through the inner map
+      @if type-of($values) == map and $values != null and $base-class != null {
+        @include loop-through-map($values, $base-class, $suffix, $property, $responsive, $important);
+      }
+    }
+  }
+}

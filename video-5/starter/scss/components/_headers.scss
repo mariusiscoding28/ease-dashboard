@@ -1,0 +1,261 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../layout/breakpoints" as *;
+
+.e-header {
+  width: 100%;
+  background-color: var(--card-bg-clr);
+  height: var(--default-navbar-height);
+
+  &-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+  }
+
+  &__mobile {
+    &--trigger {
+      background-color: var(--global-bg-clr);
+      width: 3rem;
+      height: 3rem;
+      border-radius: var(--default-brd-rad);
+    }
+  }
+
+  // Modal button
+  .ease-modal-btn {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+
+    &::before {
+      width: 30%;
+      height: 30%;
+      background-color: var(--e-danger-clr);
+      z-index: 2;
+    }
+    &::after {
+      width: 100%;
+      height: 100%;
+      background-color: var(--e-danger-100-clr);
+      z-index: 1;
+      transform: translate(-50%, -50%) scale(1);
+      @include boxShadow($blur: 0, $color: #c44f4f);
+      animation: pulse 2s infinite ease-in-out;
+    }
+  }
+
+  // Theme switcher
+  .theme-control {
+    .theme-light,
+    .theme-dark {
+      display: none;
+    }
+
+    [data-current-theme="light"] {
+      .theme-light {
+        display: none;
+      }
+      .theme-dark {
+        display: block;
+      }
+    }
+    [data-current-theme="dark"] {
+      .theme-dark {
+        display: none;
+      }
+      .theme-light {
+        display: block;
+      }
+    }
+  }
+
+  // Notifications
+  [data-dropdown-target="notifications"] {
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+
+    .e-bdg {
+      position: absolute;
+      width: 1.6rem;
+      height: 1.6rem;
+      line-height: 1.6rem;
+      border-radius: 50%;
+      padding: 0;
+      top: -0.6rem;
+      right: -0.6rem;
+
+      &.e-bdg-danger {
+        color: var(--card-bg-clr);
+      }
+    }
+  }
+
+  #notifications {
+    --default-dropdown-width: 25rem;
+  }
+
+  #notifications,
+  #profile {
+    top: calc(var(--default-navbar-height) - 1rem);
+  }
+
+  #profile {
+    .user-details {
+      line-height: 1.2;
+    }
+
+    .dropdown-footer {
+      background-color: transparent;
+      border-top: 0.1rem solid var(--brdr-clr);
+    }
+  }
+
+  // Sidebar
+  &__navitems {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow: hidden auto;
+    background-color: var(--sidebar-bg-clr);
+    width: var(--default-sidebar-nav-width);
+    max-width: var(--default-sidebar-nav-width);
+    z-index: 25;
+    visibility: hidden;
+    transform: translateX(-100%);
+
+    @include transition;
+    @include customScrollbar;
+
+    &.e-active {
+      visibility: visible;
+      transform: translateX(0);
+    }
+
+    @include respond(sm) {
+      --default-sidebar-nav-width: 36rem;
+    }
+  }
+
+  &__link--logo {
+    background-color: transparent;
+    width: 60%;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    border-left: 0.4rem solid transparent;
+    span,
+    i {
+      color: var(--sidebar-menu-item-clr);
+    }
+
+    &:hover,
+    &:focus,
+    &.e-active {
+      background-color: var(--sidebar-menu-item-hvr-bg-clr);
+    }
+
+    &.e-active {
+      border-color: var(--sidebar-menu-item-active-brd-clr);
+    }
+  }
+
+  &__navitems {
+    .e-dropdown__menu {
+      position: initial;
+      width: 100%;
+      background-color: transparent;
+      height: 0;
+      padding: 0 3rem;
+
+      .e-header__sublink {
+        color: var(--sidebar-menu-item-clr);
+
+        &:hover,
+        &:focus,
+        &.e-active {
+          color: var(--e-secondary-clr);
+        }
+      }
+
+      &.e-active {
+        height: auto;
+      }
+    }
+  }
+
+  &__list--title {
+    color: var(--sidebar-menu-title-clr);
+    font-family: var(--heading-font-family);
+  }
+
+  // Employee of the month
+  &__list--employee-of-month {
+    margin: 3.5rem 2rem;
+
+    .e-card {
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .employee-details {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-radius: 2rem 2rem 0 0;
+        background-color: var(--sidebar-empl-of-month-bg-clr);
+        color: var(--e-gray-50-clr);
+      }
+    }
+  }
+}
+
+/* ======================= Sidebar navbar on different screen sizes ======================= */
+@each $break, $value in $containers {
+  @include respond(#{$break}) {
+    @for $i from 1 through 6 {
+      .e-header__sidebar-#{$break}-#{$i} {
+        /* Sidebar menu width */
+        transform: translate(0);
+        opacity: 1;
+        pointer-events: all;
+        visibility: visible;
+        width: calc(100% / (#{$total-cols} / #{$i}));
+        max-width: calc(100% / (#{$total-cols} / #{$i}));
+      }
+    }
+  }
+}
+
+// Animation
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.85);
+    @include boxShadow($blur: 0, $color: rgba(#c44f4f, 0.7));
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 0 0.6rem rgba(#c44f4f, 0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.85);
+    @include boxShadow($blur: 0, $color: rgba(#c44f4f, 0));
+  }
+}

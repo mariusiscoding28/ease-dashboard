@@ -1,0 +1,178 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../layout/breakpoints" as *;
+
+.ease-dashboard.ease-dashboard-communications {
+  .ease-message-block > .e-row {
+    position: relative;
+  }
+
+  .ease-messages-row {
+    cursor: pointer;
+
+    &.e-active {
+      background-color: var(--e-gray-100-clr);
+    }
+  }
+
+  .ease-communication-details {
+    width: 100%;
+  }
+
+  .ease-message-left {
+    .e-card__body {
+      max-height: 70rem;
+      overflow: hidden auto;
+      @include customScrollbar;
+    }
+  }
+
+  // Chat - Center
+  .ease-message-box {
+    position: relative;
+
+    .e-card__body {
+      height: 100%;
+      margin-bottom: 8rem;
+      overflow: hidden auto;
+      @include customScrollbar;
+    }
+
+    .ease-messages-chat {
+      .ease-chat {
+        margin-bottom: 2rem;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        .chat-bubble {
+          border-radius: var(--default-brd-rad);
+        }
+
+        &.chat-is-you .chat-bubble {
+          background-color: var(--e-gray-100-clr);
+        }
+
+        &.chat-is-me {
+          flex-direction: row-reverse;
+          .chat-bubble {
+            background-color: var(--e-primary-clr);
+            color: var(--e-gray-100-clr);
+          }
+        }
+      }
+    }
+
+    // Chat footer
+    .ease-message-footer {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+
+      .e-form__input {
+        height: 100%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding-left: 2rem;
+
+        &.options {
+          border-radius: var(--default-brd-rad) 0 0 var(--default-brd-rad);
+          width: auto;
+          padding: 1rem 0 1rem 2rem;
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  // Center
+  .ease-message-center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transform: translateX(-120%);
+    visibility: hidden;
+    overflow: hidden;
+    @include transition;
+    &.e-active {
+      transform: translateX(0);
+      visibility: visible;
+    }
+
+    @include respond(sm) {
+      position: static;
+      transform: translateX(0);
+      visibility: visible;
+      height: auto;
+    }
+  }
+}
+
+// Chat modal
+.ease-communication-modal {
+  a:hover {
+    color: var(--e-secondary-clr);
+  }
+
+  .ease-communication-data-modal {
+    transform: translateX(120%);
+    @include transition;
+
+    .ease-chat-media .e-card img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &.e-active .ease-communication-data-modal {
+    transform: translateX(0);
+  }
+}
+
+// Inbox
+.ease-inbox-modal {
+  .ease-inbox-full-email {
+    max-height: 25rem;
+    overflow: hidden auto;
+    margin-bottom: 3rem;
+    @include customScrollbar;
+  }
+
+  .e-form {
+    border: 0.2rem solid var(--e-gray-400-clr);
+    border-radius: var(--default-brd-rad);
+
+    &__group:not(:last-of-type) {
+      border-bottom: 0.2rem solid var(--e-gray-400-clr);
+    }
+
+    &__input {
+      background-color: transparent;
+      border: 0;
+      &:not([class*="e-form__textarea"]) {
+        color: var(--e-secondary-clr);
+      }
+    }
+
+    &__textarea {
+      height: 15rem;
+      resize: none;
+      line-height: 1.4;
+      @include customScrollbar;
+    }
+
+    .attachments {
+      .ease-attachment {
+        padding: 0.2rem;
+        background-color: var(--e-secondary-100-clr);
+        color: var(--e-secondary-clr);
+        border-radius: var(--default-brd-rad);
+      }
+    }
+  }
+}

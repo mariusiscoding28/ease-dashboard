@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 130 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-4000,-28)">
+        <g transform="matrix(0.346949,0,0,0.693897,3931.05,-685.396)">
+            <g id="lower">
+                <g transform="matrix(1,0,0,0.5,181.662,15.4785)">
+                    <text x="109.44px" y="2123.68px" style="font-family:'Manrope-Regular', 'Manrope';font-size:172.336px;fill:rgb(250,250,250);">ase</text>
+                </g>
+                <g transform="matrix(0.792103,0,0,0.396052,-306.816,225.291)">
+                    <path d="M682,2137.66L717.495,2137.66L717.495,2154.64L638.221,2154.64L638.221,2137.75L682,2137.75L682,2137.66ZM682,2082.35L707.155,2082.35L707.155,2099.32L656.23,2099.32L656.23,2099.33L638.221,2099.33L638.221,2082.36L682,2082.36L682,2082.35ZM638.221,2047.53L638.221,2030.56L717.495,2030.56L717.495,2047.53L682,2047.53L682,2047.53L638.221,2047.53Z" style="fill:rgb(250,250,250);fill-rule:nonzero;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

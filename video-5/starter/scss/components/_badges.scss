@@ -1,0 +1,18 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.e-bdg {
+  border: 0;
+  border-radius: var(--default-brd-rad);
+  padding: var(--default-bdg-padding);
+  font-size: var(--bdg-size);
+  text-align: center;
+
+  // Generating different styles
+  @each $current-style in $badges {
+    &.e-bdg-#{$current-style} {
+      background-color: var(--bdg-#{$current-style}-bg-clr);
+      color: var(--bdg-#{$current-style}-text-clr);
+    }
+  }
+}

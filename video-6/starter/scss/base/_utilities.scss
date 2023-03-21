@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "utility-api" as *;
+/*
+=================================================
+                  UTILITIES
+=================================================
+*/
+
+[class*="e-overflow-"] {
+  @include customScrollbar;
+}
+
+// Generating the utility classes
+@include loop-deep-map($e-utilities);
